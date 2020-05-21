@@ -26,7 +26,7 @@ body {
 }
 
 
-/* The navbar */
+/* BEGIN CSS NAVBAR */
 
 .topnav {
     overflow: hidden;
@@ -52,6 +52,12 @@ h1 {
     color: #f2f2f2;
     text-align: center;
 }
+
+
+/* END CSS NAVBAR */
+
+
+/* BEGIN CSS FOOTER */
 
 .footer {
     /* position: absolute; */
@@ -79,11 +85,11 @@ h1 {
     padding-top: 100px;
 }
 
-a:link {
+footer a:link {
     color: black;
 }
 
-a:visited {
+footer a:visited {
     color: black;
 }
 
@@ -103,3 +109,6 @@ a:visited {
 .footer-copyright {
     margin-top: 50px;
 }
+
+
+/* END CSS FOOTER */
