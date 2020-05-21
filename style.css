@@ -21,7 +21,12 @@
   width: auto;
 }
 
+<<<<<<< HEAD
 /* The navbar */
+=======
+/* BEGIN CSS NAVBAR */
+
+>>>>>>> e5e0d237f34538e51fdaa2986b46f48ec042813f
 .topnav {
   overflow: hidden;
 }
@@ -44,6 +49,12 @@ h1{
     color: #f2f2f2;
     text-align: center;
 }
+
+
+/* END CSS NAVBAR */
+
+
+/* BEGIN CSS FOOTER */
 
 .footer {
     position: absolute;
@@ -81,11 +92,11 @@ h1{
     padding-top: 100px;
 }
 
-a:link {
+footer a:link {
     color: black;
 }
 
-a:visited {
+footer a:visited {
     color: black;
 }
 
@@ -105,3 +116,6 @@ a:visited {
 .footer-copyright {
     margin-top: 50px;
 }
+
+
+/* END CSS FOOTER */
