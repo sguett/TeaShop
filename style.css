@@ -27,6 +27,16 @@ body {
     background-size: cover;
 }
 
+.bg-img-about {
+    /* The image used */
+    background-image: url("pictures/about.png");
+    min-height: 700px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /* Position the navbar container inside the image */
 
@@ -230,3 +240,35 @@ div span {
 
 
 /* END CSS CONTACT */
+
+
+/* BEGIN CSS ABOUT */
+
+.blockAbout {
+    height: 100vh;
+    margin: auto 150px auto 150px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#titleAbout {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+#titleAbout::before,
+#titleAbout::after {
+    border-top: .05em solid;
+    content: "";
+    flex: 1;
+    margin: 0 .6em;
+}
+
+.blockAbout .text-left p {
+    color: grey
+}
