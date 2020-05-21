@@ -1,51 +1,43 @@
 /* header */
-body {
-font-family: proxima-nova-1, proxima-nova-2, montserrat, Helvetica, sans-serif;
+.bg-img {
+  /* The image used */
+  background-image: url("pictures/1.jpeg");
+
+  min-height: 700px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
 }
 
-ul>li>a {
-line-height: 3.5;
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
 }
 
-.menu {
-color: #fff;
-font-size: 16px;
-outline: none;
-display: block;
-padding: 0 20px;
-text-decoration: none;
-text-transform: uppercase;
+/* The navbar */
+.topnav {
+  overflow: hidden;
 }
 
-h1 {
-font-size: 60px;
-font-weight: 400;
-line-height: 1.2;
-margin: 0;
-margin: 0 auto;
-color: #fff;
-text-shadow: 5px 5px 35px rgba(43, 49, 54, .4);
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.hero-title-inside {
-max-width: 72%;
-margin: 0 auto;
-text-align: center;
-}
-
-.row {
-margin-top: 50px;
-margin: 100px;
-}
-
-
-h5 {
-color: #007bff;
-}
-
-.bbtn {
-color: #007bff;
-padding: 0vh;
+.topnav a:hover {
+  color: gold;
 }
 
 .footer {
