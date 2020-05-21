@@ -14,19 +14,6 @@ body{
   background-size: cover;
 }
 
-.bg-img {
-    /* The image used */
-    background-image: url("pictures/1.jpeg");
-    min-height: 700px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Needed to position the navbar */
-    position: relative;
-}
-
-
 /* Position the navbar container inside the image */
 
 .container {
@@ -35,11 +22,17 @@ body{
     width: auto;
 }
 
-
+#logo{
+    text-align: center;
+    font: normal normal normal 30px/1.4em brandon-grot-w01-light,sans-serif;
+    color: #f2f2f2;
+}
 /* BEGIN CSS NAVBAR */
 
 .topnav {
     overflow: hidden;
+      position: -webkit-sticky;
+  position: sticky;
 }
 
 
@@ -59,6 +52,7 @@ body{
     transition: color 0.4s ease 0s;
 }
 
+
 h1 {
     color: #f2f2f2;
     font-size: 48px;
@@ -77,7 +71,6 @@ h1 {
     width: 100%;
 
 }
-
 
 /* END CSS NAVBAR */
 
