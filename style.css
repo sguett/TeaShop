@@ -1,3 +1,6 @@
+body{
+    font-family: brandon-grot-w01-light,sans-serif;
+}
 /* header */
 .bg-img {
   /* The image used */
@@ -21,12 +24,7 @@
   width: auto;
 }
 
-<<<<<<< HEAD
 /* The navbar */
-=======
-/* BEGIN CSS NAVBAR */
-
->>>>>>> e5e0d237f34538e51fdaa2986b46f48ec042813f
 .topnav {
   overflow: hidden;
 }
@@ -42,12 +40,27 @@
 }
 
 .topnav a:hover {
-  color: gold;
+    color: #D6B86E;
+    transition: color 0.4s ease 0s;
 }
 
 h1{
     color: #f2f2f2;
+    font-size: 48px;
+    line-height: 1.3em;
+}
+
+.hero-title-inside {
+    max-width: 72%;
+    margin: 0 auto;
     text-align: center;
+}
+.style-j4mph5j1line {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    padding: 5px 0 0 0;
+    width: 100%;
+
 }
 
 
