@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://app.slack.com/client/T7P4CAKAS/D013YKUE326?cdn_fallback=1 -->
+<html data-gantry="" data-app="client" data-cdn="https://b.slack-edge.com/bv1-8-8cacda2/" data-version-ts="1590018618" data-version-hash="833d5a3089ec22c1c63bea5cc1fb2a49cca9518d" data-min-version-splay-seconds="10800" data-app-context="team" data-app-name-override="client" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Security-Policy" content="base-uri &#39;self&#39;; object-src &#39;none&#39;; script-src &#39;self&#39; https://a.slack-edge.com/ https://b.slack-edge.com/ &#39;sha256-IFRSaDPA3ImInAuG/fd6EuDvEFedN7T7m3mGmiD44Ys=&#39; &#39;sha256-ED1vnV7KfKBN2QPBeTpYldL1JKuuxyFyfqYn4kYUsZk=&#39; &#39;sha256-mrGx9OBWXbdvTCd+tWXZ6Fw99ovgBj/o0YsWdati2cA=&#39; &#39;sha256-V3pNBo9vFI47lnzeFlyJVDxtN3Yf0X6UgalmXzoA69U=&#39; &#39;sha256-RDfd/q++j6rBxOB8r5vHB+cMNV9wmg33HabiCKh3mxA=&#39; &#39;sha256-4cgk9QAX58uViOBszA2SCW1xRQV/OVBubeY/vH5Z9Rw=&#39; &#39;sha256-seSmg/sZ8IvygdKTGnR3I0B7SnR8mGjuFG+yU1Wlo8Y=&#39; &#39;sha256-oex96Hj+B7pWBwPgf3ckkHupS7Sq22NsVziOfrqtE88=&#39; &#39;sha256-QAdt3bXfwYLpurm6ZbiVsN6mP5UyBrBx0F5ONxrOgc0=&#39; &#39;sha256-KRd7aNMK2XgnEjyNAbEVgkMCRK1VYuzbmr21woUVW4Q=&#39; &#39;sha256-zSTB4LpNt9Im1njZqbJfDeNiEIey25CKfTem7sZQ7Q0=&#39; &#39;sha256-O2uJS3XrpiAN3rCyUsOhEmga4yYwG+fT7YJ5BJ3i88s=&#39; &#39;sha256-EB6lrVOn2zejRRm6uK3NHSZREKQ9gQADAkLz8wW1qAc=&#39; &#39;sha256-U/MIeFLHeaVDLlaWYJhNl296ybhyK7HMwHvNPOyN1Z0=&#39; &#39;sha256-5dxLov72QmNDxivbwQELmfeFYA1abXbk8EyLwbZvirI=&#39; &#39;sha256-5+sJvD+v2c7rWe1dM2LOXS/RwbebuM7AL4XufHVIaUc=&#39; &#39;sha256-Oi0fO8/dV4TmZcscVTFQHAwxV5yJWLWXNQJYFejImBI=&#39; &#39;sha256-8c6MLfK62bgjwH+76DuIL4d2tpHxAPov7kiT0+bJ0UU=&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://a.slack-edge.com/ https://b.slack-edge.com/"><meta name="referrer" content="no-referrer"><meta name="superfish" content="nofish"><meta name="author" content="Slack"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google" content="notranslate"><title>Slack | Samuel | di-class</title><script>function ownKeys(e,t){var o=Object.keys(e);if(Object.getOwnPropertySymbols){var n=Object.getOwnPropertySymbols(e);t&&(n=n.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),o.push.apply(o,n)}return o}function _objectSpread(e){for(var t=1;t<arguments.length;t++){var o=null!=arguments[t]?arguments[t]:{};t%2?ownKeys(Object(o),!0).forEach(function(t){_defineProperty(e,t,o[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(o)):ownKeys(Object(o)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(o,t))})}return e}function _defineProperty(e,t,o){return t in e?Object.defineProperty(e,t,{value:o,enumerable:!0,configurable:!0,writable:!0}):e[t]=o,e}class SafeConsole{constructor(){this.enabled=window.console&&window.console.log&&window.console.warn&&window.console.group&&window.console.groupEnd}log(e){return this.enabled&&window.console.log("[WD] ".concat(e))}warn(e){return this.enabled&&window.console.warn("[WD] ".concat(e))}group(e,t){this.enabled&&(this.warn("".concat(e)),window.console.group(),t.forEach(e=>window.console.warn(e)),window.console.groupEnd())}}class Watchdog{constructor(e){this.c=e,this.t=0,this.to=null,this.s=[],this.f=[],this.params=this.parseParams(),this.cLen=0,this.jLen=0,this.isReloading=!1}track(){this.t+=1,null!==this.to&&(clearTimeout(this.to),this.to=null),this.to=setTimeout(this.reloadIfIssue.bind(this,{ignoreTracking:!0}),Watchdog.ASSET_TIMEOUT*this.t)}parse(e){return e.onload=void 0,e.onerror=void 0,e?e instanceof Response?{src:e.url,type:Watchdog.TYPE_FETCH}:e.href&&e.rel&&"stylesheet"===e.rel?{src:e.href,type:Watchdog.TYPE_CSS}:e.src&&"script"===e.nodeName.toLowerCase()?{src:e.src,type:Watchdog.TYPE_JS}:null:null}ok(e){var t=this.parse(e);t&&(this.s.push(t),this.reloadIfIssue())}err(e){var t=this.parse(e);t&&(this.f.push(_objectSpread({},t,{reason:"Failed to load from CDN"})),this.reloadIfIssue())}beaconEvent(e){var t,o,n;if(e){var s=(null===(t=document)||void 0===t?void 0:null===(o=t.documentElement)||void 0===o?void 0:null===(n=o.dataset)||void 0===n?void 0:n.app)||"unknown",r=encodeURIComponent("".concat(e,"|count:1")),a="".concat("https://slack.com/beacon/timing","?data=").concat(r,"&sub_app_name=").concat(s);(new Image).src=a}}showTroubleLoading(){document.body.classList.add("p-trouble_loading--show"),setTimeout(()=>{document.body.classList.add("p-trouble_loading--transition")},100),this.beaconEvent("client_load_trouble")}parseParams(){if(!this.params){var e=window.location.search,t=e.slice(1).split("&");this.params=e?t.reduce((e,t)=>{var o=t.split("=");return _objectSpread({},e,{[o[0]]:decodeURIComponent(o[1]||"")})},{}):{}}return this.params}haveAssetsLoaded(){var{ignoreTracking:e=!1}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(e)return this.c.warn("Ignoring asset checks, because something timed out. T: ".concat(this.t,"; S: ").concat(this.s.length,"; F: ").concat(this.f.length)),!1;if(this.t<this.cLen+this.jLen)return null;if(this.t>this.s.length+this.f.length)return null;if(null!==this.to&&(this.c.log("All assets have reported back; s: ".concat(this.s.length,"; f: ").concat(this.f.length)),clearTimeout(this.to),this.to=null),this.f.length>0)return this.c.group("The following assets had issues loading:",this.f.map(e=>"".concat(e.src,": ").concat(e.reason))),!1;var t=this.s.findIndex(e=>e.type===Watchdog.TYPE_CSS)>-1,o=this.s.findIndex(e=>[Watchdog.TYPE_JS,Watchdog.TYPE_FETCH].includes(e.type))>-1;return t&&o?"object"==typeof window.slackDebug||(this.c.warn("No slackDebug object found"),!1):(this.c.warn("CSS or JS is missing from loaded assets; CSS: ".concat(t,"; JS: ").concat(o)),!1)}reloadIfIssue(){var e,t,{ignoreTracking:o=!1}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},n=this.haveAssetsLoaded({ignoreTracking:o});if(null!==n&&!0!==n)if(this.isReloading)this.c.warn("[RELOAD] Detected more issues loading assets, but we are already preparing to reload so no need to do anything");else{if(!1===window.navigator.onLine)return this.c.warn("[RELOAD] Need to reload, but not online; won't try reloading"),void this.showTroubleLoading();var s=this.parseParams();s.cdn_fallback=(parseInt(s.cdn_fallback,10)||0)+1,s.force_cold_boot=1;var r,a="?".concat(Object.keys(s).map(e=>"".concat(e,"=").concat(encodeURIComponent(s[e]))).join("&"));if(s.cdn_fallback>Watchdog.MAX_CDN_FALLBACK)return this.c.warn("[RELOAD] Hit maximum reload attempts, won't try reloading anymore"),void this.showTroubleLoading();this.isReloading=!0;var i=()=>{this.c.warn("[RELOAD] Reloading client with URL: ".concat(a)),window.clearTimeout(r),window.location.search=a};r=window.setTimeout(i.bind(this),5e3);var c=[];(null===(e=window.desktop)||void 0===e?void 0:null===(t=e.stats)||void 0===t?void 0:t.clearCache)&&c.push(new Promise(e=>{try{this.c.warn("[RELOAD] Attempting to clear desktop cache"),window.desktop.stats.clearCache().then(()=>{this.c.warn("[RELOAD] Successfully cleared desktop cache"),e()})}catch(t){this.c.warn("[RELOAD] Error clearing desktop cache: ".concat(t.message)),e()}})),"serviceWorker"in navigator&&window&&void 0!==window.caches&&(c.push(new Promise(e=>{window.caches.keys().then(e=>Promise.all(e.map(e=>window.caches.delete(e)))).then(()=>{this.c.warn("[RELOAD] Removed all Service Worker caches"),e()}).catch(t=>{this.c.warn("[RELOAD] Service worker cache keys could not be removed: ".concat(t.message)),e()})})),c.push(new Promise(e=>{navigator.serviceWorker.getRegistration("/service-worker.js").then(t=>{t?t.unregister().then(t=>{this.c.warn("[RELOAD] Service worker unregistered: ".concat(t)),e()}).catch(t=>{this.c.warn("[RELOAD] Service worker could not be unregistered: ".concat(t.message)),e()}):e()})}))),Promise.all(c).then(i)}}}Watchdog.TYPE_CSS="css",Watchdog.TYPE_JS="js",Watchdog.TYPE_FETCH="fetch",Watchdog.MAX_CDN_FALLBACK=2,Watchdog.ASSET_TIMEOUT=7e3;var watchdog=new Watchdog(new SafeConsole);window.wd=watchdog,window.Watchdog=Watchdog;</script><style>.p-trouble_loading,.p-trouble_loading_overlay{z-index:9999;opacity:0;display:none;transition:transform .5s ease-out,opacity .5s ease-out}.p-trouble_loading_overlay{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:#d9d9d9}.p-trouble_loading{position:absolute;top:50%;left:50%;width:100%;max-width:35rem;min-height:15rem;max-height:27.5rem;overflow:auto;background:#fff;padding:1.5rem;user-select:text;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;pointer-events:auto;border:1px solid rgba(0,0,0,.05);border-radius:8px;font-size:1rem;font-family:Slack-Lato,appleLogo,sans-serif;transform:scale(1) translateX(-50%) translateY(-50%);transition-duration:.33s;transition-delay:.25s;box-shadow:0 0 16px 8px rgba(0,0,0,.05)}.p-trouble_loading a{text-decoration:none;color:#0073c6}.p-trouble_loading a:hover{text-decoration:underline}.p-trouble_loading h1{font-size:1.5rem;margin:0 0 .25rem 0}.p-trouble_loading h3{font-size:1.2rem}.p-trouble_loading .p-trouble_loading_content li{margin-bottom:.5rem}.p-trouble_loading .p-trouble_loading_content li{line-height:1.275rem}.p-trouble_loading p{line-height:1.5rem;margin:.75rem 0}.p-trouble_loading--show .p-trouble_loading,.p-trouble_loading--show .p-trouble_loading_overlay{display:block}.p-trouble_loading--transition .p-trouble_loading,.p-trouble_loading--transition .p-trouble_loading_overlay{opacity:1}</style><script>!function(){if("PerformanceLongTaskTiming"in window){var n=window.__tti={e:[]};n.o=new PerformanceObserver(function(e){n.e=n.e.concat(e.getEntries())}),n.o.observe({entryTypes:["longtask"]})}}()</script><script>function isDesktop(){return/(Slack)/g.test(navigator.userAgent)}function getDesktopThemePreference(){return isDesktop()&&"true"===window.localStorage.getItem("slack-client-theme-os-sync")?window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":null}function addDarkModeRuleToHead(e){window.skFirstPaintStyle=document.createElement("style"),window.skFirstPaintStyle.type="text/css",window.skFirstPaintStyle.appendChild(document.createTextNode(e)),document.head.appendChild(window.skFirstPaintStyle)}function applyTheme(){try{var e=getDesktopThemePreference(),t=null!==e?e:window.localStorage.getItem("slack-client-theme");if("client"===document.documentElement.dataset.app)"dark"===t&&addDarkModeRuleToHead("body { background-color: #1a1d21; }");else if("workflow-builder"===document.documentElement.dataset.app)"dark"===t&&addDarkModeRuleToHead("body { background-color: #1a1d21; --sk_primary_background: 26, 29, 33; }");else if("docs"===document.documentElement.dataset.app){for(var a=window.location.search.split("&"),d="",o=0;o<a.length;o++){var n=a[o].split("=");if(n&&2===n.length&&("client_theme"===n[0]||"?client_theme"===n[0])){d=n[1];break}}"dark"!==t&&"dark"!==d||addDarkModeRuleToHead("html { background-color: #1a1d21; --sk_primary_background: 26, 29, 33; }")}}catch(e){}}window.skFirstPaintStyle=null,applyTheme()</script><link href="https://a.slack-edge.com/bv1-8-8cacda2/slack-icons-v2-17b58bb.woff2" rel="preload" as="font" crossorigin="anonymous"><link href="https://a.slack-edge.com/bv1-8-8cacda2/lato-regular-d9ce515.woff2" rel="preload" as="font" crossorigin="anonymous"><link href="https://a.slack-edge.com/bv1-8-8cacda2/lato-black-b64f5e4.woff2" rel="preload" as="font" crossorigin="anonymous"><link href="https://a.slack-edge.com/bv1-8-8cacda2/lato-bold-4b1dc11.woff2" rel="preload" as="font" crossorigin="anonymous"><script>window.wd.cdn=document&&document.documentElement&&document.documentElement.getAttribute("data-cdn")||"/"</script><script>window.wd.jLen=4,window.wd.cLen=3</script><script>window.wd.track();
+				const l0 = document.createElement('link');
+				l0.onload = function () {
+					window.wd.ok(l0);
+				};
+				l0.onerror = function () {
+					window.wd.err(l0);
+				};
+				l0.rel = 'stylesheet';
+				l0.href = window.wd.cdn + 'slack-kit-styles.414eee1.css?cacheKey=gantry-1590018618';
+				l0.crossOrigin = 'anonymous';
+				document.getElementsByTagName('head')[0].appendChild(l0);</script><link rel="stylesheet" href="./Slack _ Samuel _ di-class_files/slack-kit-styles.414eee1.css" crossorigin="anonymous"><script>window.wd.track();
+				const l1 = document.createElement('link');
+				l1.onload = function () {
+					window.wd.ok(l1);
+				};
+				l1.onerror = function () {
+					window.wd.err(l1);
+				};
+				l1.rel = 'stylesheet';
+				l1.href = window.wd.cdn + 'client-boot-styles.200dd62.css?cacheKey=gantry-1590018618';
+				l1.crossOrigin = 'anonymous';
+				document.getElementsByTagName('head')[0].appendChild(l1);</script><link rel="stylesheet" href="./Slack _ Samuel _ di-class_files/client-boot-styles.200dd62.css" crossorigin="anonymous"><script>window.wd.track();
+				const l2 = document.createElement('link');
+				l2.onload = function () {
+					window.wd.ok(l2);
+				};
+				l2.onerror = function () {
+					window.wd.err(l2);
+				};
+				l2.rel = 'stylesheet';
+				l2.href = window.wd.cdn + 'helper-styles.20b5b43.css?cacheKey=gantry-1590018618';
+				l2.crossOrigin = 'anonymous';
+				document.getElementsByTagName('head')[0].appendChild(l2);</script><link rel="stylesheet" href="./Slack _ Samuel _ di-class_files/helper-styles.20b5b43.css" crossorigin="anonymous"><script src="./Slack _ Samuel _ di-class_files/gantry-vendors.a7e932d.min.js" defer="" crossorigin="anonymous"></script><script src="./Slack _ Samuel _ di-class_files/gantry-vendors-client.7c50ce5.min.js" defer="" crossorigin="anonymous"></script><script src="./Slack _ Samuel _ di-class_files/gantry-shared.2aada37.min.js" defer="" crossorigin="anonymous"></script><script src="./Slack _ Samuel _ di-class_files/client-boot.de8925c.min.js" defer="" crossorigin="anonymous"></script><script charset="utf-8" crossorigin="anonymous" src="./Slack _ Samuel _ di-class_files/gantry-vendors-async.7c3c6a8.min.js"></script><script charset="utf-8" crossorigin="anonymous" src="./Slack _ Samuel _ di-class_files/gantry-vendors-async-client.bce7437.min.js"></script><script charset="utf-8" crossorigin="anonymous" src="./Slack _ Samuel _ di-class_files/client-boot-imports.67965fd.min.js"></script><link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABNVBMVEVKFEz///9NGE+EX4VLFU3w7PD9/f1SH1Tb0Nv59/n18/W4orhZKFt2TnhwRXF2TXdpPGqghKFMFk7FtMZTIFVhMmNxR3PHt8hfL2F6U3xpPWt/WYD+/v5nOWhWI1edgJ7z8POBW4LIuMhySHS6pruHZIl/WoGJZopuQ3CObI/Vydba0NtsQW7ArcHw6/DEs8VYJlqojqnx7fH8/PyfgqDGtcbg1+Du6e7e1N5kN2Z8VX2fg6BbKlxOGVBxRnJ4T3ljNWV6UnuDXoSLaIyih6NMF07az9qWd5f8+/zUx9Ts5+zj2+Pv6u/t5+13Tni1n7WYeZlTH1XYzdn49vjLu8uIZYm5pLpmOGipkKqMaY2UdJXr5euZe5prP2xsQG2JZovTxtSnjahOGlDSxdOQcJKHY4hXJVnkajHYAAABJUlEQVR4Xr3PNXbFMBCF4Tvmx8wYZmZmZmaG/S8hHke2UuikfF9xp9DfCC3V4YQzUeB01umDStYkogKS5EpCIUGukLHOZwMKRYsLrYv3EyqTljqQcm26DmWQXen2HNsIgrNEUf7PJGGm1w/yJlkLEBwK9PvBgLtWTgRhGQxD53OHCT5rIpiSwRCe+QyCt1kXQbQQIk9oZBQYGz9sAETV6RgChuaBpGlpSHPzlcoilpZLqwDikXZPZtOG0CCXvrXt7g7iu+TbM0Sw7wUx3gNESCqL4IiDfA9vGCck1USQIqLztAjKF+S7hO/qOmVDBLi57fRE7jX8FQRqMugienj8P3A9QeGLg+bveYFCjYNXxPiUoPJWJTOOd4foQ4OSHeUH47uO1voBEO4eo1Zt+vMAAAAASUVORK5CYII=" sizes="16x16 32x32 48x48" type="image/png"><style id="detectElementResize" type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style></head><body class="supports_custom_scrollbar p-client_desktop--ia-top-nav"><div aria-hidden="true" style="position:absolute" tabindex="1"></div><div class="p-client_container"><div class="p-client p-client--ia-top-nav"><div class="p-top_nav" role="navigation" aria-label="History and search" data-qa="top-nav"><div class="p-top_nav__sidebar"><button class="c-button-unstyled p-top_nav__button p-top_nav__history_menu" type="button" aria-label="History" data-qa="top-nav-history-menu" delay="150" aria-haspopup="true" data-sk="tooltip_parent"><i class="c-icon c-icon--clock-o" type="clock-o" aria-hidden="true"></i></button></div><button class="c-button-unstyled p-top_nav__search p-top_nav__search--mac" type="button" aria-label="Search" data-qa="top_nav_search"><i class="c-icon p-top_nav__search__icon c-icon--search-medium c-icon--inherit" type="search-medium" aria-hidden="true"></i> <span class="p-top_nav__search__text">Search di-class</span></button><div class="p-top_nav__right"><div class="p-top_nav__windows_controls_container" data-qa="top-nav-help-button" delay="150" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-bd24ed35-9ccb-410c-9d86-8195f054cfc7"><button class="c-button-unstyled p-top_nav__button p-top_nav__help" type="button" aria-label="Help, with 2 unreads"><i class="c-icon c-icon--question-circle" type="question-circle" aria-hidden="true"></i></button><div class="p-top_nav__help__badge p-top_nav__help__badge--dot"></div></div></div></div><style class="p-channel_sidebar__theme--default">
+		.p-channel_sidebar {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+
+		/* Cover up "p-channel_sidebar__icon" when the close button is focused */
+		.p-channel_sidebar__close:focus {
+			background: #3F0E40;
+		}
+		.p-channel_sidebar__channel--selected + .p-channel_sidebar__close:focus {
+			background: #1164A3;
+		}
+
+		.p-channel_sidebar__channel,
+		.p-channel_sidebar__link,
+		.p-channel_sidebar__channel:link,
+		.p-channel_sidebar__link:link,
+		.p-channel_sidebar__channel:visited,
+		.p-channel_sidebar__link:visited,
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__channel--context,
+		.p-channel_sidebar__link:hover,
+		.p-channel_sidebar__add {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar__section_heading--selected,
+		.p-channel_sidebar__section_heading--selected:hover,
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__channel--selected:link,
+		.p-channel_sidebar__link--selected:link,
+		.p-channel_sidebar__channel--selected:visited,
+		.p-channel_sidebar__link--selected:visited,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected:hover,
+		.p-channel_sidebar__channel--selected + .p-channel_sidebar__close,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__close,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__add,
+		.p-channel_sidebar__add:hover {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__channel--context,
+		.p-channel_sidebar__link:hover,
+		.p-channel_sidebar__close_container:hover {
+			background: #350D36;
+		}
+
+		.p-channel_sidebar__header {
+			color: rgb(207,195,207);
+		}
+
+		/* Folders */
+
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename {
+			background: rgb(38,0,39);
+			color: rgb(207,195,207);
+		}
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename:hover {
+			background: rgb(28,0,29);
+			color: rgb(207,195,207);
+		}
+
+		/* Override presence icons */
+		.p-channel_sidebar__presence_icon.c-presence--active,
+		.p-channel_sidebar__channel_icon_prefix--im-slackbot {
+			color: #2BAC76;
+		}
+		.p-channel_sidebar__channel--selected .p-channel_sidebar__presence_icon.c-presence,
+		.p-channel_sidebar__channel--selected .p-channel_sidebar__channel_icon_prefix--im-slackbot {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__presence_icon.c-presence--away {
+			color: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__section_heading--selected,
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__link--selected:hover,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__add,
+		.p-channel_sidebar__link--selected:hover + .p-channel_sidebar__add {
+			background: #1164A3;
+		}
+
+		.p-channel_sidebar__add {
+			background: rgba(255,255,255,0.1);
+		}
+
+		.p-channel_sidebar__add:hover {
+			background: rgba(255,255,255,0.2);
+		}
+
+		.p-channel_sidebar__section-heading--browse:hover,
+		.p-channel_sidebar__channel--selected .p-channel_sidebar__channel_icon_prefix,
+		.p-channel_sidebar__channel--selected:hover .p-channel_sidebar__channel_icon_prefix,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__channel--selected:after,
+		.p-channel_sidebar__channel--selected:hover:after,
+		.p-channel_sidebar__link--selected:after,
+		.p-channel_sidebar__link--selected:after {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__badge:not(.c-mention_badge--transparent),
+		.p-channel_sidebar__banner--mentions {
+			background: #CD2553;
+		}
+
+		.p-channel_sidebar .c-custom_scrollbar__thumb_vertical,
+		.p-channel_sidebar .c-scrollbar__bar {
+			background: rgba(255,255,255,0.45);
+		}
+
+		.client_channels_list_container.focusablesection:focus .sectionfocusindicator,
+		.client_channels_list_container .focus-ring,
+		.p-channel_sidebar.focusablesection:focus .sectionfocusindicator,
+		#team_menu.focusablesection:focus .sectionfocusindicator {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		.client_channels_list_container a:not(.c-link--focus-visible).focus-ring,
+		.client_channels_list_container button:not(.c-button--focus-visible).focus-ring,
+		.p-channel_sidebar__jumper.c-button--focus-visible:focus,
+		.p-channel_sidebar__history_button.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_label--clickable.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_plus.c-button--focus-visible:focus,
+		.p-channel_sidebar__channel.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-button--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__close.c-button--focus-visible:focus,
+		.p-channel_sidebar__add.c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** `opacity: 1` color overrides */
+		.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--add-channel:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--add-apps:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__section_heading:not(.p-channel_sidebar__section_heading--selected) .p-channel_sidebar__section_heading_label--unreads,
+		.p-channel_sidebar__quickswitcher:hover,
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section-heading--pages-drawer:hover {
+			color: #FFFFFF;
+		}
+
+		/** Navigation Bar **/
+		.p-channel_sidebar__jumper {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__jumper:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__history_button:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button--disabled:hover {
+			background: rgba(255,255,255,0.15);
+		}
+
+		/** Compose Button **/
+		.p-channel_sidebar__compose_button,
+		.p-ia__big_search_compose {
+			background: #350d36;
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__compose_button--disabled {
+			background: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__compose_button--iap1 {
+			background-color: #FFFFFF;
+			color: #3F0E40;
+			fill: #3F0E40;
+		}
+		.p-channel_sidebar__compose_button--iap1:active {
+			background-color: rgb(232,226,232);
+		}
+
+		/** Classic Nav **/
+		.p-classic_nav__team_header {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-classic_nav__team_header:hover {
+			background: #350d36;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--away {
+			color: rgb(207,195,207);
+		}
+		.p-classic_nav__team_header .c-link--focus-visible:focus,
+		.p-classic_nav__team_header .c-button--focus-visible:focus,
+		.p-channel_sidebar__static_list__item.c-virtual_list__item--focus:focus:after,
+		div[aria-selected=true].p-channel_sidebar__static_list__item:focus:after,
+		.p-pages_list__list_item--focus-visible:after,
+		.p-channel_sidebar__section_heading.p-channel_sidebar__section-heading--pages-drawer.c-button--focus-visible:focus:after {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** IA **/
+		.p-ia__sidebar_header .c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** Allow dragged channels and channel sections to have a background **/
+		.p-drag_layer__sidebar_channels,
+		.p-drag_layer__sidebar_section_heading {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+
+		.p-drag_layer__sidebar_channels--multiple {
+			background: #1164A3;
+		}
+
+		/** Allow dragged section heading to have a background **/
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading {
+			background: #3F0E40;
+		}
+
+		/** Organization mode **/
+		.p-channel_sidebar__organize_mode_menu {
+			border-color: rgba(255,255,255,0.11);
+		}
+		.p-channel_sidebar__organize_action {
+			color: #FFFFFF;
+			background-color: rgba(255,255,255,0.11);
+		}
+		.p-channel_sidebar__organize_action:hover,
+		.p-channel_sidebar__organize_action:active,
+		.p-channel_sidebar__organize_action:focus {
+			background-color: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__organize_action--primary {
+			color: #3F0E40;
+			background-color: #FFFFFF;
+		}
+		.p-channel_sidebar__organize_action--primary:hover,
+		.p-channel_sidebar__organize_action--primary:active,
+		.p-channel_sidebar__organize_action--primary:focus {
+			background-color: rgba(255,255,255,0.89);
+		}
+
+		/** IA experiment (feature_iap1) **/
+		.p-ia__sidebar_header {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-ia__omniswitcher_button {
+			color: #FFFFFF;
+			border: 1px solid rgb(86,43,87);
+		}
+		.p-ia__omniswitcher_button:hover {
+			border-color: rgb(101,62,102);
+		}
+		.p-ia__sidebar_header__mode {
+			background-color: rgb(76,31,77);
+		}
+		.p-ia__sidebar_header .p-ia__sidebar_header__mode {
+			background: #3F0E40;
+		}
+
+		.p-ia__sidebar_header--top-nav .p-ia__sidebar_header__button,
+		.p-ia__sidebar_header--top-nav .p-ia__sidebar_header__mode {
+			background-color: initial;
+			border-color: rgb(82,38,83);
+		}
+		.p-ia__sidebar_header--top-nav:not(.p-ia__sidebar_header--creator-setup):hover {
+			background-color: #350D36;
+		}
+		.p-ia__sidebar_header__user__presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-ia__sidebar_header__user__presence.c-presence--away {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar--iap1 .p-channel_sidebar__banner--unreads {
+			background: rgb(236,231,236);
+			color: #3F0E40;
+		}
+		.p-channel_sidebar--iap1.p-channel_sidebar--top_banner_showing .p-channel_sidebar__list:before {
+			background: linear-gradient(to bottom, #3F0E40, rgba(63,14,64,0));
+		}
+		.p-channel_sidebar--iap1.p-channel_sidebar--bottom_banner_showing .p-channel_sidebar__list:after {
+			background: linear-gradient(to top, #3F0E40, rgba(63,14,64,0));
+		}
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_plus:hover,
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_ellipsis:hover {
+			background: rgba(255,255,255,0.1);
+		}
+		.p-channel_sidebar--iap1 .p-channel_sidebar__divider {
+			border-bottom: 1px solid rgb(82,38,83);
+		}
+		.p-workspace--iap1 .p-workspace__sidebar:after {
+			background: rgba(255,255,255,0.1);
+		}
+
+		.p-top_nav {
+			background: #350d36;
+			color: #FFFFFF;
+			box-shadow: 0 1px 0 0 rgba(255,255,255,0.1);
+		}
+		.p-top_nav__button,
+		.p-top_nav__search,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button--disabled:hover,
+		.p-top_nav__search__clear {
+			color: #FFFFFF;
+		}
+		.p-top_nav__windows_icon {
+			fill: #FFFFFF;
+		}
+		.p-top_nav__search__clear:hover {
+			color: rgb(215,207,215);
+		}
+		.p-top_nav__button:hover,
+		.p-setup_escape_hatch:hover,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button:hover {
+			background: rgb(73,37,74);
+		}
+		.p-top_nav__sidebar .p-channel_sidebar__history_button--disabled:hover {
+			background: none;
+		}
+		.p-top_nav__button.c-button--focus-visible:focus,
+		.p-top_nav__search.c-button--focus-visible:focus,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button.c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+		.p-top_nav__search {
+			background: rgb(67,30,68);
+			box-shadow: inset 0 0 0 1px rgb(104,74,104);
+		}
+		.p-top_nav__search:hover {
+			background: rgb(73,37,74);
+			box-shadow: inset 0 0 0 1px rgb(154,134,155);
+		}
+
+		.p-top_nav__help__badge {
+			background: #CD2553;
+			box-shadow: 0 0 0 2px #350d36;
+		}
+		.p-top_nav__help__badge--dot {
+			background: #FFFFFF;
+		}
+
+		.p-ia_edu_cta,
+		.p-ia_edu_cta:hover {
+			background: #CD2553;
+		}
+		.p-ia_edu_throbber circle {
+			fill: #FFFFFF;
+		}
+		.p-top_nav__ia_edu_throbber circle {
+			fill: #FFFFFF;
+		}
+		.p-channel_sidebar__section_heading_ellipsis--showing_throbber {
+			box-shadow: 0 0 1px 1px #FFFFFF;
+		}
+		.p-channel_sidebar__section_heading_ellipsis--showing_throbber .p-ia_edu_thobber__inner--square {
+			fill: #3F0E40;
+		}
+		.p-channel_sidebar__section_heading_ellipsis--showing_throbber .p-ia_edu_throbber__pulse--square {
+			fill: #FFFFFF;
+		}
+
+		/**Sidebar Copy Invite Link Prompt**/
+		.p-channel_sidebar__invite_prompt__container {
+			background: rgb(73,26,74);
+			border: 1px solid rgb(38,0,39);
+		}
+		.p-channel_sidebar__invite_prompt__heading {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__footer {
+			background: #350d36;
+			border: 1px solid #350d36;
+		}
+		.p-channel_sidebar__invite_prompt__footer input {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__link {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__link:hover {
+			color: rgb(215,207,215);
+		}
+		.p-channel_sidebar__invite_prompt__options_link .p-channel_sidebar__invite_prompt__link {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__options_link .p-channel_sidebar__invite_prompt__link:hover {
+			color: rgba(255,255,255,0.8);
+		}
+
+		/** Day 1: Setup Sidebar **/
+		.p-channel_sidebar__channel.p-channel_sidebar__setup_channel_input {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__setup_channel_input::placeholder,
+		.p-channel_sidebar__setup_prompt .c-icon {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar__setup_channel_error_text {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__setup_channel_input:hover {
+			background: #350D36;
+		}
+		.p-channel_sidebar__setup_channel_input:active,
+		.p-channel_sidebar__setup_channel_input:focus,
+		.p-channel_sidebar__link--page_pbrowse-people.p-channel_sidebar__link--page_pbrowse-people--setup,
+		.p-ia__sidebar_header--v-team-creation-view {
+			background: rgb(82,38,83);
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__setup_channel_container:before {
+			background: rgb(82,38,83);
+		}
+		.p-channel_type_button--selected {
+			background: rgb(235,231,235);
+			border: 1px solid rgb(235,231,235);
+			color: #350d36;
+		}
+
+		/** Day 1: Sidebar Setup Prompt**/
+		.p-channel_sidebar__setup_prompt {
+			border-top: 1px solid rgb(82,38,83);
+			color: #FFFFFF;
+			background: rgb(73,26,74);
+		}
+		.p-channel_sidebar__setup_prompt a, .p-channel_sidebar__setup_prompt .c-link--button {
+			color: #FFFFFF;
+		}
+	</style><div class="p-workspace p-workspace--context-pane-collapsed p-workspace--classic-nav p-workspace--iap1" role="tabpanel" aria-label="di-class"><div class="p-workspace__banner"></div><div class="p-workspace__sidebar"><div class="p-workspace__channel_sidebar" data-qa="ws_channel_sidebar"><div class="p-ia__sidebar_header p-ia__sidebar_header--top-nav"><div data-qa="sidebar_header_button" class="p-ia__sidebar_header__button" aria-haspopup="true"><div class="p-ia__sidebar_header__info"><button class="c-button-unstyled p-ia__sidebar_header__team_name" type="button" data-qa="team-menu-trigger" aria-label="Main menu for di-class"><span class="p-ia__sidebar_header__team_name_text">di-class</span> <i class="c-icon p-ia__sidebar_header__menu_icon c-icon--chevron-down" type="chevron-down" aria-hidden="true"></i></button><div class="p-ia__sidebar_header__user"><i class="c-icon p-ia__sidebar_header__user__presence c-presence c-presence--active c-icon--presence-online c-icon--inline" type="presence-online" title="Active" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="true" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span class="p-ia__sidebar_header__user__name">Maria Plutman</span></div></div></div><button class="c-button-unstyled p-channel_sidebar__compose_button p-channel_sidebar__compose_button--iap1" type="button" aria-label="New message" data-qa="composer_button" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-855584d2-59f4-4523-9708-8e1948ceb629"><svg height="16px" viewBox="0 0 20 20" class="p-channel_sidebar__compose_button_svg_icon"><path d="M8.66000142,13.3899994 L10.3700017,12.6999993 C10.8700018,12.4999993 11.3300019,12.1999992 11.7100019,11.8199992 L19.5600032,3.96999786 C20.1900033,3.33999776 20.0600033,2.19999757 19.2800032,1.41999745 L18.570003,0.70999733 C17.7900029,-0.070002798 16.6500027,-0.190002818 16.0300026,0.429997284 L8.22000135,8.23999856 C7.81000128,8.64999863 7.49000123,9.13999871 7.29000119,9.6899988 L6.65000109,11.4199991 C6.120001,12.7599993 7.29000119,13.9099995 8.66000142,13.3899994 Z M14.4200024,18.9999974 C16.8700028,18.9999974 19.0000002,16.96 19.0000002,14.4199996 L19.0000002,8.49999738 C19.0000002,7.34999842 17.5000002,7.34999842 17.5000002,8.49999738 L17.5000002,14.1199995 C17.5000002,16.1099999 16.1100026,17.4999974 14.1200023,17.4999974 L5.88000096,17.4999974 C3.89000064,17.4999974 2.50000016,16.1099999 2.50000016,14.1199995 L2.50000016,5.87999818 C2.50000016,3.88999785 3.89000064,2.49999738 5.88000096,2.49999738 L11.5000002,2.49999738 C12.6900021,2.49999738 12.6800021,0.999997377 11.5000002,0.999997377 L5.58000091,0.999997377 C3.0300005,0.999997377 1.00000016,3.03999771 1.00000016,5.57999813 L1.00000016,14.4199996 C1.00000016,16.96 3.0300005,18.9999974 5.58000091,18.9999974 L14.4200024,18.9999974 Z M17.2100028,4.1899979 L15.8000026,2.76999767 L16.9500028,1.61999748 C17.0600028,1.50999746 17.3300028,1.54999747 17.5200029,1.7499975 L18.230003,2.45999762 C18.430003,2.65999765 18.470003,2.92999769 18.370003,3.01999771 L17.2100028,4.1899979 Z M7.98000131,12.0499992 L8.67000142,10.1099989 C8.75000143,9.88999883 8.86000145,9.71999881 9.02000148,9.54999878 L14.7300024,3.83999784 L16.1400026,5.24999807 L10.4300017,10.989999 C10.2500017,11.159999 10.0900017,11.2599991 9.90000162,11.3299991 L8.00000131,12.0699992 C7.98000131,12.0799992 7.97000131,12.0699992 7.98000131,12.0499992 Z" id="compose-dm" fill-rule="nonzero"></path></svg></button></div><nav class="p-channel_sidebar p-channel_sidebar--classic_nav p-channel_sidebar--iap1" data-qa-channel-sidebar="true" data-qa-channel-sidebar-selected-item-id="D013YKUE326" data-qa-channel-sidebar-sections-booted="true" aria-labelledby="channel_sidebar_aria_label"><h1 id="channel_sidebar_aria_label" class="offscreen">Channel Sidebar</h1><style class="p-channel_sidebar__theme--default">
+		.p-channel_sidebar {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+
+		/* Cover up "p-channel_sidebar__icon" when the close button is focused */
+		.p-channel_sidebar__close:focus {
+			background: #3F0E40;
+		}
+		.p-channel_sidebar__channel--selected + .p-channel_sidebar__close:focus {
+			background: #1164A3;
+		}
+
+		.p-channel_sidebar__channel,
+		.p-channel_sidebar__link,
+		.p-channel_sidebar__channel:link,
+		.p-channel_sidebar__link:link,
+		.p-channel_sidebar__channel:visited,
+		.p-channel_sidebar__link:visited,
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__channel--context,
+		.p-channel_sidebar__link:hover,
+		.p-channel_sidebar__add {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar__section_heading--selected,
+		.p-channel_sidebar__section_heading--selected:hover,
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__channel--selected:link,
+		.p-channel_sidebar__link--selected:link,
+		.p-channel_sidebar__channel--selected:visited,
+		.p-channel_sidebar__link--selected:visited,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected:hover,
+		.p-channel_sidebar__channel--selected + .p-channel_sidebar__close,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__close,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__add,
+		.p-channel_sidebar__add:hover {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__channel--context,
+		.p-channel_sidebar__link:hover,
+		.p-channel_sidebar__close_container:hover {
+			background: #350D36;
+		}
+
+		.p-channel_sidebar__header {
+			color: rgb(207,195,207);
+		}
+
+		/* Folders */
+
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename {
+			background: rgb(38,0,39);
+			color: rgb(207,195,207);
+		}
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename:hover {
+			background: rgb(28,0,29);
+			color: rgb(207,195,207);
+		}
+
+		/* Override presence icons */
+		.p-channel_sidebar__presence_icon.c-presence--active,
+		.p-channel_sidebar__channel_icon_prefix--im-slackbot {
+			color: #2BAC76;
+		}
+		.p-channel_sidebar__channel--selected .p-channel_sidebar__presence_icon.c-presence,
+		.p-channel_sidebar__channel--selected .p-channel_sidebar__channel_icon_prefix--im-slackbot {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__presence_icon.c-presence--away {
+			color: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__section_heading--selected,
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__link--selected:hover,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__add,
+		.p-channel_sidebar__link--selected:hover + .p-channel_sidebar__add {
+			background: #1164A3;
+		}
+
+		.p-channel_sidebar__add {
+			background: rgba(255,255,255,0.1);
+		}
+
+		.p-channel_sidebar__add:hover {
+			background: rgba(255,255,255,0.2);
+		}
+
+		.p-channel_sidebar__section-heading--browse:hover,
+		.p-channel_sidebar__channel--selected .p-channel_sidebar__channel_icon_prefix,
+		.p-channel_sidebar__channel--selected:hover .p-channel_sidebar__channel_icon_prefix,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__channel--selected:after,
+		.p-channel_sidebar__channel--selected:hover:after,
+		.p-channel_sidebar__link--selected:after,
+		.p-channel_sidebar__link--selected:after {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__badge:not(.c-mention_badge--transparent),
+		.p-channel_sidebar__banner--mentions {
+			background: #CD2553;
+		}
+
+		.p-channel_sidebar .c-custom_scrollbar__thumb_vertical,
+		.p-channel_sidebar .c-scrollbar__bar {
+			background: rgba(255,255,255,0.45);
+		}
+
+		.client_channels_list_container.focusablesection:focus .sectionfocusindicator,
+		.client_channels_list_container .focus-ring,
+		.p-channel_sidebar.focusablesection:focus .sectionfocusindicator,
+		#team_menu.focusablesection:focus .sectionfocusindicator {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		.client_channels_list_container a:not(.c-link--focus-visible).focus-ring,
+		.client_channels_list_container button:not(.c-button--focus-visible).focus-ring,
+		.p-channel_sidebar__jumper.c-button--focus-visible:focus,
+		.p-channel_sidebar__history_button.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_label--clickable.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_plus.c-button--focus-visible:focus,
+		.p-channel_sidebar__channel.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-button--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__close.c-button--focus-visible:focus,
+		.p-channel_sidebar__add.c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** `opacity: 1` color overrides */
+		.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--add-channel:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--add-apps:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__section_heading:not(.p-channel_sidebar__section_heading--selected) .p-channel_sidebar__section_heading_label--unreads,
+		.p-channel_sidebar__quickswitcher:hover,
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section-heading--pages-drawer:hover {
+			color: #FFFFFF;
+		}
+
+		/** Navigation Bar **/
+		.p-channel_sidebar__jumper {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__jumper:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__history_button:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button--disabled:hover {
+			background: rgba(255,255,255,0.15);
+		}
+
+		/** Compose Button **/
+		.p-channel_sidebar__compose_button,
+		.p-ia__big_search_compose {
+			background: #350d36;
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__compose_button--disabled {
+			background: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__compose_button--iap1 {
+			background-color: #FFFFFF;
+			color: #3F0E40;
+			fill: #3F0E40;
+		}
+		.p-channel_sidebar__compose_button--iap1:active {
+			background-color: rgb(232,226,232);
+		}
+
+		/** Classic Nav **/
+		.p-classic_nav__team_header {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-classic_nav__team_header:hover {
+			background: #350d36;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--away {
+			color: rgb(207,195,207);
+		}
+		.p-classic_nav__team_header .c-link--focus-visible:focus,
+		.p-classic_nav__team_header .c-button--focus-visible:focus,
+		.p-channel_sidebar__static_list__item.c-virtual_list__item--focus:focus:after,
+		div[aria-selected=true].p-channel_sidebar__static_list__item:focus:after,
+		.p-pages_list__list_item--focus-visible:after,
+		.p-channel_sidebar__section_heading.p-channel_sidebar__section-heading--pages-drawer.c-button--focus-visible:focus:after {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** IA **/
+		.p-ia__sidebar_header .c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** Allow dragged channels and channel sections to have a background **/
+		.p-drag_layer__sidebar_channels,
+		.p-drag_layer__sidebar_section_heading {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+
+		.p-drag_layer__sidebar_channels--multiple {
+			background: #1164A3;
+		}
+
+		/** Allow dragged section heading to have a background **/
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading {
+			background: #3F0E40;
+		}
+
+		/** Organization mode **/
+		.p-channel_sidebar__organize_mode_menu {
+			border-color: rgba(255,255,255,0.11);
+		}
+		.p-channel_sidebar__organize_action {
+			color: #FFFFFF;
+			background-color: rgba(255,255,255,0.11);
+		}
+		.p-channel_sidebar__organize_action:hover,
+		.p-channel_sidebar__organize_action:active,
+		.p-channel_sidebar__organize_action:focus {
+			background-color: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__organize_action--primary {
+			color: #3F0E40;
+			background-color: #FFFFFF;
+		}
+		.p-channel_sidebar__organize_action--primary:hover,
+		.p-channel_sidebar__organize_action--primary:active,
+		.p-channel_sidebar__organize_action--primary:focus {
+			background-color: rgba(255,255,255,0.89);
+		}
+
+		/** IA experiment (feature_iap1) **/
+		.p-ia__sidebar_header {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-ia__omniswitcher_button {
+			color: #FFFFFF;
+			border: 1px solid rgb(86,43,87);
+		}
+		.p-ia__omniswitcher_button:hover {
+			border-color: rgb(101,62,102);
+		}
+		.p-ia__sidebar_header__mode {
+			background-color: rgb(76,31,77);
+		}
+		.p-ia__sidebar_header .p-ia__sidebar_header__mode {
+			background: #3F0E40;
+		}
+
+		.p-ia__sidebar_header--top-nav .p-ia__sidebar_header__button,
+		.p-ia__sidebar_header--top-nav .p-ia__sidebar_header__mode {
+			background-color: initial;
+			border-color: rgb(82,38,83);
+		}
+		.p-ia__sidebar_header--top-nav:not(.p-ia__sidebar_header--creator-setup):hover {
+			background-color: #350D36;
+		}
+		.p-ia__sidebar_header__user__presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-ia__sidebar_header__user__presence.c-presence--away {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar--iap1 .p-channel_sidebar__banner--unreads {
+			background: rgb(236,231,236);
+			color: #3F0E40;
+		}
+		.p-channel_sidebar--iap1.p-channel_sidebar--top_banner_showing .p-channel_sidebar__list:before {
+			background: linear-gradient(to bottom, #3F0E40, rgba(63,14,64,0));
+		}
+		.p-channel_sidebar--iap1.p-channel_sidebar--bottom_banner_showing .p-channel_sidebar__list:after {
+			background: linear-gradient(to top, #3F0E40, rgba(63,14,64,0));
+		}
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_plus:hover,
+		.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_ellipsis:hover {
+			background: rgba(255,255,255,0.1);
+		}
+		.p-channel_sidebar--iap1 .p-channel_sidebar__divider {
+			border-bottom: 1px solid rgb(82,38,83);
+		}
+		.p-workspace--iap1 .p-workspace__sidebar:after {
+			background: rgba(255,255,255,0.1);
+		}
+
+		.p-top_nav {
+			background: #350d36;
+			color: #FFFFFF;
+			box-shadow: 0 1px 0 0 rgba(255,255,255,0.1);
+		}
+		.p-top_nav__button,
+		.p-top_nav__search,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button--disabled:hover,
+		.p-top_nav__search__clear {
+			color: #FFFFFF;
+		}
+		.p-top_nav__windows_icon {
+			fill: #FFFFFF;
+		}
+		.p-top_nav__search__clear:hover {
+			color: rgb(215,207,215);
+		}
+		.p-top_nav__button:hover,
+		.p-setup_escape_hatch:hover,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button:hover {
+			background: rgb(73,37,74);
+		}
+		.p-top_nav__sidebar .p-channel_sidebar__history_button--disabled:hover {
+			background: none;
+		}
+		.p-top_nav__button.c-button--focus-visible:focus,
+		.p-top_nav__search.c-button--focus-visible:focus,
+		.p-top_nav__sidebar .p-channel_sidebar__history_button.c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+		.p-top_nav__search {
+			background: rgb(67,30,68);
+			box-shadow: inset 0 0 0 1px rgb(104,74,104);
+		}
+		.p-top_nav__search:hover {
+			background: rgb(73,37,74);
+			box-shadow: inset 0 0 0 1px rgb(154,134,155);
+		}
+
+		.p-top_nav__help__badge {
+			background: #CD2553;
+			box-shadow: 0 0 0 2px #350d36;
+		}
+		.p-top_nav__help__badge--dot {
+			background: #FFFFFF;
+		}
+
+		.p-ia_edu_cta,
+		.p-ia_edu_cta:hover {
+			background: #CD2553;
+		}
+		.p-ia_edu_throbber circle {
+			fill: #FFFFFF;
+		}
+		.p-top_nav__ia_edu_throbber circle {
+			fill: #FFFFFF;
+		}
+		.p-channel_sidebar__section_heading_ellipsis--showing_throbber {
+			box-shadow: 0 0 1px 1px #FFFFFF;
+		}
+		.p-channel_sidebar__section_heading_ellipsis--showing_throbber .p-ia_edu_thobber__inner--square {
+			fill: #3F0E40;
+		}
+		.p-channel_sidebar__section_heading_ellipsis--showing_throbber .p-ia_edu_throbber__pulse--square {
+			fill: #FFFFFF;
+		}
+
+		/**Sidebar Copy Invite Link Prompt**/
+		.p-channel_sidebar__invite_prompt__container {
+			background: rgb(73,26,74);
+			border: 1px solid rgb(38,0,39);
+		}
+		.p-channel_sidebar__invite_prompt__heading {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__footer {
+			background: #350d36;
+			border: 1px solid #350d36;
+		}
+		.p-channel_sidebar__invite_prompt__footer input {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__link {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__link:hover {
+			color: rgb(215,207,215);
+		}
+		.p-channel_sidebar__invite_prompt__options_link .p-channel_sidebar__invite_prompt__link {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__invite_prompt__options_link .p-channel_sidebar__invite_prompt__link:hover {
+			color: rgba(255,255,255,0.8);
+		}
+
+		/** Day 1: Setup Sidebar **/
+		.p-channel_sidebar__channel.p-channel_sidebar__setup_channel_input {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__setup_channel_input::placeholder,
+		.p-channel_sidebar__setup_prompt .c-icon {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar__setup_channel_error_text {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__setup_channel_input:hover {
+			background: #350D36;
+		}
+		.p-channel_sidebar__setup_channel_input:active,
+		.p-channel_sidebar__setup_channel_input:focus,
+		.p-channel_sidebar__link--page_pbrowse-people.p-channel_sidebar__link--page_pbrowse-people--setup,
+		.p-ia__sidebar_header--v-team-creation-view {
+			background: rgb(82,38,83);
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__setup_channel_container:before {
+			background: rgb(82,38,83);
+		}
+		.p-channel_type_button--selected {
+			background: rgb(235,231,235);
+			border: 1px solid rgb(235,231,235);
+			color: #350d36;
+		}
+
+		/** Day 1: Sidebar Setup Prompt**/
+		.p-channel_sidebar__setup_prompt {
+			border-top: 1px solid rgb(82,38,83);
+			color: #FFFFFF;
+			background: rgb(73,26,74);
+		}
+		.p-channel_sidebar__setup_prompt a, .p-channel_sidebar__setup_prompt .c-link--button {
+			color: #FFFFFF;
+		}
+	</style><div class="p-channel_sidebar__list" style="position: relative;"><div style="overflow: visible; height: 0px; width: 0px;"><div role="presentation"><div role="presentation" class="c-virtual_list c-virtual_list--scrollbar p-channel_sidebar__static_list c-scrollbar" style="width: 260px; height: 590px;"><div data-qa="slack_kit_scrollbar" role="presentation" class="c-scrollbar__hider"><div role="presentation" class="c-scrollbar__child" style="width: 260px;"><div data-qa="slack_kit_list" class="c-virtual_list__scroll_container" role="presentation" style="position: relative; height: 908px;"><div class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="presentation" id="topPageRow" data-qa="virtual-list-item" style="top: 12px;"><div id="p-pages_list" class="p-pages_list" role="listbox" tabindex="0" aria-label="Pages" aria-activedescendant="p-pages_list__0" data-keep-tabindex="true"><div id="p-pages_list__0" role="option" class="p-pages_list__list_item" aria-selected="true"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--all-threads" type="button" role="presentation" data-sidebar-link-id="Vall_threads" data-qa-channel-sidebar-link-id="Vall_threads" tabindex="-1"><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_all_thread_link">Threads</span></button></div><div id="p-pages_list__1" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_pactivity position_relative" type="button" role="presentation" data-sidebar-link-id="Pactivity" data-qa-channel-sidebar-link-id="Pactivity" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon p-channel_sidebar__link__activity c-icon--mentions c-icon--inherit" type="mentions" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_pactivity">Mentions &amp; reactions</span></button></div><div id="p-pages_list__2" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_pdrafts position_relative" type="button" role="presentation" data-sidebar-link-id="Pdrafts" data-qa-channel-sidebar-link-id="Pdrafts" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon c-icon--all-files c-icon--inherit" type="all-files" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_pdrafts">Drafts</span></button></div><div id="p-pages_list__3" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_psaved position_relative" type="button" role="presentation" data-sidebar-link-id="Psaved" data-qa-channel-sidebar-link-id="Psaved" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon c-icon--bookmark c-icon--inherit" type="bookmark" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_psaved">Saved items</span></button></div><div id="p-pages_list__4" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_pbrowse-channels position_relative" type="button" role="presentation" data-sidebar-link-id="Pbrowse-channels" data-qa-channel-sidebar-link-id="Pbrowse-channels" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon c-icon--share-other-alt c-icon--inherit" type="share-other-alt" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_pbrowse-channels">Channel browser</span></button></div><div id="p-pages_list__5" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_pbrowse-people position_relative" type="button" role="presentation" data-sidebar-link-id="Pbrowse-people" data-qa-channel-sidebar-link-id="Pbrowse-people" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon c-icon--team-directory c-icon--inherit" type="team-directory" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_pbrowse-people">People</span></button></div><div id="p-pages_list__6" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_papps position_relative" type="button" role="presentation" data-sidebar-link-id="Papps" data-qa-channel-sidebar-link-id="Papps" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon c-icon--gn-menu c-icon--inherit" type="gn-menu" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_papps">Apps</span></button></div><div id="p-pages_list__7" role="option" class="p-pages_list__list_item" aria-selected="false"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--page_pbrowse-files position_relative" type="button" role="presentation" data-sidebar-link-id="Pbrowse-files" data-qa-channel-sidebar-link-id="Pbrowse-files" tabindex="-1"><i class="c-icon p-channel_sidebar__link__icon c-icon--all-files-alt c-icon--inherit" type="all-files-alt" aria-hidden="true"></i><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_page_pbrowse-files">Files</span></button></div></div></div><div class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="presentation" id="morePages" data-qa="virtual-list-item" style="top: 236px;"><button class="c-button-unstyled p-channel_sidebar__section_heading p-channel_sidebar__section-heading--pages-drawer" type="button" aria-expanded="true" aria-controls="p-pages_list" aria-label="More pages" data-keep-tabindex="true"><i class="c-icon p-channel_sidebar__section-heading--pages-drawer-icon c-icon--arrow-large-up c-icon--inherit c-icon--inline" type="arrow-large-up" aria-hidden="true"></i>Show less</button></div><div class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="presentation" id="sectionHeading-divider-pages" data-qa="virtual-list-item" style="top: 272px;"><hr class="p-channel_sidebar__divider"></div><div aria-owns="sectionHeading-custom-LTJ4EJ71P sectionHeadingAriaGroup-custom-LTJ4EJ71P addAChannelLink sectionHeading-custom-LTFEURL0J sectionHeadingAriaGroup-custom-LTFEURL0J invitePeopleLink sectionHeading-custom-LTU8M99DW sectionHeadingAriaGroup-custom-LTU8M99DW" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="list" id="ariaTree" data-qa="virtual-list-item" style="top: 292px;"><div role="img" aria-label=""></div></div><div aria-level="1" aria-label="Channels" aria-describedby="sectionHeading-custom-LTJ4EJ71P-description" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="sectionHeading-custom-LTJ4EJ71P" data-qa="virtual-list-item" style="top: 292px;"><div class="p-channel_sidebar__section_heading" data-qa-channel-sidebar-section-heading="channels" data-qa="channels" draggable="true"><span role="presentation" aria-hidden="true"><i class="c-icon p-channel_sidebar__section_heading_expand c-icon--caret-right c-icon--inherit c-icon--inline" data-qa="channel-section-collapse" type="caret-right" aria-hidden="true"></i></span><button class="c-button-unstyled p-channel_sidebar__section_heading_label p-channel_sidebar__section_heading_label--clickable " type="button" aria-expanded="true" data-qa="channel_sidebar__section_heading_label__channels" tabindex="-1" aria-haspopup="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-c7a72f4c-6feb-4e39-883c-475b4caea842"> Channels</button><div class="p-channel_sidebar__section_heading_right"><div class="p-channel_sidebar__section_heading_right_item p-channel_sidebar__badge_ellipsis_container"><button class="c-button-unstyled p-channel_sidebar__section_heading_ellipsis" type="button" data-qa="standard_channel_section_button" delay="300" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-1dd444f1-865f-4879-9569-4a4d7cc4b15d"><i class="c-icon p-channel_sidebar__section_heading_ellipsis_icon c-icon--vertical-ellipsis c-icon--inherit c-icon--inline" data-qa="channel_section_ellipsis_icon" type="vertical-ellipsis" aria-hidden="true"></i></button></div><button class="c-button-unstyled p-channel_sidebar__section_heading_right_item p-channel_sidebar__section_heading_plus" type="button" aria-hidden="true" tabindex="-1" data-qa="channel_sidebar__plus__channels" delay="300" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-1bc136c3-bb40-4ed9-bcd9-7b242fc7bccc"></button></div></div></div><div aria-owns="CPCKXNTT6 C8L5S8N7P C7NBVAC4D CQEUC1RSS C011ZAY15L3" aria-label="Channels" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="group" id="sectionHeadingAriaGroup-custom-LTJ4EJ71P" data-qa="virtual-list-item" style="top: 328px;"><div id="sectionHeading-custom-LTJ4EJ71P-description" class="p-channel_sidebar__group-description">Press Cmd Shift L to find or create a channel</div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="CPCKXNTT6" data-qa="virtual-list-item" style="top: 328px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="CPCKXNTT6" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.13059618546545" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--unread" href="https://di-class.slack.com/archives/CPCKXNTT6" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__channel_icon_prefix c-icon--channel-pane-hash c-icon--inherit c-icon--inline" data-qa="sidebar-channel-icon-prefix" type="channel-pane-hash" aria-hidden="true"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_daily_challenge" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-0d45c368-e465-4837-a73d-35e20347ddd8">daily_challenge</span></a></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="C8L5S8N7P" data-qa="virtual-list-item" style="top: 356px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="C8L5S8N7P" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.010610813106939" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--unread" href="https://di-class.slack.com/archives/C8L5S8N7P" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__channel_icon_prefix c-icon--channel-pane-hash c-icon--inherit c-icon--inline" data-qa="sidebar-channel-icon-prefix" type="channel-pane-hash" aria-hidden="true"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_find-a-job" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-0b73c02c-5031-462d-b889-b00a904c7f33">find-a-job</span></a></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="C7NBVAC4D" data-qa="virtual-list-item" style="top: 384px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="C7NBVAC4D" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.014100834685216" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--unread" href="https://di-class.slack.com/archives/C7NBVAC4D" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__channel_icon_prefix c-icon--channel-pane-hash c-icon--inherit c-icon--inline" data-qa="sidebar-channel-icon-prefix" type="channel-pane-hash" aria-hidden="true"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_general" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-f4ccf49d-ff29-4e75-9f82-82c08035ef2b">general</span></a></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="CQEUC1RSS" data-qa="virtual-list-item" style="top: 412px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="CQEUC1RSS" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.0075793082359852" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel" href="https://di-class.slack.com/archives/CQEUC1RSS" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__channel_icon_prefix c-icon--channel-pane-hash c-icon--inherit c-icon--inline" data-qa="sidebar-channel-icon-prefix" type="channel-pane-hash" aria-hidden="true"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_hackathon" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-f35d6a10-a56a-4a6e-bccd-2ef84d693093">hackathon</span></a></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" role="listitem" id="C011ZAY15L3" data-qa="virtual-list-item" style="top: 440px;" tabindex="-1"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="C011ZAY15L3" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.064126114965697" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--unread p-channel_sidebar__channel--last_in_section" href="https://di-class.slack.com/archives/C011ZAY15L3" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__channel_icon_prefix c-icon--channel-pane-hash c-icon--inherit c-icon--inline" data-qa="sidebar-channel-icon-prefix" type="channel-pane-hash" aria-hidden="true"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_web-js-python-pt-q3-2020" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-7b3b7d68-7e31-4b02-b3d1-b111f62a1f21">web-js-python-pt-q3-2020</span></a></div><div aria-level="1" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="addAChannelLink" data-qa="virtual-list-item" style="top: 468px;"><div class="p-channel_sidebar__close_container"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--add-channel p-channel_sidebar__link--dim" type="button" role="presentation" data-sidebar-link-id="Vadd_channel" data-qa-channel-sidebar-link-id="Vadd_channel" tabindex="-1"><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_add_channel">Add a channel</span></button><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-hidden="true" tabindex="-1"><i class="c-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="1" aria-label="Direct Messages" aria-describedby="sectionHeading-custom-LTFEURL0J-description" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="sectionHeading-custom-LTFEURL0J" data-qa="virtual-list-item" style="top: 516px;"><div class="p-channel_sidebar__section_heading" data-qa-channel-sidebar-section-heading="direct_messages" data-qa="direct_messages" draggable="true"><span role="presentation" aria-hidden="true"><i class="c-icon p-channel_sidebar__section_heading_expand c-icon--caret-right c-icon--inherit c-icon--inline" data-qa="channel-section-collapse" type="caret-right" aria-hidden="true"></i></span><button class="c-button-unstyled p-channel_sidebar__section_heading_label p-channel_sidebar__section_heading_label--clickable " type="button" aria-expanded="true" data-qa="channel_sidebar__section_heading_label__direct_messages" tabindex="-1" aria-haspopup="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-74e5c348-e7b2-4eeb-baf2-0c2d5f13b59b"> Direct messages</button><div class="p-channel_sidebar__section_heading_right"><div class="p-channel_sidebar__section_heading_right_item p-channel_sidebar__badge_ellipsis_container"><button class="c-button-unstyled p-channel_sidebar__section_heading_ellipsis" type="button" data-qa="standard_channel_section_button" delay="300" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-14b0cd50-73e3-43ee-8092-16ac58282825"><i class="c-icon p-channel_sidebar__section_heading_ellipsis_icon c-icon--vertical-ellipsis c-icon--inherit c-icon--inline" data-qa="channel_section_ellipsis_icon" type="vertical-ellipsis" aria-hidden="true"></i></button></div><button class="c-button-unstyled p-channel_sidebar__section_heading_right_item p-channel_sidebar__section_heading_plus" type="button" aria-hidden="true" tabindex="-1" data-qa="channel_sidebar__plus__direct_messages" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-284afff3-7571-4af0-b62a-b93e1723f993"></button></div></div></div><div aria-owns="DTTQMSUHJ DTWES8ERL D013RTMK014 D013X97A9QD D011YD1CG5U D013EKT4GS0 D012UGCMCSW D013YKUE326" aria-label="Direct Messages" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="group" id="sectionHeadingAriaGroup-custom-LTFEURL0J" data-qa="virtual-list-item" style="top: 552px;"><div id="sectionHeading-custom-LTFEURL0J-description" class="p-channel_sidebar__group-description">Press Cmd Shift K to find or create a direct message. Press delete to remove a direct message from the sidebar</div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="DTTQMSUHJ" data-qa="virtual-list-item" style="top: 552px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="DTTQMSUHJ" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--im-slackbot" href="https://di-class.slack.com/archives/DTTQMSUHJ" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__channel_icon_prefix p-channel_sidebar__channel_icon_prefix--im-slackbot c-icon--heart c-icon--inherit c-icon--inline" data-qa="sidebar-channel-icon-prefix" type="heart" aria-hidden="true"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_slackbot" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-d8e1c7ae-60af-4579-ace9-fbd10ba2b409"><span>Slackbot</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="DTWES8ERL" data-qa="virtual-list-item" style="top: 580px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="DTWES8ERL" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="true" data-qa-channel-sidebar-priority="0.0068058255271074" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--im-you" href="https://di-class.slack.com/archives/DTWES8ERL" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--active c-icon--presence-online" type="presence-online" title="Active" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="true" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_maria-plutman" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-bfa793f1-d9b9-4a61-b184-0859fcf73636"><span>Maria Plutman</span><span class="p-channel_sidebar__you_label" data-qa="channel_sidebar_name_you">(you)</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="D013RTMK014" data-qa="virtual-list-item" style="top: 608px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="D013RTMK014" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.034900947636155" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel" href="https://di-class.slack.com/archives/D013RTMK014" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--active c-icon--presence-online" type="presence-online" title="Active" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_arthur-ruthenberg" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-8e6c7c4a-b8b7-44e2-8b84-561e1eaeee69"><span>Arthur Ruthenberg</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="D013X97A9QD" data-qa="virtual-list-item" style="top: 636px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="D013X97A9QD" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.034940239866841" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel" href="https://di-class.slack.com/archives/D013X97A9QD" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--away c-icon--presence-offline" type="presence-offline" title="Away" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="false" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name p-channel_sidebar__name--away" data-qa="channel_sidebar_name_denis-khoronenko" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-e9a93a50-78f6-4086-b5c0-1e6c260239e7"><span>Denis Khoronenko</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="D011YD1CG5U" data-qa="virtual-list-item" style="top: 664px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="D011YD1CG5U" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.091745888652351" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel" href="https://di-class.slack.com/archives/D011YD1CG5U" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--away c-icon--presence-offline" type="presence-offline" title="Away" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="false" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name p-channel_sidebar__name--away" data-qa="channel_sidebar_name_lise" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-0552e212-2d7d-445d-bab8-a4a3569a8567"><span>Lise</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="D013EKT4GS0" data-qa="virtual-list-item" style="top: 692px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="D013EKT4GS0" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.030071901896581" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel" href="https://di-class.slack.com/archives/D013EKT4GS0" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--active c-icon--presence-online" type="presence-online" title="Active" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_mathilde-charlet" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-1e2cd7a5-c747-4402-96fe-ac8a6d64e75b"><span>Mathilde Charlet</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="D012UGCMCSW" data-qa="virtual-list-item" style="top: 720px;"><div class="p-channel_sidebar__close_container" data-qa="channel_item_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="D012UGCMCSW" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.023498705523402" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel" href="https://di-class.slack.com/archives/D012UGCMCSW" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--away c-icon--presence-dnd-offline" type="presence-dnd-offline" title="Away, notifications snoozed" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="false" data-qa-presence-dnd="true"></i><span dir="auto" class="p-channel_sidebar__name p-channel_sidebar__name--away" data-qa="channel_sidebar_name_mitchell-neides" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-71cf2eea-401a-43f9-bb78-2b4f7fa0aa41"><span>Mitchell Neides</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" data-qa="channel_item_close" aria-hidden="true" tabindex="-1"><i class="c-deprecated-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="2" aria-selected="true" class="p-channel_sidebar__static_list__item c-virtual_list__item" role="listitem" id="D013YKUE326" data-qa="virtual-list-item" style="top: 748px;" tabindex="0" data-keep-tabindex="true"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="true" data-qa-channel-sidebar-channel-is-muted="false" data-qa-channel-sidebar-channel-id="D013YKUE326" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" data-qa-channel-sidebar-priority="0.0349055909723" tabindex="-1" role="presentation" aria-haspopup="true" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--selected p-channel_sidebar__channel--last_in_section" href="https://di-class.slack.com/archives/D013YKUE326" draggable="true"><i class="c-icon p-channel_sidebar__organizing_checkbox p-channel_sidebar__organizing_checkbox--not-organizing c-icon--real-checkbox-empty c-icon--inherit c-icon--inline" data-qa="organizing-checkbox-state" type="real-checkbox-empty" aria-hidden="true"></i><i class="c-icon p-channel_sidebar__presence_icon c-presence c-presence--active c-icon--presence-online" type="presence-online" title="Active" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name_samuel" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-cf3695fa-6b65-4a01-8e73-e554250992e1"><span>Samuel</span></span></a></div><div aria-level="1" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" role="listitem" id="invitePeopleLink" data-qa="virtual-list-item" style="top: 776px;" tabindex="-1"><div class="p-channel_sidebar__close_container"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--invites p-channel_sidebar__link--dim" type="button" role="presentation" data-sidebar-link-id="Vinvites" data-qa-channel-sidebar-link-id="Vinvites" tabindex="-1"><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_invite_people">Invite people</span></button><button class="c-button-unstyled p-channel_sidebar__close" type="button" tabindex="-1" aria-hidden="true"><i class="c-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div aria-level="1" aria-label="Recent Apps" aria-describedby="sectionHeading-custom-LTU8M99DW-description" aria-selected="false" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="listitem" id="sectionHeading-custom-LTU8M99DW" data-qa="virtual-list-item" style="top: 824px;"><div class="p-channel_sidebar__section_heading p-channel_sidebar__section_heading--empty" data-qa-channel-sidebar-section-heading="recent_apps" data-qa="recent_apps" draggable="true"><span role="presentation" aria-hidden="true"><i class="c-icon p-channel_sidebar__section_heading_expand c-icon--caret-right c-icon--inherit c-icon--inline" data-qa="channel-section-collapse" type="caret-right" aria-hidden="true"></i></span><button class="c-button-unstyled p-channel_sidebar__section_heading_label p-channel_sidebar__section_heading_label--clickable " type="button" aria-expanded="true" data-qa="channel_sidebar__section_heading_label__recent_apps" tabindex="-1" aria-haspopup="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-b4c46964-fd0c-4d0d-bb79-115816a94cca"> Apps</button><div class="p-channel_sidebar__section_heading_right"><div class="p-channel_sidebar__section_heading_right_item p-channel_sidebar__badge_ellipsis_container"><button class="c-button-unstyled p-channel_sidebar__section_heading_ellipsis" type="button" data-qa="standard_channel_section_button" delay="300" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-dc668ae1-b067-4e8a-a672-a0a21ed16332"><i class="c-icon p-channel_sidebar__section_heading_ellipsis_icon c-icon--vertical-ellipsis c-icon--inherit c-icon--inline" data-qa="channel_section_ellipsis_icon" type="vertical-ellipsis" aria-hidden="true"></i></button></div><button class="c-button-unstyled p-channel_sidebar__section_heading_right_item p-channel_sidebar__section_heading_plus" type="button" aria-hidden="true" tabindex="-1" data-qa="channel_sidebar__plus__recent_apps" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-6acf3b1a-3abb-47bb-9379-1e8624465c1f"></button></div></div></div><div aria-owns="" aria-label="Recent Apps" class="p-channel_sidebar__static_list__item c-virtual_list__item" tabindex="-1" role="group" id="sectionHeadingAriaGroup-custom-LTU8M99DW" data-qa="virtual-list-item" style="top: 860px;"><div id="sectionHeading-custom-LTU8M99DW-description" class="p-channel_sidebar__group-description">Press delete to remove messages from an app from the sidebar</div></div></div></div></div><div role="presentation" class="c-scrollbar__track"><div role="presentation" class="c-scrollbar__bar" tabindex="-1" style="height: 383.37px; transform: translateY(116px);"></div></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 261px; height: 591px;"></div></div><div class="contract-trigger"></div></div></div></nav></div></div><div role="main" aria-label="Conversation with @Samuel" class="p-workspace__primary_view"><div class="p-workspace__primary_view_contents"><div class="p-ia__view_header"><div class="p-ia__view_header__info"><div class="p-ia__view_header__title_and_channel_section"><div class="p-classic_nav__model__title__name p-classic_nav__no_drag"><div class="p-classic_nav__model__title__name__button" data-qa="channel_name"><i class="c-icon c-presence c-presence--active c-icon--presence-online c-icon--inline" type="presence-online" title="Active" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span>Samuel</span></div></div><div class="p-channel_section_selector"><span><button class="c-button-unstyled p-channel_section_selector__star" type="button" data-qa="channel-header-star-button" delay="150" data-sk="tooltip_parent" aria-describedby="sk-tooltip-c0eee476-aa36-480a-a225-65d8c96443c9"><i class="c-icon p-channel_section_selector__icon c-icon--star-o c-icon--inherit c-icon--inline" type="star-o" aria-hidden="true"></i></button></span></div></div><div class="p-ia__view_header__metadata"><div data-qa="channel_header__title__info" class="p-classic_nav__model__title__info p-classic_nav__no_drag"></div></div></div><div class="p-ia__view_header__spacer"></div><button class="c-button-unstyled p-classic_nav__model__button p-classic_nav__model__button--calls" type="button" aria-label="Call Samuel" aria-disabled="false" data-qa="channel_header_calls_button" delay="150" data-sk="tooltip_parent" aria-describedby="sk-tooltip-260e12e8-3bd7-42f8-adc6-2390211d51c2"><div class="display_flex"><i class="c-icon p-classic_nav__model__button__icon c-icon--phone" type="phone" aria-hidden="true"></i></div></button><div class="p-ia__view_header__divider"></div><button class="c-button-unstyled p-ia__view_header__button" type="outline" data-qa="channel-details" aria-label="Show details for conversation with @Samuel" aria-expanded="false" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-45de6915-dc12-49fb-992c-0b89ed15368e"><i class="c-icon p-ia__view_header__button_icon c-icon--info-circle" type="info-circle" aria-hidden="true"></i> <span class="p-ia__view_header__button_text">Details</span></button></div><div class="p-file_drag_drop__container"><div class="p-workspace__primary_view_body"><div class="p-message_pane p-message_pane--classic-nav" data-qa="message_pane"><div class="p-message_pane__top_banners"></div><div style="overflow: visible; height: 0px; width: 0px;"><div role="presentation"><div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none; top: 0px;"></div><div role="list" aria-label="Samuel (direct message, away, has draft)" class="c-virtual_list c-virtual_list--scrollbar c-message_list c-scrollbar c-scrollbar--fade" style="width: 1180px; height: 489px;"><div data-qa="slack_kit_scrollbar" role="presentation" class="c-scrollbar__hider"><div role="presentation" class="c-scrollbar__child" style="width: 1180px;"><div data-qa="slack_kit_list" class="c-virtual_list__scroll_container" role="presentation" style="position: relative; height: 6986.69px;"><div class="c-virtual_list__sticky_container" role="presentation" style="top: -100px; bottom: 0px;"><div class="c-virtual_list__item--sticky c-virtual_list__item" tabindex="-1" role="listitem" id="1590008400000.D013YKUE326" data-qa="virtual-list-item" style="top: 0px; z-index: 199;"><div class="c-message_list__day_divider__label c-message_list__day_divider__label--jump_to_date"><button class="c-button-unstyled c-message_list__day_divider__label__pill" type="button" aria-haspopup="true">Today<i class="c-icon c-message_list__day_divider__label__pill__arrow c-icon--chevron-down" type="chevron-down" aria-hidden="true"></i></button></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080520.150500" data-qa="virtual-list-item" style="top: 6196.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Samuel’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Samuel"><a target="_blank" rel="noopener noreferrer" data-message-sender="U012TRJ4YKS" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/U012TRJ4YKS">Samuel</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:02 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-fb05c5ea-0730-4e32-8dcd-4df205f1da97" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080520150500"><span class="c-timestamp__label">8:02 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">I finish about page<br>Can I push it?</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080535.150800" data-qa="virtual-list-item" style="top: 6270.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Maria Plutman’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-UTU96G80M-2bd870032f81-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-UTU96G80M-2bd870032f81-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Maria Plutman"><a target="_blank" rel="noopener noreferrer" data-message-sender="UTU96G80M" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/UTU96G80M">Maria Plutman</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:02 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-2a61ef12-dcfc-42e9-8716-bf24ef91edae" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080535150800"><span class="c-timestamp__label">8:02 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">yes</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080658.151000" data-qa="virtual-list-item" style="top: 6322.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Samuel’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Samuel"><a target="_blank" rel="noopener noreferrer" data-message-sender="U012TRJ4YKS" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/U012TRJ4YKS">Samuel</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:04 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-9285e1ff-c9c8-4677-9c88-8f64acec05ee" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080658151000"><span class="c-timestamp__label">8:04 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">done</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080685.151300" data-qa="virtual-list-item" style="top: 6374.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Maria Plutman’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-UTU96G80M-2bd870032f81-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-UTU96G80M-2bd870032f81-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Maria Plutman"><a target="_blank" rel="noopener noreferrer" data-message-sender="UTU96G80M" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/UTU96G80M">Maria Plutman</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:04 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-dc79afe1-e1a3-4ae6-8867-03a44008c490" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080685151300"><span class="c-timestamp__label">8:04 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">I can push too</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080697.151600" data-qa="virtual-list-item" style="top: 6426.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Samuel’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Samuel"><a target="_blank" rel="noopener noreferrer" data-message-sender="U012TRJ4YKS" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/U012TRJ4YKS">Samuel</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:04 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-e33aa8cd-e33c-49a7-ba40-19483f6a8414" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080697151600"><span class="c-timestamp__label">8:04 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">yeah, don't forget to pull before</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080718.152100" data-qa="virtual-list-item" style="top: 6478.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--above" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left"><div class="p-message_pane_message__compact_timestamp p-message_pane_message__compact_timestamp--light p-message_pane_message__compact_timestamp--adjacent"><a data-stringify-type="replace" data-stringify-text="[8:05 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-09c367f5-a034-4ea8-954b-6462c341085f" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080718152100"><span class="c-timestamp__label">8:05</span></a></div></div><div class="c-message_kit__gutter__right" data-qa="message_content"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">pull, check you don't have conflict, and push</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080890.152300" data-qa="virtual-list-item" style="top: 6508.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Maria Plutman’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-UTU96G80M-2bd870032f81-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-UTU96G80M-2bd870032f81-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Maria Plutman"><a target="_blank" rel="noopener noreferrer" data-message-sender="UTU96G80M" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/UTU96G80M">Maria Plutman</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:08 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-302e94c9-0305-43e3-8e25-3925e38b9973" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080890152300"><span class="c-timestamp__label">8:08 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">done</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590080914.152600" data-qa="virtual-list-item" style="top: 6560.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Samuel’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Samuel"><a target="_blank" rel="noopener noreferrer" data-message-sender="U012TRJ4YKS" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/U012TRJ4YKS">Samuel</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:08 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-b795fefd-b737-49fc-aeb7-f2d54fc4a1a2" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590080914152600"><span class="c-timestamp__label">8:08 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">cool! <span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-9ce31105-f7ed-4f0d-8681-de546544e6ce"><img src="./Slack _ Samuel _ di-class_files/1f642@2x.png" aria-label="slightly smiling face emoji" alt=":slightly_smiling_face:" data-stringify-type="emoji" data-stringify-emoji=":slightly_smiling_face:"></span></div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081014.152800" data-qa="virtual-list-item" style="top: 6612.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--above" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left"><div class="p-message_pane_message__compact_timestamp p-message_pane_message__compact_timestamp--light p-message_pane_message__compact_timestamp--adjacent"><a data-stringify-type="replace" data-stringify-text="[8:10 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-10c84379-3622-4911-af5d-2a4d3f27ae58" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081014152800"><span class="c-timestamp__label">8:10</span></a></div></div><div class="c-message_kit__gutter__right" data-qa="message_content"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">wow it's pretty <span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-9aa3629a-c94d-4b94-a5a2-610310ced9ec"><img src="./Slack _ Samuel _ di-class_files/1f642@2x.png" aria-label="slightly smiling face emoji" alt=":slightly_smiling_face:" data-stringify-type="emoji" data-stringify-emoji=":slightly_smiling_face:"></span></div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081041.153100" data-qa="virtual-list-item" style="top: 6642.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--above" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left"><div class="p-message_pane_message__compact_timestamp p-message_pane_message__compact_timestamp--light p-message_pane_message__compact_timestamp--adjacent"><a data-stringify-type="replace" data-stringify-text="[8:10 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-b617a3ad-38c3-4080-bc7f-92edd312a01f" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081041153100"><span class="c-timestamp__label">8:10</span></a></div></div><div class="c-message_kit__gutter__right" data-qa="message_content"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">we made a good job today, congrats <span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-20c01aae-e36e-4d44-8016-9e9afe716757"><img src="./Slack _ Samuel _ di-class_files/1f609@2x.png" aria-label="wink emoji" alt=":wink:" data-stringify-type="emoji" data-stringify-emoji=":wink:"></span></div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081086.153500" data-qa="virtual-list-item" style="top: 6672.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Maria Plutman’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-UTU96G80M-2bd870032f81-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-UTU96G80M-2bd870032f81-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Maria Plutman"><a target="_blank" rel="noopener noreferrer" data-message-sender="UTU96G80M" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/UTU96G80M">Maria Plutman</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:11 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-8dbb19d6-df82-46b5-9c9e-b8e66504a38b" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081086153500"><span class="c-timestamp__label">8:11 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">Yeah, good job <span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-4d852f86-4da9-4e09-b605-fb2b9cd37753"><img src="./Slack _ Samuel _ di-class_files/1f918@2x.png" aria-label="the horns emoji" alt=":the_horns:" data-stringify-type="emoji" data-stringify-emoji=":the_horns:"></span><span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-c054b641-5e02-462d-8466-eb673c5c1d79"><img src="./Slack _ Samuel _ di-class_files/1f918@2x.png" aria-label="the horns emoji" alt=":the_horns:" data-stringify-type="emoji" data-stringify-emoji=":the_horns:"></span><span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-341258b6-fafc-44a6-89cd-8679e22d8f2f"><img src="./Slack _ Samuel _ di-class_files/1f918@2x.png" aria-label="the horns emoji" alt=":the_horns:" data-stringify-type="emoji" data-stringify-emoji=":the_horns:"></span></div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081112.154300" data-qa="virtual-list-item" style="top: 6724.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--above" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left"><div class="p-message_pane_message__compact_timestamp p-message_pane_message__compact_timestamp--light p-message_pane_message__compact_timestamp--adjacent"><a data-stringify-type="replace" data-stringify-text="[8:11 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-28bff8e4-d60f-453c-957b-e07f87b97223" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081112154300"><span class="c-timestamp__label">8:11</span></a></div></div><div class="c-message_kit__gutter__right" data-qa="message_content"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">Can you add to text new arrivals a like like on contact?</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081195.154600" data-qa="virtual-list-item" style="top: 6754.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Samuel’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Samuel"><a target="_blank" rel="noopener noreferrer" data-message-sender="U012TRJ4YKS" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/U012TRJ4YKS">Samuel</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:13 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-e5fb4e65-6e52-48fc-9d30-39e95a56f206" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081195154600"><span class="c-timestamp__label">8:13 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">yes</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081207.154800" data-qa="virtual-list-item" style="top: 6806.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Maria Plutman’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-UTU96G80M-2bd870032f81-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-UTU96G80M-2bd870032f81-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Maria Plutman"><a target="_blank" rel="noopener noreferrer" data-message-sender="UTU96G80M" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/UTU96G80M">Maria Plutman</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:13 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-383347bb-93a2-44c3-ae36-9270f682367b" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081207154800"><span class="c-timestamp__label">8:13 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">Thanks</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081447.155300" data-qa="virtual-list-item" style="top: 6858.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--above" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left"><div class="p-message_pane_message__compact_timestamp p-message_pane_message__compact_timestamp--light p-message_pane_message__compact_timestamp--adjacent"><a data-stringify-type="replace" data-stringify-text="[8:17 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-f8d62ff3-a0ab-44c4-914b-eb8e65d5ea35" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081447155300"><span class="c-timestamp__label">8:17</span></a></div></div><div class="c-message_kit__gutter__right" data-qa="message_content"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">I'll do the teas and you extras?</div></div></div></div></div></div></div></div></div></div></div></div><div class="c-virtual_list__item" tabindex="-1" role="listitem" id="unreadDivider" data-qa="virtual-list-item" style="top: 6888.69px;"><div class="c-message_list__unread_divider c-message_list__unread_divider--ghost" data-stringify-ignore="true"><hr class="c-message_list__unread_divider__separator" aria-hidden="true"><span class="c-message_list__unread_divider__label">New</span></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081537.156200" data-qa="virtual-list-item" style="top: 6888.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--default" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left" data-stringify-ignore="true"><button class="c-button-unstyled c-message_kit__avatar c-avatar c-avatar--interactive " type="button" aria-hidden="true" aria-label="View Samuel’s Profile" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ Samuel _ di-class_files/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-48" srcset="https://ca.slack-edge.com/T7P4CAKAS-U012TRJ4YKS-0aae450b62e9-72 2x" alt=""></button></div><div class="c-message_kit__gutter__right" data-qa="message_content"><span class="c-message__sender c-message_kit__sender" data-qa="message_sender" data-stringify-type="replace" data-stringify-text="Samuel"><a target="_blank" rel="noopener noreferrer" data-message-sender="U012TRJ4YKS" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link " href="https://app.slack.com/team/U012TRJ4YKS">Samuel</a></span>&nbsp;&nbsp;<a data-stringify-type="replace" data-stringify-text="[8:18 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-764e5855-8621-4eec-b343-c9bbcbef6d1c" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081537156200"><span class="c-timestamp__label">8:18 PM</span></a><br><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">ok. But wait, before that, I think we'll need to check our job. Check mine and I check yours.</div></div></div></div></div></div></div></div></div></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" id="1590081549.156600" data-qa="virtual-list-item" style="top: 6940.69px;"><div role="document" class="c-message_kit__background p-message_pane_message__message c-message_kit__message p-message_pane_message__message--last" data-qa="message_container" data-qa-unprocessed="false" data-qa-placeholder="false"><div role="document" class="c-message_kit__hover" data-qa-hover="true"><div class="c-message_kit__actions c-message_kit__actions--above" style="position: relative;"><div class="c-message_kit__labels__offscreen_message" aria-live="assertive"></div><div class="c-message_kit__gutter"><div class="c-message_kit__gutter__left"><div class="p-message_pane_message__compact_timestamp p-message_pane_message__compact_timestamp--light p-message_pane_message__compact_timestamp--adjacent"><a data-stringify-type="replace" data-stringify-text="[8:19 PM]" data-stringify-requires-siblings="true" delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-7e7f5c99-dee8-4cd8-a109-1e3c3b592e15" class="c-link c-timestamp" href="https://di-class.slack.com/archives/D013YKUE326/p1590081549156600"><span class="c-timestamp__label">8:19</span></a></div></div><div class="c-message_kit__gutter__right" data-qa="message_content"><div class="c-message_kit__blocks c-message_kit__blocks--rich_text"><div class="c-message__message_blocks c-message__message_blocks--rich_text"><div class="p-block_kit_renderer" data-qa="block-kit-renderer"><div class="p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first"><div class="p-rich_text_block" dir="auto"><div class="p-rich_text_section">and if it's ok, we continue on the others pages</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div role="presentation" class="c-scrollbar__track"><div role="presentation" class="c-scrollbar__bar" tabindex="-1" style="height: 50px; transform: translateY(423px);"></div></div></div><div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none; top: 0px;"></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 1181px; height: 490px;"></div></div><div class="contract-trigger"></div></div></div></div><footer class="workspace__primary_view_footer"><div class="p-message_pane_input" data-qa="message_input_container"><div class="p-message_pane_input_inner"><div class="p-workspace__input p-message_input"><div class="p-message_input_field c-texty_input--multi_line c-texty_input ql-container c-texty_input--sticky_composer c-texty_input--double_decker focus" data-qa="message_input" data-message-input="true" data-channel-id="D013YKUE326" data-view-context="message-pane" data-min-lines="1" data-buttons="0"><div class="ql-editor" data-gramm="false" contenteditable="true" id="undefined" dir="auto" role="textbox" tabindex="0" data-team-id="T7P4CAKAS" aria-label="Message Samuel" aria-describedby="context_bar_text-aac567d5" aria-multiline="true" aria-autocomplete="list" aria-expanded="false" aria-owns="chat_input_tab_ui" spellcheck="true"><p>you pushed your last changes?</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true" role="presentation"></div><div class="ql-composer"></div><div class="ql-composer-sticky"><div style="overflow: visible; width: 0px;"><div class="p-composer__body p-composer__body--visible p-composer__body--sticky" role="toolbar" aria-label="formatting"><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Bold" data-format="bold" aria-pressed="false" data-qa="bold-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-332a9dc9-f2e3-4d60-8ac3-4b7f62e8bc82"><i class="c-icon c-icon--bold" type="bold" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Italic" data-format="italic" aria-pressed="false" data-qa="italic-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-63266038-ba1d-40ef-adbf-d52816e3a326"><i class="c-icon c-icon--italic" type="italic" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Strikethrough" data-format="strike" aria-pressed="false" data-qa="strike-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-d8b562d6-a5d9-4c82-97c6-fdb99ef99d4c"><i class="c-icon c-icon--strikethrough" type="strikethrough" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Code" data-format="code" aria-pressed="false" data-qa="code-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-417fea53-08db-4ee1-8507-2c00e5b48ad0"><i class="c-icon c-icon--code" type="code" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Link" data-format="link" aria-pressed="false" data-qa="link-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-af70e2d0-8408-4def-a85d-442411dbc79b"><i class="c-icon c-icon--link" type="link" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Ordered list" data-format="ordered-list" aria-pressed="false" data-qa="ordered-list-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-abaec9c2-6d80-45b9-9cd6-66503f74485d"><i class="c-icon c-icon--numbered-list" type="numbered-list" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Bulleted list" data-format="bullet-list" aria-pressed="false" data-qa="bullet-list-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-becae990-ec74-437a-9326-50a5647f4104"><i class="c-icon c-icon--bullet-list" type="bullet-list" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Blockquote" data-format="blockquote" aria-pressed="false" data-qa="blockquote-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-038c5bef-ae72-4074-9a1b-98cb7174ba37"><i class="c-icon c-icon--quote-post" type="quote-post" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-composer__button p-composer__button--sticky" type="button" tabindex="-1" aria-label="Code block" data-format="code-block" aria-pressed="false" data-qa="code-block-composer-button" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-19e01805-d094-4bc3-aca8-15f454cf9f89"><i class="c-icon c-icon--code-block" type="code-block" aria-hidden="true"></i></button></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 1139px; height: 41px;"></div></div><div class="contract-trigger"></div></div></div><div class="ql-buttons"><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_medium c-texty_input__button c-texty_input__button--send" type="button" data-qa="texty_send_button" aria-label="Send message" delay="150" data-sk="tooltip_parent"><i class="c-icon c-icon--paperplane-filled" type="paperplane-filled" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_medium c-texty_input__button" type="button" aria-label="File menu" tabindex="-1" data-qa="msg_input_file_btn_inset" delay="500" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-f4d3300c-365f-4c37-b044-5e0d1b1bf68c"><i class="c-icon c-icon--paperclip" type="paperclip" aria-hidden="true"></i></button><input type="file" class="p-hidden_file_input" multiple="" aria-hidden="true" data-qa="file_upload" tabindex="-1"><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_medium c-texty_input__button c-texty_input__button--emoji" type="button" data-qa="texty_emoji_button" tabindex="-1" aria-hidden="true" delay="500" aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-3af065c2-4688-4396-8fe4-c70d9251363b"><i class="c-icon c-icon--smile-o" type="smile-o" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_medium c-texty_input__button" type="button" data-qa="texty_mention_button" tabindex="-1" aria-hidden="true" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-2ee53440-86da-4ce3-99d8-4c0f0a1d4265"><i class="c-icon c-icon--mentions" type="mentions" aria-hidden="true"></i></button><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_medium c-texty_input__button c-texty_input__button_composer c-texty_input__button_composer--active" type="button" data-qa="texty_composer_button" tabindex="-1" aria-hidden="true" delay="500" data-sk="tooltip_parent" aria-describedby="sk-tooltip-a3176cf0-7f7b-450f-94b7-74c9716c94a1"><i class="c-icon c-icon--text" type="text" aria-hidden="true"></i></button></div><div class="ql-warning"></div><div class="ql-files"></div><div class="ql-placeholder" aria-hidden="true" role="presentation" tabindex="-1" style=""><div class="c-texty_input__placeholder">Message Samuel</div></div></div><div class="p-shortcuts_menu_trigger_button_left_column"><div class="p-shortcuts_menu_trigger_button_container"><button class="c-button-unstyled c-icon_button c-icon_button--light c-icon_button--size_small p-shortcuts_menu_trigger_button" type="button" data-qa="shortcuts_menu_trigger__message-pane" aria-label="Shortcuts" delay="150" aria-haspopup="true" data-sk="tooltip_parent"><i class="c-icon c-icon--bolt" type="bolt" aria-hidden="true"></i></button></div></div></div><div class="p-notification_bar p-notification_bar--double_decker"><div class="p-notification_bar__section p-notification_bar__section--left"></div><div class="p-notification_bar__section p-notification_bar__section--right p-notification_bar__section--is-visible"><span class="p-notification_bar__formatting" aria-hidden="true"><span class="p-notification_bar__send"><b class="p-notification_bar__return">Return</b> to send</span><b class="p-notification_bar__return">Shift + Return</b> to add a new line</span></div></div></div></div></footer></div></div></div><div class="p-workspace__secondary_view"><div class="p-workspace__secondary_view_contents"></div></div></div><div class="p-client__banners p-ia__workspace_banner"><div role="alert" class="c-banner c-banner--neutral p-ia_banner p-workspace_banner__desktop-notifications" data-qa="banner" style="top: 0px; opacity: 1;"><div class="c-banner__text">Slack needs your permission to <button class="c-link--button" type="button">enable desktop notifications</button>.</div><button class="c-button-unstyled c-icon_button c-icon_button--dark c-icon_button--size_medium c-banner__close" type="button" aria-label="Dismiss"><i class="c-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div></div></div><div class="p-trouble_loading_overlay"></div><div class="p-trouble_loading"><h1 id="p-trouble--title">For some reason, Slack couldn't load 😓</h1><p id="p-trouble--subtext">We're quite sorry about this! Before you try to troubleshoot, please do check <a href="https://status.slack.com/" target="_blank">https://status.slack.com</a> — the problem may be on our end.</p><h3 id="p-trouble--ts">Troubleshooting</h3><div class="p-trouble_loading_content"><p id="p-trouble--tsSubtext">Here are a few things to try:</p><ul><li id="p-trouble--ts1"><a href="https://app.slack.com/client?force_cold_boot=1">Reload Slack</a> or even restart your browser</li><li id="p-trouble--ts2"><a href="https://slack.com/help/test" target="_blank">Test your connection</a> to Slack's servers.</li><li id="p-trouble--ts3">Make sure your security software isn't blocking Slack.</li></ul><p id="p-trouble--moreInfo"><a href="https://slack.com/help" target="_blank">Check our Help Center</a> for more details, or <a href="https://slack.com/help/requests/new" target="_blank">drop us a line</a>.</p></div></div><script>window.wd.translations={"de-DE":{title:"Aus irgendeinem Grund konnte Slack nicht geladen werden 😓",subtext:'Das tut uns wirklich sehr leid! Bevor du dich an die Fehlerbehebung machst, schau bitte mal auf der folgenden Website nach: <a href="http://status.slack.com/">http://status.slack.com/</a>. Es kann nämlich sein, dass das Problem bei uns liegt.',ts:"Fehlerbehebung",tsSubtext:"Hier sind ein paar Dinge, die du versuchen kannst:",ts1:'<a href="/client?force_cold_boot=1">Lade Slack neu</a> oder starte deinen Browser neu.',ts2:'<a href="https://slack.com/help/test" target="_blank">Teste deine Verbindung</a> zu den Servern von Slack.',ts3:"Vergewissere dich bitte, dass deine Sicherheitssoftware Slack nicht blockiert.",moreInfo:'<a href="https://slack.com/help" target="_blank">Informiere dich in unserem Support-Center</a> über weitere Einzelheiten oder <a href="https://slack.com/help/requests/new" target="_blank">sende uns eine Nachricht.</a>'},"es-ES":{title:"Por alguna razón, Slack no se ha cargado 😓",subtext:'Lo sentimos mucho. Antes de intentar solucionar el problema, revisa <a href="http://status.slack.com/">http://status.slack.com/</a>. El problema puede venir de nuestra parte.',ts:"Resolución de problemas",tsSubtext:"Prueba a hacer lo siguiente:",ts1:'<a href="/client?force_cold_boot=1">Vuelve a cargar Slack</a> o incluso reinicia el navegador.',ts2:'<a href="https://slack.com/help/test" target="_blank">Comprueba el estado de tu conexión</a> a los servidores de Slack.',ts3:"Asegúrate de que tu software de seguridad no bloquea Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Consulta nuestro centro de ayuda</a> para más información o <a href="https://slack.com/help/requests/new" target="_blank">escríbenos.</a>'},"es-LA":{title:"Por alguna razón, Slack no pudo cargarse 😓",subtext:'Lo sentimos mucho. Antes de intentar solucionar el problema, revisa <a href="http://status.slack.com/">http://status.slack.com/</a>. El problema puede venir de nuestra parte.',ts:"Resolución de problemas",tsSubtext:"Intenta hacer lo siguiente:",ts1:'<a href="/client?force_cold_boot=1">Vuelve a cargar Slack</a> o incluso reinicia el navegador.',ts2:'<a href="https://slack.com/help/test" target="_blank">Comprueba el estado de tu conexión</a> a los servidores de Slack.',ts3:"Asegúrate de que tu software de seguridad no bloquea Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Consulta nuestro Centro de Ayuda</a> para más información o <a href="https://slack.com/help/requests/new" target="_blank">escríbenos.</a>'},"fr-FR":{title:"Slack n’a pas pu se charger 😓",subtext:'Nous en sommes désolés ! Avant d’essayer de résoudre les problèmes, veuillez consulter <a href="http://status.slack.com/">http://status.slack.com/</a> — le problème pourrait provenir de notre côté.',ts:"Résolution des problèmes",tsSubtext:"Ce que vous pouvez essayer de faire:",ts1:'<a href="/client?force_cold_boot=1">Rechargez Slack</a> ou redémarrez le navigateur.',ts2:'<a href="https://slack.com/help/test" target="_blank">Testez votre connexion</a> aux serveurs Slack.',ts3:"Vérifiez que votre logiciel de sécurité ne bloque pas Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Consultez notre Centre d’assistance</a> pour en savoir plus. Vous pouvez aussi <a href="https://slack.com/help/requests/new" target="_blank">nous écrire.</a>'},"ja-JP":{title:"何らかの理由により、Slack を読み込めませんでした 😓",subtext:'大変申しわけありません！トラブルシューティングを行う前に、<a href="http://status.slack.com/">http://status.slack.com/</a> をご確認ください — 原因はこちらにあるかもしれません。',ts:"トラブルシューティング",tsSubtext:"幾つか試してみてください：",ts1:'<a href="/client?force_cold_boot=1">Slack をリロード</a>するか、ブラウザを再起動してみてください。',ts2:'Slack のサーバーへの<a href="https://slack.com/help/test" target="_blank">接続をテスト</a>します。',ts3:"お使いのセキュリティソフトウェアがSlackをブロックしていないかどうか確認してください。",moreInfo:'詳しくは<a href="https://slack.com/help" target="_blank">ヘルプセンターをチェック</a>するか、<a href="https://slack.com/help/requests/new" target="_blank">当社までご連絡</a>ください。'},"pt-BR":{title:"Por algum motivo, o Slack não carregou 😓",subtext:'Lamentamos o inconveniente. Antes de tentar solucionar o problema, consulte <a href="http://status.slack.com/">http://status.slack.com/</a> — o problema talvez seja nos nossos servidores locais.',ts:"Solução de problemas",tsSubtext:"Tente o seguinte:",ts1:'<a href="/client?force_cold_boot=1">Recarregue o Slack</a> ou reinicie seu navegador.',ts2:'<a href="https://slack.com/help/test" target="_blank">Teste sua conexão</a> com os servidores do Slack.',ts3:"Verifique se o seu software de segurança não está bloqueando o Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Explore nossa Central de Ajuda</a> para mais detalhes ou <a href="https://slack.com/help/requests/new" target="_blank">escreva para nossa equipe.</a>'}},function(){var e,a=document.cookie.match("(^|[^;]+)\\s*i18n_locale\\s*=\\s*([^;]+)"),t=a?a.pop():null;if(t||(t=(null===(e=navigator.languages)||void 0===e?void 0:e.length)?navigator.languages[0]:navigator.language||navigator.browserLanguage||"en-US"),!(0<=t.indexOf("en"))){var s=window.wd.translations[t];s&&(Object.keys(s).forEach(function(e){var a=document.getElementById("p-trouble--"+e);a&&(a.innerHTML=s[e])}),window.wd.translations=null)}}()</script><script>window.translationMap={"en-US":window.wd.cdn+"gantry-translations_en-US.4b28b011f011a7ff32b3.min.json?cacheKey=gantry-1590018618","en-GB":window.wd.cdn+"gantry-translations_en-GB.776132f2af760bbc97a3.min.json?cacheKey=gantry-1590018618","de-DE":window.wd.cdn+"gantry-translations_de-DE.c984f1feff7b626dae40.min.json?cacheKey=gantry-1590018618","es-ES":window.wd.cdn+"gantry-translations_es-ES.8d0bb0e391289618c705.min.json?cacheKey=gantry-1590018618","es-LA":window.wd.cdn+"gantry-translations_es-LA.31282b2a4423068adaee.min.json?cacheKey=gantry-1590018618","fr-FR":window.wd.cdn+"gantry-translations_fr-FR.5268aee2db6bb932f420.min.json?cacheKey=gantry-1590018618","pt-BR":window.wd.cdn+"gantry-translations_pt-BR.8ba20c930aee1a6212ae.min.json?cacheKey=gantry-1590018618","ja-JP":window.wd.cdn+"gantry-translations_ja-JP.34cfe52ab6146ae3e3c0.min.json?cacheKey=gantry-1590018618"},window.performance&&window.performance.timing&&(window.sonic_boot__phase_1__duration=Date.now()-performance.timing.fetchStart,window.sonic_boot__phase_1_5__start=Date.now(),window.performance.mark&&performance.mark("start_load"))</script><script>!function(y){function r(r){for(var a,n,e=r[0],c=r[1],o=r[2],d=0,t=[];d<e.length;d++)n=e[d],Object.prototype.hasOwnProperty.call(m,n)&&m[n]&&t.push(m[n][0]),m[n]=0;for(a in c)Object.prototype.hasOwnProperty.call(c,a)&&(y[a]=c[a]);for(l&&l(r);t.length;)t.shift()();return s.push.apply(s,o||[]),g()}function g(){for(var r,a=0;a<s.length;a++){for(var n=s[a],e=!0,c=1;c<n.length;c++){var o=n[c];0!==m[o]&&(e=!1)}e&&(s.splice(a--,1),r=f(f.s=n[0]))}return r}var n={},c={2:0},m={2:0},s=[];function f(r){if(n[r])return n[r].exports;var a=n[r]={i:r,l:!1,exports:{}};return y[r].call(a.exports,a,a.exports,f),a.l=!0,a.exports}f.e=function(i){var r=[];c[i]?r.push(c[i]):0!==c[i]&&{4:1,5:1,6:1,10:1,15:1,18:1,25:1,42:1,107:1}[i]&&r.push(c[i]=new Promise(function(r,e){for(var a=({0:"gantry-vendors-async",3:"workflow-builder-page-edit-workflow",4:"calls-boot-styles",5:"checkout-boot-styles",6:"docs-boot-styles",7:"vendors~gantry-async-codemirror-lang-vue",10:"client-boot-styles",12:"gantry-async-codemirror-lang-django",13:"workflow-builder-segment-form-channel_action",15:"free-willy-boot-styles",18:"workflow-builder-boot-styles",20:"calls-boot-imports",22:"checkout-boot-imports",24:"client-boot-imports",25:"client-lazy-components",26:"workflow-builder-page-workflow-version",28:"docs-boot-imports",29:"free-willy-boot-imports",30:"gantry-vendors-async-free-willy",32:"workflow-builder-extension-step-modal-content",41:"workflow-builder-boot-imports",42:"gantry-async-codemirror-snippet-editor",45:"vendors~gantry-async-codemirror-lang-clike~gantry-async-codemirror-lang-dart~gantry-async-codemirror-lang-php",47:"gantry-async-codemirror-lang-clojure",48:"gantry-async-codemirror-lang-coffeescript",49:"gantry-async-codemirror-lang-commonlisp",50:"gantry-async-codemirror-lang-crystal",51:"gantry-async-codemirror-lang-cypher",52:"gantry-async-codemirror-lang-d",53:"gantry-async-codemirror-lang-dart",54:"gantry-async-codemirror-lang-diff",55:"gantry-async-codemirror-lang-dockerfile",56:"gantry-async-codemirror-lang-erlang",57:"gantry-async-codemirror-lang-fortran",58:"gantry-async-codemirror-lang-gherkin",59:"gantry-async-codemirror-lang-go",60:"gantry-async-codemirror-lang-groovy",61:"gantry-async-codemirror-lang-handlebars",62:"gantry-async-codemirror-lang-haskell",63:"gantry-async-codemirror-lang-haxe",65:"gantry-async-codemirror-lang-julia",66:"gantry-async-codemirror-lang-lua",67:"gantry-async-codemirror-lang-mathematica",68:"gantry-async-codemirror-lang-mllike",69:"gantry-async-codemirror-lang-mumps",70:"gantry-async-codemirror-lang-octave",71:"gantry-async-codemirror-lang-pascal",72:"gantry-async-codemirror-lang-pig",73:"gantry-async-codemirror-lang-powershell",74:"gantry-async-codemirror-lang-puppet",75:"gantry-async-codemirror-lang-python",76:"gantry-async-codemirror-lang-r",77:"gantry-async-codemirror-lang-ruby",78:"gantry-async-codemirror-lang-rust",79:"gantry-async-codemirror-lang-sass",80:"gantry-async-codemirror-lang-scheme",81:"gantry-async-codemirror-lang-shell",82:"gantry-async-codemirror-lang-smalltalk",83:"gantry-async-codemirror-lang-stex",84:"gantry-async-codemirror-lang-swift",85:"gantry-async-codemirror-lang-vb",86:"gantry-async-codemirror-lang-vbscript",87:"gantry-async-codemirror-lang-velocity",88:"gantry-async-codemirror-lang-verilog",90:"gantry-async-codemirror-lang-yaml",91:"vendors~gantry-async-codemirror-lang-markdown",92:"vendors~gantry-async-codemirror-lang-perl",93:"gantry-vendors-async-calls",94:"vendors~gantry-async-codemirror-lang-sql",95:"gantry-async-codemirror-lang-php",96:"gantry-vendors-async-checkout",97:"gantry-vendors-async-client",98:"gantry-vendors-async-docs",102:"gantry-async-codemirror-lang-javascript",107:"gantry-async-docsonly-space-tab",108:"vendors~gantry-async-docsonly-space-tab",109:"gantry-vendors-async-workflow-builder",112:"workflow-builder-page-url-error",121:"workflow-builder-segment-form-dialog",122:"workflow-builder-segment-form-member_joined_channel",123:"workflow-builder-segment-form-message",124:"workflow-builder-segment-form-message_action",125:"workflow-builder-segment-form-reaction_added",126:"workflow-builder-segment-form-scheduled",127:"workflow-builder-segment-form-slash_command",131:"gantry-async-modal-message-stats",132:"vendors~gantry-async-modal-message-stats",133:"workflow-builder-segment-form-webhook",142:"vendors~gantry-async-codemirror-lang-stylus~gantry-async-codemirror-lang-vue",143:"gantry-async-codemirror-lang-apl",144:"gantry-async-codemirror-lang-asciiarmor",145:"gantry-async-codemirror-lang-asn.1",146:"gantry-async-codemirror-lang-asterisk",147:"gantry-async-codemirror-lang-brainfuck",148:"gantry-async-codemirror-lang-cmake",149:"gantry-async-codemirror-lang-cobol",151:"gantry-async-codemirror-lang-dtd",152:"gantry-async-codemirror-lang-dylan",153:"gantry-async-codemirror-lang-ebnf",154:"gantry-async-codemirror-lang-ecl",155:"gantry-async-codemirror-lang-eiffel",156:"gantry-async-codemirror-lang-elixir",157:"gantry-async-codemirror-lang-elm",158:"gantry-async-codemirror-lang-factor",159:"gantry-async-codemirror-lang-fcl",160:"gantry-async-codemirror-lang-forth",161:"gantry-async-codemirror-lang-gas",162:"gantry-async-codemirror-lang-graphql",163:"gantry-async-codemirror-lang-haml",164:"gantry-async-codemirror-lang-haskell-literate",165:"gantry-async-codemirror-lang-htmlembedded",166:"gantry-async-codemirror-lang-http",167:"gantry-async-codemirror-lang-idl",168:"gantry-async-codemirror-lang-jinja2",169:"gantry-async-codemirror-lang-livescript",170:"gantry-async-codemirror-lang-mbox",171:"gantry-async-codemirror-lang-mirc",172:"gantry-async-codemirror-lang-modelica",173:"gantry-async-codemirror-lang-mscgen",174:"gantry-async-codemirror-lang-nginx",175:"gantry-async-codemirror-lang-nsis",176:"gantry-async-codemirror-lang-ntriples",177:"gantry-async-codemirror-lang-oz",178:"gantry-async-codemirror-lang-pegjs",179:"gantry-async-codemirror-lang-properties",180:"gantry-async-codemirror-lang-protobuf",181:"gantry-async-codemirror-lang-pug",182:"gantry-async-codemirror-lang-q",183:"gantry-async-codemirror-lang-rpm",184:"gantry-async-codemirror-lang-sas",185:"gantry-async-codemirror-lang-sieve",186:"gantry-async-codemirror-lang-smarty",187:"gantry-async-codemirror-lang-solr",188:"gantry-async-codemirror-lang-soy",189:"gantry-async-codemirror-lang-sparql",190:"gantry-async-codemirror-lang-spreadsheet",191:"gantry-async-codemirror-lang-tcl",192:"gantry-async-codemirror-lang-textile",193:"gantry-async-codemirror-lang-tiddlywiki",194:"gantry-async-codemirror-lang-tiki",195:"gantry-async-codemirror-lang-toml",196:"gantry-async-codemirror-lang-tornado",197:"gantry-async-codemirror-lang-troff",198:"gantry-async-codemirror-lang-ttcn",199:"gantry-async-codemirror-lang-ttcn-cfg",200:"gantry-async-codemirror-lang-turtle",201:"gantry-async-codemirror-lang-twig",202:"gantry-async-codemirror-lang-vhdl",204:"gantry-async-codemirror-lang-webidl",205:"gantry-async-codemirror-lang-xquery",206:"gantry-async-codemirror-lang-yacas",207:"gantry-async-codemirror-lang-yaml-frontmatter",208:"gantry-async-codemirror-lang-z80",209:"vendors~gantry-async-codemirror-lang-rst",210:"gantry-async-codemirror-lang-slim"}[i]||i)+"."+{0:"31d6cfe",3:"31d6cfe",4:"b741d78",5:"e101abe",6:"bd513a8",7:"31d6cfe",10:"200dd62",12:"31d6cfe",13:"31d6cfe",15:"1030a29",18:"5e8643f",20:"31d6cfe",22:"31d6cfe",24:"31d6cfe",25:"99d1e9b",26:"31d6cfe",28:"31d6cfe",29:"31d6cfe",30:"31d6cfe",32:"31d6cfe",41:"31d6cfe",42:"6424654",45:"31d6cfe",47:"31d6cfe",48:"31d6cfe",49:"31d6cfe",50:"31d6cfe",51:"31d6cfe",52:"31d6cfe",53:"31d6cfe",54:"31d6cfe",55:"31d6cfe",56:"31d6cfe",57:"31d6cfe",58:"31d6cfe",59:"31d6cfe",60:"31d6cfe",61:"31d6cfe",62:"31d6cfe",63:"31d6cfe",65:"31d6cfe",66:"31d6cfe",67:"31d6cfe",68:"31d6cfe",69:"31d6cfe",70:"31d6cfe",71:"31d6cfe",72:"31d6cfe",73:"31d6cfe",74:"31d6cfe",75:"31d6cfe",76:"31d6cfe",77:"31d6cfe",78:"31d6cfe",79:"31d6cfe",80:"31d6cfe",81:"31d6cfe",82:"31d6cfe",83:"31d6cfe",84:"31d6cfe",85:"31d6cfe",86:"31d6cfe",87:"31d6cfe",88:"31d6cfe",90:"31d6cfe",91:"31d6cfe",92:"31d6cfe",93:"31d6cfe",94:"31d6cfe",95:"31d6cfe",96:"31d6cfe",97:"31d6cfe",98:"31d6cfe",102:"31d6cfe",107:"b69fc2b",108:"31d6cfe",109:"31d6cfe",112:"31d6cfe",121:"31d6cfe",122:"31d6cfe",123:"31d6cfe",124:"31d6cfe",125:"31d6cfe",126:"31d6cfe",127:"31d6cfe",131:"31d6cfe",132:"31d6cfe",133:"31d6cfe",142:"31d6cfe",143:"31d6cfe",144:"31d6cfe",145:"31d6cfe",146:"31d6cfe",147:"31d6cfe",148:"31d6cfe",149:"31d6cfe",151:"31d6cfe",152:"31d6cfe",153:"31d6cfe",154:"31d6cfe",155:"31d6cfe",156:"31d6cfe",157:"31d6cfe",158:"31d6cfe",159:"31d6cfe",160:"31d6cfe",161:"31d6cfe",162:"31d6cfe",163:"31d6cfe",164:"31d6cfe",165:"31d6cfe",166:"31d6cfe",167:"31d6cfe",168:"31d6cfe",169:"31d6cfe",170:"31d6cfe",171:"31d6cfe",172:"31d6cfe",173:"31d6cfe",174:"31d6cfe",175:"31d6cfe",176:"31d6cfe",177:"31d6cfe",178:"31d6cfe",179:"31d6cfe",180:"31d6cfe",181:"31d6cfe",182:"31d6cfe",183:"31d6cfe",184:"31d6cfe",185:"31d6cfe",186:"31d6cfe",187:"31d6cfe",188:"31d6cfe",189:"31d6cfe",190:"31d6cfe",191:"31d6cfe",192:"31d6cfe",193:"31d6cfe",194:"31d6cfe",195:"31d6cfe",196:"31d6cfe",197:"31d6cfe",198:"31d6cfe",199:"31d6cfe",200:"31d6cfe",201:"31d6cfe",202:"31d6cfe",204:"31d6cfe",205:"31d6cfe",206:"31d6cfe",207:"31d6cfe",208:"31d6cfe",209:"31d6cfe",210:"31d6cfe"}[i]+".css?cacheKey=gantry-1590018618",c=f.p+a,n=document.getElementsByTagName("link"),o=0;o<n.length;o++){var d=(y=n[o]).getAttribute("data-href")||y.getAttribute("href");if("stylesheet"===y.rel&&(d===a||d===c))return r()}var t=document.getElementsByTagName("style");for(o=0;o<t.length;o++){var y;if((d=(y=t[o]).getAttribute("data-href"))===a||d===c)return r()}var g=document.createElement("link");g.rel="stylesheet",g.type="text/css",g.onload=r,g.onerror=function(r){var a=r&&r.target&&r.target.src||c,n=new Error("Loading CSS chunk "+i+" failed.\n("+a+")");n.request=a,e(n)},g.href=c,document.getElementsByTagName("head")[0].appendChild(g)}).then(function(){c[i]=0}));var n=m[i];if(0!==n)if(n)r.push(n[2]);else{var a=new Promise(function(r,a){n=m[i]=[r,a]});r.push(n[2]=a),window.wd.track();var e=function d(t,y){var a,r=y.shift(),n=new RegExp("^("+t+")"),g=(f.p+""+({0:"gantry-vendors-async",3:"workflow-builder-page-edit-workflow",4:"calls-boot-styles",5:"checkout-boot-styles",6:"docs-boot-styles",7:"vendors~gantry-async-codemirror-lang-vue",10:"client-boot-styles",12:"gantry-async-codemirror-lang-django",13:"workflow-builder-segment-form-channel_action",15:"free-willy-boot-styles",18:"workflow-builder-boot-styles",20:"calls-boot-imports",22:"checkout-boot-imports",24:"client-boot-imports",25:"client-lazy-components",26:"workflow-builder-page-workflow-version",28:"docs-boot-imports",29:"free-willy-boot-imports",30:"gantry-vendors-async-free-willy",32:"workflow-builder-extension-step-modal-content",41:"workflow-builder-boot-imports",42:"gantry-async-codemirror-snippet-editor",45:"vendors~gantry-async-codemirror-lang-clike~gantry-async-codemirror-lang-dart~gantry-async-codemirror-lang-php",47:"gantry-async-codemirror-lang-clojure",48:"gantry-async-codemirror-lang-coffeescript",49:"gantry-async-codemirror-lang-commonlisp",50:"gantry-async-codemirror-lang-crystal",51:"gantry-async-codemirror-lang-cypher",52:"gantry-async-codemirror-lang-d",53:"gantry-async-codemirror-lang-dart",54:"gantry-async-codemirror-lang-diff",55:"gantry-async-codemirror-lang-dockerfile",56:"gantry-async-codemirror-lang-erlang",57:"gantry-async-codemirror-lang-fortran",58:"gantry-async-codemirror-lang-gherkin",59:"gantry-async-codemirror-lang-go",60:"gantry-async-codemirror-lang-groovy",61:"gantry-async-codemirror-lang-handlebars",62:"gantry-async-codemirror-lang-haskell",63:"gantry-async-codemirror-lang-haxe",65:"gantry-async-codemirror-lang-julia",66:"gantry-async-codemirror-lang-lua",67:"gantry-async-codemirror-lang-mathematica",68:"gantry-async-codemirror-lang-mllike",69:"gantry-async-codemirror-lang-mumps",70:"gantry-async-codemirror-lang-octave",71:"gantry-async-codemirror-lang-pascal",72:"gantry-async-codemirror-lang-pig",73:"gantry-async-codemirror-lang-powershell",74:"gantry-async-codemirror-lang-puppet",75:"gantry-async-codemirror-lang-python",76:"gantry-async-codemirror-lang-r",77:"gantry-async-codemirror-lang-ruby",78:"gantry-async-codemirror-lang-rust",79:"gantry-async-codemirror-lang-sass",80:"gantry-async-codemirror-lang-scheme",81:"gantry-async-codemirror-lang-shell",82:"gantry-async-codemirror-lang-smalltalk",83:"gantry-async-codemirror-lang-stex",84:"gantry-async-codemirror-lang-swift",85:"gantry-async-codemirror-lang-vb",86:"gantry-async-codemirror-lang-vbscript",87:"gantry-async-codemirror-lang-velocity",88:"gantry-async-codemirror-lang-verilog",90:"gantry-async-codemirror-lang-yaml",91:"vendors~gantry-async-codemirror-lang-markdown",92:"vendors~gantry-async-codemirror-lang-perl",93:"gantry-vendors-async-calls",94:"vendors~gantry-async-codemirror-lang-sql",95:"gantry-async-codemirror-lang-php",96:"gantry-vendors-async-checkout",97:"gantry-vendors-async-client",98:"gantry-vendors-async-docs",102:"gantry-async-codemirror-lang-javascript",107:"gantry-async-docsonly-space-tab",108:"vendors~gantry-async-docsonly-space-tab",109:"gantry-vendors-async-workflow-builder",112:"workflow-builder-page-url-error",121:"workflow-builder-segment-form-dialog",122:"workflow-builder-segment-form-member_joined_channel",123:"workflow-builder-segment-form-message",124:"workflow-builder-segment-form-message_action",125:"workflow-builder-segment-form-reaction_added",126:"workflow-builder-segment-form-scheduled",127:"workflow-builder-segment-form-slash_command",131:"gantry-async-modal-message-stats",132:"vendors~gantry-async-modal-message-stats",133:"workflow-builder-segment-form-webhook",142:"vendors~gantry-async-codemirror-lang-stylus~gantry-async-codemirror-lang-vue",143:"gantry-async-codemirror-lang-apl",144:"gantry-async-codemirror-lang-asciiarmor",145:"gantry-async-codemirror-lang-asn.1",146:"gantry-async-codemirror-lang-asterisk",147:"gantry-async-codemirror-lang-brainfuck",148:"gantry-async-codemirror-lang-cmake",149:"gantry-async-codemirror-lang-cobol",151:"gantry-async-codemirror-lang-dtd",152:"gantry-async-codemirror-lang-dylan",153:"gantry-async-codemirror-lang-ebnf",154:"gantry-async-codemirror-lang-ecl",155:"gantry-async-codemirror-lang-eiffel",156:"gantry-async-codemirror-lang-elixir",157:"gantry-async-codemirror-lang-elm",158:"gantry-async-codemirror-lang-factor",159:"gantry-async-codemirror-lang-fcl",160:"gantry-async-codemirror-lang-forth",161:"gantry-async-codemirror-lang-gas",162:"gantry-async-codemirror-lang-graphql",163:"gantry-async-codemirror-lang-haml",164:"gantry-async-codemirror-lang-haskell-literate",165:"gantry-async-codemirror-lang-htmlembedded",166:"gantry-async-codemirror-lang-http",167:"gantry-async-codemirror-lang-idl",168:"gantry-async-codemirror-lang-jinja2",169:"gantry-async-codemirror-lang-livescript",170:"gantry-async-codemirror-lang-mbox",171:"gantry-async-codemirror-lang-mirc",172:"gantry-async-codemirror-lang-modelica",173:"gantry-async-codemirror-lang-mscgen",174:"gantry-async-codemirror-lang-nginx",175:"gantry-async-codemirror-lang-nsis",176:"gantry-async-codemirror-lang-ntriples",177:"gantry-async-codemirror-lang-oz",178:"gantry-async-codemirror-lang-pegjs",179:"gantry-async-codemirror-lang-properties",180:"gantry-async-codemirror-lang-protobuf",181:"gantry-async-codemirror-lang-pug",182:"gantry-async-codemirror-lang-q",183:"gantry-async-codemirror-lang-rpm",184:"gantry-async-codemirror-lang-sas",185:"gantry-async-codemirror-lang-sieve",186:"gantry-async-codemirror-lang-smarty",187:"gantry-async-codemirror-lang-solr",188:"gantry-async-codemirror-lang-soy",189:"gantry-async-codemirror-lang-sparql",190:"gantry-async-codemirror-lang-spreadsheet",191:"gantry-async-codemirror-lang-tcl",192:"gantry-async-codemirror-lang-textile",193:"gantry-async-codemirror-lang-tiddlywiki",194:"gantry-async-codemirror-lang-tiki",195:"gantry-async-codemirror-lang-toml",196:"gantry-async-codemirror-lang-tornado",197:"gantry-async-codemirror-lang-troff",198:"gantry-async-codemirror-lang-ttcn",199:"gantry-async-codemirror-lang-ttcn-cfg",200:"gantry-async-codemirror-lang-turtle",201:"gantry-async-codemirror-lang-twig",202:"gantry-async-codemirror-lang-vhdl",204:"gantry-async-codemirror-lang-webidl",205:"gantry-async-codemirror-lang-xquery",206:"gantry-async-codemirror-lang-yacas",207:"gantry-async-codemirror-lang-yaml-frontmatter",208:"gantry-async-codemirror-lang-z80",209:"vendors~gantry-async-codemirror-lang-rst",210:"gantry-async-codemirror-lang-slim"}[i]||i)+"."+{0:"7c3c6a8",3:"e2a41aa",4:"63cc617",5:"c874775",6:"194d0b4",7:"78d88f8",10:"2ac64dc",12:"3ea41e8",13:"70ff680",15:"86431e4",18:"ac94c44",20:"3e1ddb4",22:"384cfa7",24:"67965fd",25:"cb3d353",26:"646c52a",28:"e28e8a6",29:"aefe701",30:"165c15d",32:"1160680",41:"7a7658d",42:"ddf8695",45:"8550e23",47:"bb06add",48:"0011476",49:"5ea984d",50:"155677e",51:"d0e1bc8",52:"844b479",53:"add9a49",54:"5de086c",55:"18c8d23",56:"8a10d09",57:"d2e534b",58:"8e67db9",59:"6075db1",60:"5c1b0f2",61:"663069b",62:"7ade765",63:"c075f69",65:"426dfe0",66:"cd2d15f",67:"6ea2d7c",68:"5eeacb9",69:"22cff54",70:"ee9d0f4",71:"a42e50e",72:"796b037",73:"61fd663",74:"51ced59",75:"2b8311c",76:"9e43c17",77:"06ccda2",78:"f5bed06",79:"cb45f97",80:"e4710c6",81:"13f0f78",82:"de42f2d",83:"c1f1f20",84:"2ad360f",85:"15f942f",86:"d1fd7e6",87:"b83515a",88:"1af1903",90:"e5d9f04",91:"fae7ea4",92:"a3aa535",93:"115d102",94:"7929ef0",95:"7355561",96:"c5c6b28",97:"bce7437",98:"68a14e2",102:"8df29c8",107:"f3e33e1",108:"f0aceb7",109:"fab5a6d",112:"d271ff0",121:"ab63b5c",122:"deda1c6",123:"7cd23f1",124:"0491814",125:"b119092",126:"7db54ec",127:"a61b207",131:"2144bd1",132:"b19f528",133:"606249c",142:"eb49888",143:"df6de37",144:"31a97a7",145:"5b570c9",146:"5698d50",147:"22e52dc",148:"9d86c10",149:"053fc52",151:"d630c02",152:"44a91b7",153:"07885e0",154:"e808cb0",155:"15745e1",156:"6aa2a86",157:"9e9c2c0",158:"ff8142f",159:"17fe8fd",160:"ff74a4a",161:"25b3b9f",162:"e3066c7",163:"86551ba",164:"8234130",165:"94c3476",166:"6ce1837",167:"11dc929",168:"7c6f157",169:"2da3d73",170:"ed350f2",171:"0f002bd",172:"a3193a2",173:"12ed7fd",174:"ce5516b",175:"f5494c9",176:"2ca5220",177:"aa50f05",178:"c6241f3",179:"5d67451",180:"6367c18",181:"7083887",182:"f4e8ed5",183:"ca32a19",184:"ec2175e",185:"35b0b7b",186:"a91614a",187:"d8115cf",188:"dd66107",189:"b97d26b",190:"91337e7",191:"d0fe58f",192:"2b0ff03",193:"aa72121",194:"53d3826",195:"0315795",196:"213937f",197:"77fc575",198:"c4f4c19",199:"4e7f8d8",200:"b0e119a",201:"d0059ae",202:"947a0f0",204:"3c22823",205:"e628da7",206:"0b94718",207:"80f97df",208:"9f12ad7",209:"0bbab4c",210:"c28de82"}[i]+".min.js?cacheKey=gantry-1590018618").replace(n,r),s=document.createElement("script");s.charset="utf-8",s.timeout=120,f.nc&&s.setAttribute("nonce",f.nc),0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),a=function(r){s.onerror=s.onload=null,clearTimeout(l);var a=m[i];if(0!==a)if(a)if(0<y.length){console.warn("[WD]","Failed to load url: ",g,". Trying backup");var n=d(t,y);document.head.appendChild(n)}else{console.warn("[WD]","Failed to load url: ",g,". No more backups available");var e=r&&("load"===r.type?"missing":r.type),c=r&&r.target&&r.target.src,o=new Error("Loading chunk "+i+" failed.\n("+e+": "+c+")");o.type=e,o.request=c,a[1](o),m[i]=void 0}else m[i]=void 0};var l=setTimeout(function(){a({type:"timeout",target:s})},12e4);return s.onerror=function(r){0===y.length&&window.wd.err(s),a(r)},s.onload=function(r){window.wd.ok(s),a(r)},s.src=g,s}("https://a.slack-edge.com/",["https://a.slack-edge.com/","https://b.slack-edge.com/","https://a.slack-edge.com/"]);document.head.appendChild(e)}return Promise.all(r)},f.m=y,f.c=n,f.d=function(r,a,n){f.o(r,a)||Object.defineProperty(r,a,{enumerable:!0,get:n})},f.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},f.t=function(a,r){if(1&r&&(a=f(a)),8&r)return a;if(4&r&&"object"==typeof a&&a&&a.__esModule)return a;var n=Object.create(null);if(f.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:a}),2&r&&"string"!=typeof a)for(var e in a)f.d(n,e,function(r){return a[r]}.bind(null,e));return n},f.n=function(r){var a=r&&r.__esModule?function(){return r.default}:function(){return r};return f.d(a,"a",a),a},f.o=function(r,a){return Object.prototype.hasOwnProperty.call(r,a)},f.p="https://a.slack-edge.com/bv1-8-8cacda2/",f.oe=function(r){throw console.error(r),r};var a=window.webpackJsonp=window.webpackJsonp||[],e=a.push.bind(a);a.push=r,a=a.slice();for(var o=0;o<a.length;o++)r(a[o]);var l=e;g()}([])</script><script>window.wd.track();
+			const s1 = document.createElement('script');
+			s1.onload = function () {
+				window.wd.ok(s1);
+			};
+			s1.onerror = function () {
+				window.wd.err(s1);
+			};
+			s1.src = window.wd.cdn + 'gantry-vendors.a7e932d.min.js?cacheKey=gantry-1590018618';
+			s1.defer = true;
+			s1.crossOrigin = 'anonymous';
+			
+			document.getElementsByTagName('head')[0].appendChild(s1);</script><script>window.wd.track();
+			const s2 = document.createElement('script');
+			s2.onload = function () {
+				window.wd.ok(s2);
+			};
+			s2.onerror = function () {
+				window.wd.err(s2);
+			};
+			s2.src = window.wd.cdn + 'gantry-vendors-client.7c50ce5.min.js?cacheKey=gantry-1590018618';
+			s2.defer = true;
+			s2.crossOrigin = 'anonymous';
+			
+			document.getElementsByTagName('head')[0].appendChild(s2);</script><script>window.wd.track();
+			const s3 = document.createElement('script');
+			s3.onload = function () {
+				window.wd.ok(s3);
+			};
+			s3.onerror = function () {
+				window.wd.err(s3);
+			};
+			s3.src = window.wd.cdn + 'gantry-shared.2aada37.min.js?cacheKey=gantry-1590018618';
+			s3.defer = true;
+			s3.crossOrigin = 'anonymous';
+			
+			document.getElementsByTagName('head')[0].appendChild(s3);</script><script>(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{LMhI:function(n,w,o){}},[["LMhI",2]]])</script><script>(window.webpackJsonp=window.webpackJsonp||[]).push([[10],[]])</script><script>(window.webpackJsonp=window.webpackJsonp||[]).push([[31],{nF6r:function(n,w,o){}},[["nF6r",2]]])</script><script>window.wd.track();
+			const s7 = document.createElement('script');
+			s7.onload = function () {
+				window.wd.ok(s7);
+			};
+			s7.onerror = function () {
+				window.wd.err(s7);
+			};
+			s7.src = window.wd.cdn + 'client-boot.de8925c.min.js?cacheKey=gantry-1590018618';
+			s7.defer = true;
+			s7.crossOrigin = 'anonymous';
+			
+			document.getElementsByTagName('head')[0].appendChild(s7);</script><iframe id="gantry-auth" src="./Slack _ Samuel _ di-class_files/auth.html" style="display: none;"></iframe><div aria-hidden="true" style="position:absolute" tabindex="0"></div></body></html>
