@@ -446,3 +446,13 @@ div span {
 .blockAbout .text-left p {
     color: grey
 }
+
+/* BEGIN TEAS */
+.bg-img-teas {
+    background-image: url("pictures/teas.jpeg");
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 90%;
+}
