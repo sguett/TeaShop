@@ -12,31 +12,46 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* Needed to position the navbar */
-  position: relative;
 }
+
+.bg-img {
+    /* The image used */
+    background-image: url("pictures/1.jpeg");
+    min-height: 700px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
 
 /* Position the navbar container inside the image */
+
 .container {
-  position: absolute;
-  margin: 20px;
-  width: auto;
+    position: absolute;
+    margin: 20px;
+    width: auto;
 }
 
-/* The navbar */
+
+/* BEGIN CSS NAVBAR */
+
 .topnav {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 
 /* Navbar links */
+
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .topnav a:hover {
@@ -44,7 +59,7 @@ body{
     transition: color 0.4s ease 0s;
 }
 
-h1{
+h1 {
     color: #f2f2f2;
     font-size: 48px;
     line-height: 1.3em;
@@ -70,16 +85,6 @@ h1{
 /* BEGIN CSS FOOTER */
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #f5f5f5;
-}
-
-
-.footer {
     /* position: absolute; */
     bottom: 0;
     width: 100%;
@@ -91,8 +96,10 @@ h1{
     padding-top: 100px;
 }
 
-.footBlock1 .text-uppercase {
+.footBlock1 .text-capitalize {
     font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .footBlock2 {
@@ -103,6 +110,19 @@ h1{
 .footBlock3 {
     padding-left: 50px;
     padding-top: 100px;
+}
+
+.footBlock2 .text-capitalize,
+.footBlock3 .text-capitalize {
+    font-size: 20px;
+}
+
+
+/* borderText For border of title text footBlock2 & footBlock3 */
+
+.borderText {
+    border-bottom: black .5px solid;
+    width: 12rem;
 }
 
 footer a:link {
@@ -126,9 +146,80 @@ footer a:visited {
     padding-right: 150px;
 }
 
-.footer-copyright {
+.footerBorderUp {
     margin-top: 50px;
+    border-top: 1px black solid;
+}
+
+.footerBorderUp2 {
+    margin-top: 5px;
+    border-top: 2px black solid;
+}
+
+.footer-copyright {
+    margin-left: 150px;
 }
 
 
 /* END CSS FOOTER */
+
+
+/* BEGIN CSS CONTACT */
+
+.blockContact {
+    height: 100vh;
+    margin: auto 150px auto 150px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.contactText {
+    height: 150px;
+}
+
+div span {
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+#titleContact {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+#titleContact::before,
+#titleContact::after {
+    border-top: .05em solid;
+    content: "";
+    flex: 1;
+    margin: 0 .6em;
+}
+
+.titleQuestionContact {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.blockStores {
+    padding-left: 250px;
+}
+
+.lineStores {
+    border-bottom: solid .09em black;
+    width: 4rem;
+}
+
+.buttonContact {
+    width: 35.5vw;
+    background-color: #242A35;
+    border-color: #242A35;
+}
+
+
+/* END CSS CONTACT */
