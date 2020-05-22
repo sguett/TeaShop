@@ -7,44 +7,43 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
-    <style>
+    <<<<<<< HEAD <style>
         .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 10px;
-            padding: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
         }
 
         .grid-container>div {
-            background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
         }
 
         .item1 {
-            grid-row-start: 1;
-            grid-row-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
         }
 
         img {
-            width: 350px;
-            height: 300px;
+        width: 350px;
+        height: 300px;
         }
 
         h4 {
-            margin-top: 10px;
-            font-family: didot-w01-italic, serif;
-            text-align: center;
+        margin-top: 10px;
+        font-family: didot-w01-italic, serif;
+        text-align: center;
         }
 
         button {
-            margin-bottom: 30px;
-            width: fit-content;
+        margin-bottom: 30px;
+        width: fit-content;
         }
-    </style>
-    <title>Teas</title>
+        </style>
+        =======
+        >>>>>>> 71eb035368fdcbc6bdd3d346c6103991f481bd99
+        <title>Teas</title>
 </head>
-<style>
-
-</style>
 
 <body>
     <!-- BEGIN NAVBAR -->
@@ -63,67 +62,100 @@
             <h1 class="display-4" style="font-family: didot-w01-italic,serif;"><i>Shop Your Favorite Tea</i></h1>
         </div>
     </div>
+    <div class="blockTeas">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+                    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                    <button class="btn" onclick="filterSelection('people')"> People</button>
+                </div>
+                <section class="mb-4">
 
-    <div class="grid-container">
-        <div class="item1"></div>
-        <div>
-            <img src="pictures/Almond Spice.webp" class="gallery__img" alt="Image 1">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Chamomile Tea.webp" class="gallery__img" alt="Image 2">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Earl Grey.webp" class="gallery__img" alt="Image 3">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$5.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Hibiscus Flower.webp" class="gallery__img" alt="Image 4">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Lavender Blend.webp" class="gallery__img" alt="Image 5">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Mint & Melissa Mix.webp" class="gallery__img" alt="Image 6">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Raspberry Leaves.webp" class="gallery__img" alt="Image 7">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Rose Flowers.webp" class="gallery__img" alt="Image 8">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
-        </div>
-        <div>
-            <img src="pictures/Rosemary Specials.webp" class="gallery__img" alt="Image 9">
-            <h4><i>Almond Spice</i> </h4>
-            <p>$7.00</p>
-            <button type="button" class="btn btn-dark">Add to Card</button>
+                    <div class="grid-container">
+                        <div class="item1"></div>
+                        <div>
+                            <img src="pictures/Almond Spice.webp" class="gallery__img" alt="Image 1">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Chamomile Tea.webp" class="gallery__img" alt="Image 2">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Earl Grey.webp" class="gallery__img" alt="Image 3">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$5.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Hibiscus Flower.webp" class="gallery__img" alt="Image 4">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Lavender Blend.webp" class="gallery__img" alt="Image 5">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Mint & Melissa Mix.webp" class="gallery__img" alt="Image 6">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Raspberry Leaves.webp" class="gallery__img" alt="Image 7">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Rose Flowers.webp" class="gallery__img" alt="Image 8">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                        </div>
+                        <div>
+                            <img src="pictures/Rosemary Specials.webp" class="gallery__img" alt="Image 9">
+                            <h4><i>Almond Spice</i> </h4>
+                            <p>$7.00</p>
+                            <button type="button" class="btn btn-dark">Add to Card</button>
+                            <h6 class="font-weight-bold mb-3">Price</h6>
+
+                            <div class="slider-price d-flex align-items-center my-4">
+                                <span class="font-weight-normal small text-muted mr-2">$0</span>
+                                <form class="multi-range-field w-100 mb-1">
+                                    <input id="multi" class="multi-range" type="range" />
+                                </form>
+                                <span class="font-weight-normal small text-muted ml-2">$100</span>
+                            </div>
+
+                </section>
+            </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- <div class="teas" style="margin-top: 50px;"></div> -->
+    <!-- BEGIN FOOTER -->
+    <script language="javascript " type="text/javascript " src="footer.txt "></script>
+    <!-- END FOOTER -->
+    <script language="javascript " type="text/javascript " src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
+        crossorigin="anonymous "></script>
 </body>
 
 </html>
