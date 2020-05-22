@@ -2,6 +2,8 @@ body {
     /* font-family: brandon-grot-w01-light, sans-serif; */
     font-family: didot-w01-italic, serif;
     color: #242A35;
+    width: auto;
+    height: auto;
 }
 
 
@@ -277,9 +279,9 @@ p {
 
 .footer {
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     background-color: #E6E7EA;
 }
 
@@ -464,6 +466,7 @@ div span {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 90%;
+    /* width: 100vw; */
 }
 
 
