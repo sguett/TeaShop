@@ -1,14 +1,6 @@
-var productsTea = {
-    products: ["product1", "product2", "product3", "product4"],
-    price: [10, 20, 30, 40],
-    category: ["classic", "Infusions", "Infusions", "Special Edition"],
-}
-
-// let products = document.getElementsByClassName("listCategoryItem2")[0];
 function filterByCat(arg) {
     let categoryProducts = document.getElementsByClassName("listCategory")[0].children
     let textCat = null;
-    console.log(arg)
     if (arg == "item1") {
         // textCat = categoryProducts[0].classList[0]
         AllCards();
@@ -30,14 +22,24 @@ function AllCards() {
     for (i = 0; i < cards.length; i++) {
         cards[i].style.display = "";
     }
+    let categoryProducts = document.getElementsByClassName("listCategory")[0].children
+    for (let c of categoryProducts) {
+        if (c.innerText == "All") {
+            c.setAttribute("style", "font-weight: bold");
+        } else { c.setAttribute("style", "font-weight: none"); }
+    }
 }
 
 function FilterCards(category) {
     var input, filter, cards, cardContainer, h5, title, i;
     input = document.getElementsByClassName(category)[0];
-    console.log(input)
-    input.setAttribute("style", "font-weight: bold");
     filter = input.innerText.toUpperCase();
+    let categoryProducts = document.getElementsByClassName("listCategory")[0].children
+    for (let c of categoryProducts) {
+        if (c.innerText.toUpperCase() == filter) {
+            c.setAttribute("style", "font-weight: bold");
+        } else { c.setAttribute("style", "font-weight: none"); }
+    }
     cardContainer = document.getElementById("productsItems");
     cards = cardContainer.getElementsByClassName("myItems");
     for (i = 0; i < cards.length; i++) {
