@@ -36,7 +36,7 @@
             margin-bottom: 30px;
             width: fit-content;
         }
-
+        
         .shopping-cart {
             position: fixed;
             top: 0;
@@ -47,28 +47,27 @@
             padding: 20px;
             background: wheat;
         }
-
+        
         .shopping-cart-head {
             background: steelblue;
             color: white;
             padding: 5px;
         }
-
+        
         .shopping-cart,
         .shopping-cart-head {
             border-radius: 5px;
         }
-
+        
         .empty-cart-btn,
         .cart-checkout {
             display: none;
-
         }
-
+        
         .empty-cart-btn {
             margin-bottom: 5px;
         }
-
+        
         .cart-checkout {
             background: limegreen;
         }
@@ -93,20 +92,44 @@
             <h1 class="display-4" style="font-family: didot-w01-italic,serif;"><i>Shop Your Favorite Tea</i></h1>
         </div>
     </div>
+    <!-- END NAVBAR -->
+    <!-- BEGIN TEA SHOP -->
     <div class="blockTeas">
         <div class="row">
             <div class="col-md-3">
-                <div id="myBtnContainer">
+                <h4 style="text-align: left; font-size: 2rem; margin-bottom: 1rem; margin-top: 0;"><i>Filters</i></h4>
+                <div class="lineFilters"></div>
+                <!-- <div id="myBtnContainer">
                     <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                     <button class="btn" onclick="filterSelection('nature')"> Nature</button>
                     <button class="btn" onclick="filterSelection('cars')"> Cars</button>
                     <button class="btn" onclick="filterSelection('people')"> People</button>
+                </div> -->
+
+                <p style="text-align: left;"><i>Price</i></p>
+
+                <div class="PriceLabel">
+                    <div id="rs-bullet" class="rs-label">0</div>
+                    <input id="rs-range-line" class="Filters" type="range" value="50" min="1" max="100" step="1" style="width:225; cursor: hand;">
                 </div>
+                <div class="box-minmax">
+                    <div><i>0</i></div>
+                    <div><i>100</i></div>
+                </div>
+                <div class="lineFilters" style="margin-top: 1rem;"></div>
+                <p style="text-align: left;"><i>Category</i></p>
+                <div class="listCategory">
+                    <div class="listCategoryItem1" style="cursor: hand;" onclick="filterByCat('item1')"><i>All</i></div>
+                    <div class="listCategoryItem2" style="cursor: hand;" onclick="filterByCat('item2')"><i>Classic</i></div>
+                    <div class="listCategoryItem3" style="cursor: hand;" onclick="filterByCat('item3')"><i>Infusions</i></div>
+                    <div class="listCategoryItem4" style="cursor: hand;" onclick="filterByCat('item4')"><i>Special Edition</i></div>
+                </div>
+                <div class="lineFilters" style="margin-top: 1rem;"></div>
             </div>
             <div class="col-md-9">
                 <section>
 
-                    <div class="grid-container">
+                    <div class="grid-container" id="productsItems">
                         <div class="shopping-cart">
                             <div class="shopping-cart-head">
                                 <span class="product-quantity">0</span> Product(s) in Cart
@@ -120,56 +143,56 @@
                             </div>
                         </div>
                         <!-- <div class="item1"></div> -->
-                        <div>
-                            <img src="pictures/Almond Spice.webp" class="products" id="img1" alt="Image 1">
+                        <div class="myItems">
+                            <img src="pictures/Almond Spice.webp" class="classic" id="img1" alt="Image 1">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Chamomile Tea.webp" class="products" id="img1" alt="Image 2">
+                        <div class="myItems">
+                            <img src="pictures/Chamomile Tea.webp" class="infusions" id="img1" alt="Image 2">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Earl Grey.webp" class="products" alt="Image 3">
+                        <div class="myItems">
+                            <img src="pictures/Earl Grey.webp" class="infusions" alt="Image 3">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$5.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Hibiscus Flower.webp" class="products" alt="Image 4">
+                        <div class="myItems">
+                            <img src="pictures/Hibiscus Flower.webp" class="classic" alt="Image 4">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Lavender Blend.webp" class="products" alt="Image 5">
+                        <div class="myItems">
+                            <img src="pictures/Lavender Blend.webp" class="classic" alt="Image 5">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Mint & Melissa Mix.webp" class="products" alt="Image 6">
+                        <div class="myItems">
+                            <img src="pictures/Mint & Melissa Mix.webp" class="infusions" alt="Image 6">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Raspberry Leaves.webp" class="products" alt="Image 7">
+                        <div class="myItems">
+                            <img src="pictures/Raspberry Leaves.webp" class="special edition" alt="Image 7">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Rose Flowers.webp" class="products" alt="Image 8">
+                        <div class="myItems">
+                            <img src="pictures/Rose Flowers.webp" class="infusions" alt="Image 8">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
-                        <div>
-                            <img src="pictures/Rosemary Specials.webp" class="products" alt="Image 9">
+                        <div class="myItems">
+                            <img src="pictures/Rosemary Specials.webp" class="special edition" alt="Image 9">
                             <h4><i>Almond Spice</i> </h4>
                             <p>$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
@@ -179,13 +202,13 @@
             </div>
         </div>
     </div>
+    <!-- END TEA SHOP -->
     <!-- <div class="teas" style="margin-top: 50px;"></div> -->
     <!-- BEGIN FOOTER -->
     <script language="javascript " type="text/javascript " src="footer.txt "></script>
     <!-- END FOOTER -->
     <script>
-<<<<<<< HEAD
-        var ShoppingCart = (function ($) {
+        var ShoppingCart = (function($) {
             "use strict";
 
             // Cahce necesarry DOM Elements
@@ -197,55 +220,48 @@
                 totalPriceEl = document.querySelector(".total-price");
 
             // Fake JSON data array here should be API call
-            let products = [
-                {
+            let products = [{
                     id: 0,
                     name: "iPhone 6S",
                     description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
                     imageUrl: "http://www.icentar.me/phone/6s/images/goldbig.jpg",
                     price: 799
-                },
-                {
+                }, {
                     id: 1,
                     name: "iPhone 5S",
                     description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
                     imageUrl: "http://www.icentar.me/phone/5s/images/silverbig.png",
                     price: 349,
-                },
-                {
+                }, {
                     id: 2,
                     name: "Macbook",
                     description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
                     imageUrl: "http://www.icentar.me/mac/macbook/images/pro.jpg",
                     price: 1499
-                },
-                {
+                }, {
                     id: 3,
                     name: "Macbook Air",
                     description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
                     imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
                     price: 999
-                },
-                {
+                }, {
                     id: 4,
                     name: "Macbook Air 2013",
                     description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
                     imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
                     price: 599
-                },
-                {
+                }, {
                     id: 5,
                     name: "Macbook Air 2012",
                     description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
                     imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
                     price: 499
-                }
-            ],
+                }],
                 productsInCart = [];
 
             // Pretty much self explanatory function. NOTE: Here I have used template strings (ES6 Feature)
-            var generateProductList = function () {
-                products.forEach(function (item) {
+            var generateProductList = function() {
+                products.forEach(function(item) {
                     var productEl = document.createElement("div");
                     productEl.className = "product";
                     productEl.innerHTML = `<div class="product-image">
@@ -266,11 +282,11 @@
             }
 
             // Like one before and I have also used ES6 template strings
-            var generateCartList = function () {
+            var generateCartList = function() {
 
                 cartEl.innerHTML = "";
 
-                productsInCart.forEach(function (item) {
+                productsInCart.forEach(function(item) {
                     var li = document.createElement("li");
                     li.innerHTML = `${item.quantity} ${item.product.name} - $${item.product.price * item.quantity}`;
                     cartEl.appendChild(li);
@@ -283,7 +299,7 @@
 
 
             // Function that generates Empty Cart and Checkout buttons based on condition that checks if productsInCart array is empty
-            var generateCartButtons = function () {
+            var generateCartButtons = function() {
                 if (productsInCart.length > 0) {
                     emptyCartEl.style.display = "block";
                     cartCheckoutEl.style.display = "block"
@@ -295,8 +311,8 @@
             }
 
             // Setting up listeners for click event on all products and Empty Cart button as well
-            var setupListeners = function () {
-                productsEl.addEventListener("click", function (event) {
+            var setupListeners = function() {
+                productsEl.addEventListener("click", function(event) {
                     var el = event.target;
                     if (el.classList.contains("add-to-cart")) {
                         var elId = el.dataset.id;
@@ -304,7 +320,7 @@
                     }
                 });
 
-                emptyCartEl.addEventListener("click", function (event) {
+                emptyCartEl.addEventListener("click", function(event) {
                     if (confirm("Are you sure?")) {
                         productsInCart = [];
                     }
@@ -313,12 +329,15 @@
             }
 
             // Adds new items or updates existing one in productsInCart array
-            var addToCart = function (id) {
+            var addToCart = function(id) {
                 var obj = products[id];
                 if (productsInCart.length === 0 || productFound(obj.id) === undefined) {
-                    productsInCart.push({ product: obj, quantity: 1 });
+                    productsInCart.push({
+                        product: obj,
+                        quantity: 1
+                    });
                 } else {
-                    productsInCart.forEach(function (item) {
+                    productsInCart.forEach(function(item) {
                         if (item.product.id === obj.id) {
                             item.quantity++;
                         }
@@ -329,20 +348,20 @@
 
 
             // This function checks if project is already in productsInCart array
-            var productFound = function (productId) {
-                return productsInCart.find(function (item) {
+            var productFound = function(productId) {
+                return productsInCart.find(function(item) {
                     return item.product.id === productId;
                 });
             }
 
-            var calculateTotalPrice = function () {
-                return productsInCart.reduce(function (total, item) {
+            var calculateTotalPrice = function() {
+                return productsInCart.reduce(function(total, item) {
                     return total + (item.product.price * item.quantity);
                 }, 0);
             }
 
             // This functon starts the whole application
-            var init = function () {
+            var init = function() {
                 generateProductList();
                 setupListeners();
             }
@@ -355,8 +374,6 @@
         })(jQuery);
 
         ShoppingCart.init();
-=======
->>>>>>> b6f14bb295004f33b620ffc79dd4ba13e90cdbb1
     </script>
 
     <script language="javascript " type="text/javascript " src="script.js"></script>
