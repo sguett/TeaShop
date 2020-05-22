@@ -7,8 +7,33 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .item1 {
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
     <title>Teas</title>
 </head>
+<style>
+
+</style>
 
 <body>
     <!-- BEGIN NAVBAR -->
@@ -28,8 +53,54 @@
         </div>
     </div>
 
-    <div class="teas" style="margin-top: 50px;">
+    <div class="grid-container">
+        <div class="item1"></div>
+        <div>
+            <img src="pictures/Almond Spice.webp" class="gallery__img" alt="Image 1">
+            <P>Almond Spice</P>
+            <p>$7.00</p>
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Chamomile Tea.webp" class="gallery__img" alt="Image 2">
+            <P>Chamomile Tea</P>
+            <p>$7.00</p>
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Earl Grey.webp" class="gallery__img" alt="Image 3">
+            <P>Earl Grey</P>
+            <p>$5.00</p>
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Hibiscus Flower.webp" class="gallery__img" alt="Image 4">
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Lavender Blend.webp" class="gallery__img" alt="Image 5">
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Mint & Melissa Mix.webp" class="gallery__img" alt="Image 6">
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Raspberry Leaves.webp" class="gallery__img" alt="Image 7">
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Rose Flowers.webp" class="gallery__img" alt="Image 8">
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
+        <div>
+            <img src="pictures/Rosemary Specials.webp" class="gallery__img" alt="Image 9">
+            <button type="button" class="btn btn-dark">Add to Card</button>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
