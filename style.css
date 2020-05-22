@@ -242,6 +242,13 @@ h1 {
     }
 }
 
+p{
+    text-align: center;
+    font-family: didot-w01-italic,serif;
+    margin-top: 10px;
+
+}
+
 #paraArrivals {
     font: 22px/1.4em;
     font-family: didot-w01-italic;
