@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
     <title>Teas</title>
@@ -27,9 +26,110 @@
             <h1 class="display-4" style="font-family: didot-w01-italic,serif;"><i>Shop Your Favorite Tea</i></h1>
         </div>
     </div>
+    <div class="blockTeas">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+                    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                    <button class="btn" onclick="filterSelection('people')"> People</button>
+                </div>
+                <section class="mb-4">
 
-    <div class="teas" style="margin-top: 50px;">
+                    <h6 class="font-weight-bold mb-3">Price</h6>
+
+                    <div class="slider-price d-flex align-items-center my-4">
+                        <span class="font-weight-normal small text-muted mr-2">$0</span>
+                        <form class="multi-range-field w-100 mb-1">
+                            <input id="multi" class="multi-range" type="range" />
+                        </form>
+                        <span class="font-weight-normal small text-muted ml-2">$100</span>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-9">
+                <!-- Portfolio Gallery Grid -->
+                <div class="row">
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+                            <h4>Mountains</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+                            <h4>Lights</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+                            <h4>Forest</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+                    <div class="column cars">
+                        <div class="content">
+                            <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+                            <h4>Retro</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column cars">
+                        <div class="content">
+                            <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+                            <h4>Fast</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column cars">
+                        <div class="content">
+                            <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+                            <h4>Classic</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+                    <div class="column people">
+                        <div class="content">
+                            <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+                            <h4>Girl</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column people">
+                        <div class="content">
+                            <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+                            <h4>Man</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column people">
+                        <div class="content">
+                            <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+                            <h4>Woman</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <!-- END GRID -->
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- <div class="teas" style="margin-top: 50px;"></div> -->
+    <!-- BEGIN FOOTER -->
+    <script language="javascript " type="text/javascript " src="footer.txt "></script>
+    <!-- END FOOTER -->
+    <script language="javascript " type="text/javascript " src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
 </body>
 
 </html>
