@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
     <style>
@@ -15,23 +16,23 @@
             /* padding: 10px; */
             /* grid-auto-columns: minmax(100px, auto); */
         }
-        
+
         .grid-container>div {
             background-color: rgba(255, 255, 255, 0.8);
         }
-        
+
         img {
             max-width: 100%;
             /* width: 100%; */
             height: auto;
         }
-        
+
         h4 {
             margin-top: 10px;
             /* font-family: didot-w01-italic, serif; */
             text-align: center;
         }
-        
+
         button {
             margin-bottom: 30px;
             width: fit-content;
@@ -93,6 +94,7 @@
             <h1 class="display-4" style="font-family: didot-w01-italic,serif;"><i>Shop Your Favorite Tea</i></h1>
         </div>
     </div>
+
     <div class="blockTeas">
         <div class="row">
             <div class="col-md-3">
@@ -106,72 +108,65 @@
             <div class="col-md-9">
                 <section>
 
-                    <div class="grid-container">
-                        <div class="shopping-cart">
-                            <div class="shopping-cart-head">
-                                <span class="product-quantity">0</span> Product(s) in Cart
-                            </div>
-                            <ul class="shopping-cart-list">
-                            </ul>
-                            <div class="cart-buttons">
-                                <a href="#0" class="button empty-cart-btn">Empty</a>
-                                <a href="#0" class="button cart-checkout">Checkout - <span
-                                        class="total-price">$0</span></a>
-                            </div>
-                        </div>
-                        <!-- <div class="item1"></div> -->
+                    <div id="teas-list" class="grid-container">
                         <div>
                             <img src="pictures/Almond Spice.webp" class="products" id="img1" alt="Image 1">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
+                            <div class="cart">
+                                <i class="material-icons">
+                                    shopping_cart
+                                </i>
+                                <span class="count">10</span>
+                            </div>
                         </div>
                         <div>
                             <img src="pictures/Chamomile Tea.webp" class="products" id="img1" alt="Image 2">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Earl Grey.webp" class="products" alt="Image 3">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$5.00</p>
+                            <p class="price">$5.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Hibiscus Flower.webp" class="products" alt="Image 4">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Lavender Blend.webp" class="products" alt="Image 5">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Mint & Melissa Mix.webp" class="products" alt="Image 6">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Raspberry Leaves.webp" class="products" alt="Image 7">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Rose Flowers.webp" class="products" alt="Image 8">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                         <div>
                             <img src="pictures/Rosemary Specials.webp" class="products" alt="Image 9">
                             <h4><i>Almond Spice</i> </h4>
-                            <p>$7.00</p>
+                            <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark">Add to Card</button>
                         </div>
                     </div>
@@ -184,185 +179,18 @@
     <script language="javascript " type="text/javascript " src="footer.txt "></script>
     <!-- END FOOTER -->
     <script>
-<<<<<<< HEAD
-        var ShoppingCart = (function ($) {
-            "use strict";
-
-            // Cahce necesarry DOM Elements
-            let productsEl = document.querySelector(".products"),
-                cartEl = document.querySelector(".shopping-cart-list"),
-                productQuantityEl = document.querySelector(".product-quantity"),
-                emptyCartEl = document.querySelector(".empty-cart-btn"),
-                cartCheckoutEl = document.querySelector(".cart-checkout"),
-                totalPriceEl = document.querySelector(".total-price");
-
-            // Fake JSON data array here should be API call
-            let products = [
-                {
-                    id: 0,
-                    name: "iPhone 6S",
-                    description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-                    imageUrl: "http://www.icentar.me/phone/6s/images/goldbig.jpg",
-                    price: 799
-                },
-                {
-                    id: 1,
-                    name: "iPhone 5S",
-                    description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-                    imageUrl: "http://www.icentar.me/phone/5s/images/silverbig.png",
-                    price: 349,
-                },
-                {
-                    id: 2,
-                    name: "Macbook",
-                    description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-                    imageUrl: "http://www.icentar.me/mac/macbook/images/pro.jpg",
-                    price: 1499
-                },
-                {
-                    id: 3,
-                    name: "Macbook Air",
-                    description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-                    imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
-                    price: 999
-                },
-                {
-                    id: 4,
-                    name: "Macbook Air 2013",
-                    description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-                    imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
-                    price: 599
-                },
-                {
-                    id: 5,
-                    name: "Macbook Air 2012",
-                    description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-                    imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
-                    price: 499
-                }
-            ],
-                productsInCart = [];
-
-            // Pretty much self explanatory function. NOTE: Here I have used template strings (ES6 Feature)
-            var generateProductList = function () {
-                products.forEach(function (item) {
-                    var productEl = document.createElement("div");
-                    productEl.className = "product";
-                    productEl.innerHTML = `<div class="product-image">
-                                <img src="${item.imageUrl}" alt="${item.name}">
-                             </div>
-                             <div class="product-name"><span>Product:</span> ${item.name}</div>
-                             <div class="product-description"><span>Description:</span> ${item.description}</div>
-                             <div class="product-price"><span>Price:</span> ${item.price} $</div>
-                             <div class="product-add-to-cart">
-                               <a href="#0" class="button see-more">More Details</a>
-                               <a href="#0" class="button add-to-cart" data-id=${item.id}>Add to Cart</a>
-                             </div>
-                          </div>
-`;
-
-                    productsEl.appendChild(productEl);
-                });
-            }
-
-            // Like one before and I have also used ES6 template strings
-            var generateCartList = function () {
-
-                cartEl.innerHTML = "";
-
-                productsInCart.forEach(function (item) {
-                    var li = document.createElement("li");
-                    li.innerHTML = `${item.quantity} ${item.product.name} - $${item.product.price * item.quantity}`;
-                    cartEl.appendChild(li);
-                });
-
-                productQuantityEl.innerHTML = productsInCart.length;
-
-                generateCartButtons()
-            }
-
-
-            // Function that generates Empty Cart and Checkout buttons based on condition that checks if productsInCart array is empty
-            var generateCartButtons = function () {
-                if (productsInCart.length > 0) {
-                    emptyCartEl.style.display = "block";
-                    cartCheckoutEl.style.display = "block"
-                    totalPriceEl.innerHTML = "$ " + calculateTotalPrice();
-                } else {
-                    emptyCartEl.style.display = "none";
-                    cartCheckoutEl.style.display = "none";
-                }
-            }
-
-            // Setting up listeners for click event on all products and Empty Cart button as well
-            var setupListeners = function () {
-                productsEl.addEventListener("click", function (event) {
-                    var el = event.target;
-                    if (el.classList.contains("add-to-cart")) {
-                        var elId = el.dataset.id;
-                        addToCart(elId);
-                    }
-                });
-
-                emptyCartEl.addEventListener("click", function (event) {
-                    if (confirm("Are you sure?")) {
-                        productsInCart = [];
-                    }
-                    generateCartList();
-                });
-            }
-
-            // Adds new items or updates existing one in productsInCart array
-            var addToCart = function (id) {
-                var obj = products[id];
-                if (productsInCart.length === 0 || productFound(obj.id) === undefined) {
-                    productsInCart.push({ product: obj, quantity: 1 });
-                } else {
-                    productsInCart.forEach(function (item) {
-                        if (item.product.id === obj.id) {
-                            item.quantity++;
-                        }
-                    });
-                }
-                generateCartList();
-            }
-
-
-            // This function checks if project is already in productsInCart array
-            var productFound = function (productId) {
-                return productsInCart.find(function (item) {
-                    return item.product.id === productId;
-                });
-            }
-
-            var calculateTotalPrice = function () {
-                return productsInCart.reduce(function (total, item) {
-                    return total + (item.product.price * item.quantity);
-                }, 0);
-            }
-
-            // This functon starts the whole application
-            var init = function () {
-                generateProductList();
-                setupListeners();
-            }
-
-            // Exposes just init function to public, everything else is private
-            return {
-                init: init
-            };
-
-        })(jQuery);
-
-        ShoppingCart.init();
-=======
->>>>>>> b6f14bb295004f33b620ffc79dd4ba13e90cdbb1
     </script>
 
     <script language="javascript " type="text/javascript " src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
+        crossorigin="anonymous "></script>
 </body>
 
 </html>
