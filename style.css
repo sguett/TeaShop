@@ -39,6 +39,16 @@ body {
     background-size: cover;
 }
 
+.bg-img-extras {
+    /* The image used */
+    background-image: url("pictures/extras.jpeg");
+    min-height: 700px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /* Position the navbar container inside the image */
 
@@ -473,9 +483,10 @@ div span {
 /* BEGIN CSS TEAS PAGE */
 
 .blockTeas {
-    /* height: 100vh; */
+     /* height: 100vh; */
     /* margin: auto 150px auto 150px; */
     padding-top: 50px;
+    width: 95%;
     max-width: 95%;
     margin-left: 20px;
     padding-bottom: 100px;
@@ -597,4 +608,4 @@ input[type=range].Filters:focus::-ms-fill-upper {
     text-align: left;
     /* font-size: 20px; */
     /* color: #FFFFFF; */
-}
+} 
