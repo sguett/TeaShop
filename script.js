@@ -58,6 +58,7 @@ function showSliderValue() {
     var rangeSlider = document.getElementById("rs-range-line");
     var rangeBullet = document.getElementById("rs-bullet");
     var rangeColor = document.getElementById("lineFilterColor");
+
     rangeBullet.innerHTML = rangeSlider.value;
     var bulletPosition = (rangeSlider.value / rangeSlider.max);
     rangeBullet.style.marginLeft = (bulletPosition * 215) + "px";
@@ -67,16 +68,31 @@ function showSliderValue() {
     rangeColor.style.borderRadius = "5px";
 
 
-    var cards, cardContainer, price, i;
+    var title, cards, cardContainer, price, i;
     cardContainer = document.getElementById("productsItems");
     cards = cardContainer.getElementsByClassName("myItems");
+    let input = null;
+    let filter = null;
+    let categoryProducts = document.getElementsByClassName("listCategory")[0].children
+    for (i = 0; i < categoryProducts.length; i++) {
+        if (categoryProducts[i].style.fontWeight == "bold") {
+            input = document.getElementsByClassName(categoryProducts[i].classList[0])[0];
+            filter = input.innerText.toUpperCase();
+        } else {
+            filter == null;
+        }
+    }
+
     for (i = 0; i < cards.length; i++) {
+        title = cards[i].firstElementChild.classList[0];
         price = cards[i].children[2].innerText
         price = parseFloat(price.substr(1, price.length));
-        if (price <= parseFloat(rangeSlider.value)) {
+        if (filter == "ALL" && (price <= parseFloat(rangeSlider.value))) {
             cards[i].style.display = "";
-        } else {
-            cards[i].style.display = "none";
-        }
+        } else if (((title.toUpperCase() == filter) || filter.includes(title.toUpperCase())) && (price <= parseFloat(rangeSlider.value))) {
+            cards[i].style.display = "";
+        } else if ((filter == null) && (price <= parseFloat(rangeSlider.value))) {
+            cards[i].style.display = "";
+        } else { cards[i].style.display = "none"; }
     }
 }
