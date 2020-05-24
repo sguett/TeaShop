@@ -73,12 +73,30 @@
             background: limegreen;
         }
 
-        .btn {
+        #pay {
+            margin-left: 5px;
+            width: fit-content;
             border-radius: 0%;
             font-family: sans-serif;
             font-size: 15px;
             font-weight: lighter;
         }
+
+        #delete {
+            margin-left: 30px;
+            width: fit-content;
+            border-radius: 0%;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        /* .btn {
+            border-radius: 0%;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: lighter;
+        } */
     </style>
     <title>Teas</title>
 </head>
@@ -140,9 +158,9 @@
                     <div class="shopping-cart">
                         <div class="shopping-cart-head" id="card">
                             <h4 id="cart" style="font-weight: bolder; font-size: 18px;">Product(s) in Cart</h4>
-                            <button type="button" class="btn btn-dark" id="delete" onclick="clearCart()"
-                                style="margin-left: 80px; margin-top: 10px;">Clear
-                                cart</button>
+                            <button type="button" class="btn btn-dark" id="delete" onclick="clearCart()">Clear
+                                cart<button type="button" class="btn btn-dark" id="pay" onclick="payCart()">Pay
+                                    cart</button></button>
                         </div>
                     </div>
                     <div class="grid-container" id="productsItems">
@@ -151,24 +169,24 @@
                             <h4><i>Classic Tea Pot</i> </h4>
                             <p class="price">$20.00</p>
                             <button click="" type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
-                                onclick="addToCart1()">Add
+                                onclick="addToCart(2)">Add
                                 to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teapot2.webp" class="teapots" id="img1" alt="Image 2">
-                            <h4><i>Classic Tea Pot</i> </h4>
+                            <h4><i>Modern Tea Pot</i> </h4>
                             <p class="price">$17.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
-                                onclick="addToCart2()">Add to
+                                onclick="addToCart(3)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teapot3.webp" class="teapots" alt="Image 3">
-                            <h4><i>Classic Tea Pot</i> </h4>
+                            <h4><i>Round Tea Pot</i> </h4>
                             <p class="price">$19.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
-                                onclick="addToCart3()">Add to
+                                onclick="addToCart(4)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
@@ -176,7 +194,7 @@
                             <h4><i>Cup</i> </h4>
                             <p class="price">$5.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
-                                onclick="addToCart4()">Add to
+                                onclick="addToCart(5)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
@@ -184,7 +202,7 @@
                             <h4><i>Tea Ball Infuser</i> </h4>
                             <p class="price">$2.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
-                                onclick="addToCart5()">Add to
+                                onclick="addToCart(6)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
@@ -192,7 +210,7 @@
                             <h4><i>Tea cups set</i> </h4>
                             <p class="price">$15.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
-                                onclick="addToCart6()">Add to
+                                onclick="addToCart(7)">Add to
                                 Card</button>
                         </div>
                     </div>
@@ -206,51 +224,74 @@
     <script language="javascript " type="text/javascript " src="footer.txt "></script>
     <!-- END FOOTER -->
     <script>
-        function addToCart1() {
+        function addToCart(n) {
             var tag = document.createElement("p");
-            var text = document.createTextNode("Classic Tea Pot $20.00");
-            tag.appendChild(text);
+            var text = document.getElementsByTagName("button")[n].parentElement.children[1].innerText
+            var price = document.getElementsByTagName("button")[n].parentElement.children[2].innerText
             var element = document.getElementById("cart");
+            var bool = false;
+            for (let i = 0; i < element.childElementCount; i++) {
+                let count = 1;
+                if (element.children[i].innerText.includes(text)) {
+                    count = parseInt(element.children[i].innerText.substr(1, 1))
+                    element.children[i].remove();
+                    count++;
+                    let FinalText = document.createTextNode("x" + count + " " + text + " " + price);
+                    tag.appendChild(FinalText);
+                    bool = true;
+                }
+            }
+            if (bool == false) {
+                let FinalText = document.createTextNode("x" + 1 + " " + text + " " + price);
+                tag.appendChild(FinalText);
+            }
             element.appendChild(tag);
         }
 
-        function addToCart2() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Classic Tea Pot $17.00");
-            tag.appendChild(text);
+        function clearCart() {
             var element = document.getElementById("cart");
-            element.appendChild(tag);
+            element.querySelectorAll('*').forEach(n => n.remove());
         }
-        function addToCart3() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Classic Tea Pot $19.00");
-            tag.appendChild(text);
+
+        function payCart() {
             var element = document.getElementById("cart");
-            element.appendChild(tag);
+            var modal = document.getElementById("myModal");
+            var modalContent = document.getElementsByClassName("modal-content")[0].children[1];
+            var sum = 0;
+            if (element.childElementCount == 0) {
+                alert("Your cart shopping is empty")
+                return;
+            } else {
+                // When the user clicks the button, open the modal 
+                modal.style.display = "block";
+                modalContent.innerText = "";
+                for (let i = 0; i < element.childElementCount; i++) {
+                    sum = sum + (parseInt(element.children[i].innerText.split(" ")[3].substr(1, 2)) * parseInt(element.children[i].innerText.split(" ")[0].substr(1, 1)))
+                }
+                modalContent.innerText = element.innerText;
+                var tag = document.createElement("p");
+                var textSum = document.createTextNode("TOTAL AMOUNT DUE: " + sum)
+                tag.appendChild(textSum);
+                tag.style.fontWeight = "bold";
+                modalContent.appendChild(tag);
+                // element.querySelectorAll('*')
+            }
         }
-        function addToCart4() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Cup $5.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
+
+        // When the user clicks on <span> (x), close the modal
+        window.onclick = function (event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
-        function addToCart5() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Tea Ball Infuser $2.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart6() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Tea cups set $15.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
+
+        // When the user clicks anywhere outside of the modal, close it
+        function close() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
         }
     </script>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
