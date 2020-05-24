@@ -135,6 +135,7 @@ function payCart() {
     var modal = document.getElementById("myModal");
     var modalContent = document.getElementsByClassName("modal-content")[0].children[1];
     var sum = 0;
+    let temp = null;
     if (element.childElementCount == 0) {
         alert("You cart shopping is empty")
         return;
@@ -143,10 +144,12 @@ function payCart() {
         modal.style.display = "block";
         modalContent.innerText = "";
         for (let i = 0; i < element.childElementCount; i++) {
-            sum = sum + (parseInt(element.children[i].innerText.split(" ")[3].substr(1, 2)) * parseInt(element.children[i].innerText.split(" ")[0].substr(1, 1)))
+            temp = element.children[i].innerText.split(" ")
+            sum = sum + (parseInt(element.children[i].innerText.split(" ")[temp.length - 1].substr(1, 2)) * parseInt(element.children[i].innerText.split(" ")[0].substr(1, 1)))
         }
         modalContent.innerText = element.innerText;
         var tag = document.createElement("p");
+        console.log(sum)
         var textSum = document.createTextNode("TOTAL AMOUNT DUE: " + sum)
         tag.appendChild(textSum);
         tag.style.fontWeight = "bold";

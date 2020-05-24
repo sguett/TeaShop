@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script language="javascript " type="text/javascript " src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
@@ -15,21 +14,21 @@
             grid-template-rows: repeat(3, 1fr);
             grid-gap: 10px;
         }
-
+        
         .grid-container>div {
             background-color: rgba(255, 255, 255, 0.8);
         }
-
+        
         img {
             max-width: 100%;
             height: auto;
         }
-
+        
         h4 {
             margin-top: 10px;
             text-align: center;
         }
-
+        
         #delete {
             margin-left: 30px;
             width: fit-content;
@@ -38,7 +37,7 @@
             font-size: 15px;
             font-weight: lighter;
         }
-
+        
         #pay {
             margin-left: 5px;
             width: fit-content;
@@ -47,7 +46,7 @@
             font-size: 15px;
             font-weight: lighter;
         }
-
+        
         .shopping-cart {
             position: fixed;
             top: 0;
@@ -61,19 +60,18 @@
             font-size: 15px;
             font-weight: lighter;
         }
-
+        
         .shopping-cart-head {
             background: white;
             color: #50555d;
             padding: 5px;
         }
-
+        
         .shopping-cart,
         .shopping-cart-head {
             border-radius: 5px;
             text-align: left;
         }
-
         /*         
         .btn {
             border-radius: 0%;
@@ -124,8 +122,7 @@
                 <div class="PriceLabel">
                     <div id="rs-bullet" class="rs-label"></div>
                     <div id="lineFilterColor"></div>
-                    <input id="rs-range-line" class="Filters" type="range" value="20" min="0" max="20" step="1"
-                        style="width:225; cursor: hand;" oninput="showSliderValue()">
+                    <input id="rs-range-line" class="Filters" type="range" value="20" min="0" max="20" step="1" style="width:225; cursor: hand;" oninput="showSliderValue()">
 
                     <!-- <output name="rangeVal">50</output> -->
                 </div>
@@ -162,72 +159,63 @@
                             <img src="pictures/Almond Spice.webp" class="classic" id="img1" alt="Image 1">
                             <h4 class="name"><i>Almond Spice</i> </h4>
                             <p class="price">$15.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="Almond Spice"
-                                onclick="addToCart(2)">Add to
+                            <button type="button" class="btn btn-dark" style="width: 18.5rem;" id="Almond Spice" onclick="addToCart(2)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Chamomile Tea.webp" class="infusions" id="img1" alt="Image 2">
                             <h4><i>Chamomile Tea</i> </h4>
                             <p class="price">$7.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="Chamomile Tea"
-                                onclick="addToCart(3)">Add to
+                            <button type="button" class="btn btn-dark" style="width: 18.5rem;" id="Chamomile Tea" onclick="addToCart(3)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Earl Grey.webp" class="infusions" alt="Image 3">
                             <h4><i>Earl Grey</i> </h4>
                             <p class="price">$5.00</p>
-                            <button onclick="addToCart(4)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(4)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Hibiscus Flower.webp" class="classic" alt="Image 4">
                             <h4><i>Hibiscus Flower</i> </h4>
                             <p class="price">$7.00</p>
-                            <button onclick="addToCart(5)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(5)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Lavender Blend.webp" class="classic" alt="Image 5">
                             <h4><i>Lavender Blend</i> </h4>
                             <p class="price">$7.00</p>
-                            <button onclick="addToCart(6)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(6)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Mint & Melissa Mix.webp" class="infusions" alt="Image 6">
                             <h4><i>Mint & Melissa Mix</i> </h4>
                             <p class="price">$6.00</p>
-                            <button onclick="addToCart(7)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(7)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Raspberry Leaves.webp" class="special" alt="Image 7">
                             <h4><i>Raspberry Leaves</i> </h4>
                             <p class="price">$8.00</p>
-                            <button onclick="addToCart(8)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(8)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Rose Flowers.webp" class="infusions" alt="Image 8">
                             <h4><i>Rose Flowers</i> </h4>
                             <p class="price">$10.00</p>
-                            <button onclick="addToCart(9)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(9)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Rosemary Specials.webp" class="special" alt="Image 9">
                             <h4><i>Rosemary Specials</i> </h4>
                             <p class="price">$7.00</p>
-                            <button onclick="addToCart(10)" type="button" class="btn btn-dark" style="width: 340px;"
-                                id="addToCard">Add to
+                            <button onclick="addToCart(10)" type="button" class="btn btn-dark" style="width: 18.5rem;" id="addToCard">Add to
                                 Card</button>
                         </div>
                     </div>
@@ -239,15 +227,9 @@
     <!-- BEGIN FOOTER -->
     <script language="javascript " type="text/javascript " src="footer.txt "></script>
     <!-- END FOOTER -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
-        crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
-        crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
-        crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
 </body>
 
 </html>
