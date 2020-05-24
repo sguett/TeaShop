@@ -1,15 +1,6 @@
-
-var productsTea = {
-    products: ["product1", "product2", "product3", "product4"],
-    price: [10, 20, 30, 40],
-    category: ["classic", "Infusions", "Infusions", "Special Edition"],
-}
-
-// let products = document.getElementsByClassName("listCategoryItem2")[0];
 function filterByCat(arg) {
     let categoryProducts = document.getElementsByClassName("listCategory")[0].children
     let textCat = null;
-    console.log(arg)
     if (arg == "item1") {
         // textCat = categoryProducts[0].classList[0]
         AllCards();
@@ -23,44 +14,85 @@ function filterByCat(arg) {
         textCat = categoryProducts[3].classList[0]
         FilterCards(textCat);
     }
+}
 
+function AllCards() {
+    let cardContainer = document.getElementById("productsItems");
+    let cards = cardContainer.getElementsByClassName("myItems");
+    for (i = 0; i < cards.length; i++) {
+        cards[i].style.display = "";
+    }
+    let categoryProducts = document.getElementsByClassName("listCategory")[0].children
+    for (let c of categoryProducts) {
+        if (c.innerText == "All") {
+            c.setAttribute("style", "font-weight: bold");
+        } else { c.setAttribute("style", "font-weight: none"); }
+    }
+    showSliderValue()
+}
 
-    function AllCards() {
-        let cardContainer = document.getElementById("productsItems");
-        let cards = cardContainer.getElementsByClassName("myItems");
-        for (i = 0; i < cards.length; i++) {
+function FilterCards(category) {
+    var input, filter, cards, cardContainer, title, i;
+    input = document.getElementsByClassName(category)[0];
+    filter = input.innerText.toUpperCase();
+    let categoryProducts = document.getElementsByClassName("listCategory")[0].children
+    for (let c of categoryProducts) {
+        if (c.innerText.toUpperCase() == filter) {
+            c.setAttribute("style", "font-weight: bold");
+        } else { c.setAttribute("style", "font-weight: none"); }
+    }
+    cardContainer = document.getElementById("productsItems");
+    cards = cardContainer.getElementsByClassName("myItems");
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].firstElementChild.classList[0];
+        if (title.toUpperCase() == filter || filter.includes(title.toUpperCase())) {
             cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+    showSliderValue()
+}
+
+function showSliderValue() {
+    var rangeSlider = document.getElementById("rs-range-line");
+    var rangeBullet = document.getElementById("rs-bullet");
+    var rangeColor = document.getElementById("lineFilterColor");
+
+    rangeBullet.innerHTML = rangeSlider.value;
+    var bulletPosition = (rangeSlider.value / rangeSlider.max);
+    rangeBullet.style.marginLeft = (bulletPosition * 215) + "px";
+    rangeColor.style.width = (bulletPosition * 215) + "px";
+    rangeColor.style.height = "10px";
+    rangeColor.style.backgroundColor = "#50555D";
+    rangeColor.style.borderRadius = "5px";
+
+
+    var title, cards, cardContainer, price, i;
+    cardContainer = document.getElementById("productsItems");
+    cards = cardContainer.getElementsByClassName("myItems");
+    let input = null;
+    let filter = null;
+    let categoryProducts = document.getElementsByClassName("listCategory")[0].children
+    for (i = 0; i < categoryProducts.length; i++) {
+        if (categoryProducts[i].style.fontWeight == "bold") {
+            input = document.getElementsByClassName(categoryProducts[i].classList[0])[0];
+            filter = input.innerText.toUpperCase();
+        } else {
+            filter == null;
         }
     }
 
-    function FilterCards(category) {
-        var input, filter, cards, cardContainer, h5, title, i;
-        input = document.getElementsByClassName(category)[0];
-        console.log(input)
-        input.setAttribute("style", "font-weight: bold");
-        filter = input.innerText.toUpperCase();
-        cardContainer = document.getElementById("productsItems");
-        cards = cardContainer.getElementsByClassName("myItems");
-        for (i = 0; i < cards.length; i++) {
-            title = cards[i].firstElementChild.classList[0];
-            if (title.toUpperCase() == filter || filter.includes(title.toUpperCase())) {
-                cards[i].style.display = "";
-            } else {
-                cards[i].style.display = "none";
-            }
-        }
-
-        // update value in select price (filter)
-
-        var rangeSlider = document.getElementById("rs-range-line");
-        var rangeBullet = document.getElementById("rs-bullet");
-
-        rangeSlider.addEventListener("input", showSliderValue, false);
-
-        function showSliderValue() {
-            rangeBullet.innerHTML = rangeSlider.value;
-            var bulletPosition = (rangeSlider.value / rangeSlider.max);
-            rangeBullet.style.left = (bulletPosition * 578) + "px";
-        }
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].firstElementChild.classList[0];
+        price = cards[i].children[2].innerText
+        price = parseFloat(price.substr(1, price.length));
+        if (filter == "ALL" && (price <= parseFloat(rangeSlider.value))) {
+            cards[i].style.display = "";
+        } else if (((title.toUpperCase() == filter) || filter.includes(title.toUpperCase())) && (price <= parseFloat(rangeSlider.value))) {
+            cards[i].style.display = "";
+        } else if ((filter == null) && (price <= parseFloat(rangeSlider.value))) {
+            cards[i].style.display = "";
+        } else { cards[i].style.display = "none"; }
     }
 }

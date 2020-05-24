@@ -483,7 +483,7 @@ div span {
 /* BEGIN CSS TEAS PAGE */
 
 .blockTeas {
-     /* height: 100vh; */
+    /* height: 100vh; */
     /* margin: auto 150px auto 150px; */
     padding-top: 50px;
     width: 95%;
@@ -608,4 +608,20 @@ input[type=range].Filters:focus::-ms-fill-upper {
     text-align: left;
     /* font-size: 20px; */
     /* color: #FFFFFF; */
-} 
+}
+
+.PriceLabel {
+    position: relative;
+    /* z-index: 1; */
+}
+
+#rs-range-line {
+    position: absolute;
+    z-index: 1;
+}
+
+#lineFilterColor {
+    position: absolute;
+    z-index: 2;
+    margin-top: 5px;
+}

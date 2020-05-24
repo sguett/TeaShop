@@ -49,13 +49,11 @@
             font-weight: lighter;
         }
 
-
         .shopping-cart-head {
             background: white;
             color: #50555d;
             padding: 5px;
         }
-
 
         .shopping-cart,
         .shopping-cart-head {
@@ -101,13 +99,16 @@
                 <p style="text-align: left;"><i>Price</i></p>
 
                 <div class="PriceLabel">
-                    <div id="rs-bullet" class="rs-label">0</div>
-                    <input id="rs-range-line" class="Filters" type="range" value="50" min="1" max="100" step="1"
-                        style="width:225; cursor: hand;">
+                    <div id="rs-bullet" class="rs-label"></div>
+                    <div id="lineFilterColor"></div>
+                    <input id="rs-range-line" class="Filters" type="range" value="20" min="0" max="20" step="1"
+                        style="width:225; cursor: hand;" oninput="showSliderValue()">
+
+                    <!-- <output name="rangeVal">50</output> -->
                 </div>
-                <div class="box-minmax">
+                <div class="box-minmax" style="margin-top: 30px;">
                     <div><i>0</i></div>
-                    <div><i>100</i></div>
+                    <div><i>20</i></div>
                 </div>
                 <div class="lineFilters" style="margin-top: 1rem;"></div>
                 <p style="text-align: left;"><i>Category</i></p>
