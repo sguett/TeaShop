@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script language="javascript " type="text/javascript " src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
@@ -15,26 +14,26 @@
             grid-template-rows: repeat(3, 1fr);
             grid-gap: 10px;
         }
-
+        
         .grid-container>div {
             background-color: rgba(255, 255, 255, 0.8);
         }
-
+        
         img {
             max-width: 100%;
             height: auto;
         }
-
+        
         h4 {
             margin-top: 10px;
             text-align: center;
         }
-
+        
         button {
             margin-bottom: 30px;
             width: fit-content;
         }
-
+        
         .shopping-cart {
             position: fixed;
             top: 0;
@@ -48,37 +47,31 @@
             font-size: 15px;
             font-weight: lighter;
         }
-
-
+        
         .shopping-cart-head {
             background: white;
             color: #50555d;
             padding: 5px;
         }
-
-
+        
         .shopping-cart,
         .shopping-cart-head {
             border-radius: 5px;
         }
-
-
+        
         .empty-cart-btn,
         .cart-checkout {
             display: none;
-
         }
-
-
+        
         .empty-cart-btn {
             margin-bottom: 5px;
         }
-
-
+        
         .cart-checkout {
             background: limegreen;
         }
-
+        
         .btn {
             border-radius: 0%;
             font-family: sans-serif;
@@ -117,13 +110,15 @@
                 <p style="text-align: left;"><i>Price</i></p>
 
                 <div class="PriceLabel">
-                    <div id="rs-bullet" class="rs-label">0</div>
-                    <input id="rs-range-line" class="Filters" type="range" value="50" min="1" max="100" step="1"
-                        style="width:225; cursor: hand;">
+                    <div id="rs-bullet" class="rs-label"></div>
+                    <div id="lineFilterColor"></div>
+                    <input id="rs-range-line" class="Filters" type="range" value="20" min="0" max="20" step="1" style="width:225; cursor: hand;" oninput="showSliderValue()">
+
+                    <!-- <output name="rangeVal">50</output> -->
                 </div>
-                <div class="box-minmax">
+                <div class="box-minmax" style="margin-top: 30px;">
                     <div><i>0</i></div>
-                    <div><i>100</i></div>
+                    <div><i>20</i></div>
                 </div>
                 <div class="lineFilters" style="margin-top: 1rem;"></div>
                 <p style="text-align: left;"><i>Category</i></p>
@@ -223,22 +218,16 @@
         var card = document.getElementById("card");
         var button = document.getElementById("addToCard");
         count = 0;
-        button.onclick = function () {
+        button.onclick = function() {
             count += 1;
             card.innerHTML = count;
         };
     </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
-        crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
-        crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
-        crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
 </body>
 
 </html>
