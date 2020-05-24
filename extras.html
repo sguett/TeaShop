@@ -12,7 +12,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             grid-gap: 10px;
         }
 
@@ -91,19 +91,19 @@
 
 <body>
     <!-- BEGIN NAVBAR -->
-    <div class="bg-img-teas">
+    <div class="bg-img-extras">
         <div class="container">
             <nav class="navbar fixed-top topnav">
                 <a id="logo" class="nav-link" href="index.html">BLOOM'S TEA</a>
                 <a class="nav-link" href="teas.html">Teas</a>
-                <a class="nav-link" href="extras.html">Extras</a>
+                <a class="nav-link" href="#extras">Extras</a>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="contact.html">Contact</a>
             </nav>
         </div>
         <div id="comp-j4mpgz1dline" class="style-j4mph5j1line"></div>
         <div class="jumbotron hero-title-inside" style="background-color:transparent;margin-top: 15%;">
-            <h1 class="display-4" style="font-family: didot-w01-italic,serif;"><i>Shop Your Favorite Tea</i></h1>
+            <h1 class="display-4" style="font-family: didot-w01-italic,serif;"><i>Shop Extras</i></h1>
         </div>
     </div>
     <!-- END NAVBAR -->
@@ -142,78 +142,60 @@
                 <section>
                     <div class="shopping-cart">
                         <div class="shopping-cart-head">
-                            <span class="product-quantity" id="card">0</span> Product(s) in Cart<i>
+                            <span class="product-quantity" id="quantity">0</span> Product(s) in Cart<i>
+                                <br>
+                                <span class="product-total" id="total"></span><i>
                         </div>
 
                     </div>
                     <div class="grid-container" id="productsItems">
                         <div class="myItems">
-                            <img src="pictures/Almond Spice.webp" class="classic" id="img1" alt="Image 1">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$15.00</p>
+                            <img src="pictures/teapot1.webp" class="classic" id="img1" alt="Image 1">
+                            <h4><i>Classic Tea Pot</i> </h4>
+                            <p class="price">$20.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
-                            <img src="pictures/Chamomile Tea.webp" class="infusions" id="img1" alt="Image 2">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
+                            <img src="pictures/teapot2.webp" class="infusions" id="img1" alt="Image 2">
+                            <h4><i>Classic Tea Pot</i> </h4>
+                            <p class="price">$17.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
-                            <img src="pictures/Earl Grey.webp" class="infusions" alt="Image 3">
-                            <h4><i>Almond Spice</i> </h4>
+                            <img src="pictures/teapot3.webp" class="infusions" alt="Image 3">
+                            <h4><i>Classic Tea Pot</i> </h4>
+                            <p class="price">$19.00</p>
+                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                                Card</button>
+                        </div>
+                        <div class="myItems">
+                            <img src="pictures/teacup1.webp" class="classic" alt="Image 4">
+                            <h4><i>Cup</i> </h4>
                             <p class="price">$5.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
-                            <img src="pictures/Hibiscus Flower.webp" class="classic" alt="Image 4">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
+                            <img src="pictures/teaball.webp" class="classic" alt="Image 5">
+                            <h4><i>Tea Ball Infuser</i> </h4>
+                            <p class="price">$2.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
-                            <img src="pictures/Lavender Blend.webp" class="classic" alt="Image 5">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
-                                Card</button>
-                        </div>
-                        <div class="myItems">
-                            <img src="pictures/Mint & Melissa Mix.webp" class="infusions" alt="Image 6">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
-                                Card</button>
-                        </div>
-                        <div class="myItems">
-                            <img src="pictures/Raspberry Leaves.webp" class="special edition" alt="Image 7">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
-                                Card</button>
-                        </div>
-                        <div class="myItems">
-                            <img src="pictures/Rose Flowers.webp" class="infusions" alt="Image 8">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
-                                Card</button>
-                        </div>
-                        <div class="myItems">
-                            <img src="pictures/Rosemary Specials.webp" class="special edition" alt="Image 9">
-                            <h4><i>Almond Spice</i> </h4>
-                            <p class="price">$7.00</p>
+                            <img src="pictures/teacup2.webp" class="infusions" alt="Image 6">
+                            <h4><i>Tea cups set</i> </h4>
+                            <p class="price">$15.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
                                 Card</button>
                         </div>
                     </div>
-                </section>
             </div>
+            </section>
         </div>
+    </div>
     </div>
     <!-- <div class="teas" style="margin-top: 50px;"></div> -->
     <!-- BEGIN FOOTER -->
