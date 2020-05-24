@@ -30,9 +30,22 @@
             text-align: center;
         }
 
-        button {
-            margin-bottom: 30px;
+        #delete {
+            margin-left: 30px;
             width: fit-content;
+            border-radius: 0%;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        #pay {
+            margin-left: 5px;
+            width: fit-content;
+            border-radius: 0%;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: lighter;
         }
 
         .shopping-cart {
@@ -61,12 +74,13 @@
             text-align: left;
         }
 
+        /*         
         .btn {
             border-radius: 0%;
             font-family: sans-serif;
             font-size: 15px;
             font-weight: lighter;
-        }
+        } */
     </style>
     <title>Teas</title>
 </head>
@@ -89,7 +103,16 @@
         </div>
     </div>
     <!-- END NAVBAR -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="close()">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
     <!-- BEGIN TEA SHOP -->
     <div class="blockTeas">
         <div class="row">
@@ -128,9 +151,9 @@
                     <div class="shopping-cart">
                         <div class="shopping-cart-head" id="card">
                             <h4 id="cart" style="font-weight: bolder; font-size: 18px;">Product(s) in Cart</h4>
-                            <button type="button" class="btn btn-dark" id="delete" onclick="clearCart()"
-                                style="margin-left: 80px; margin-top: 10px;">Clear
-                                cart</button>
+                            <button type="button" class="btn btn-dark" id="delete" onclick="clearCart()">Clear
+                                cart<button type="button" class="btn btn-dark" id="pay" onclick="payCart()">Pay
+                                    cart</button></button>
                         </div>
 
                     </div>
@@ -140,7 +163,7 @@
                             <h4 class="name"><i>Almond Spice</i> </h4>
                             <p class="price">$15.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="Almond Spice"
-                                onclick="addToCart1()">Add to
+                                onclick="addToCart(2)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
@@ -148,14 +171,14 @@
                             <h4><i>Chamomile Tea</i> </h4>
                             <p class="price">$7.00</p>
                             <button type="button" class="btn btn-dark" style="width: 340px;" id="Chamomile Tea"
-                                onclick="addToCart2()">Add to
+                                onclick="addToCart(3)">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/Earl Grey.webp" class="infusions" alt="Image 3">
                             <h4><i>Earl Grey</i> </h4>
                             <p class="price">$5.00</p>
-                            <button onclick="addToCart3()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(4)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
@@ -163,7 +186,7 @@
                             <img src="pictures/Hibiscus Flower.webp" class="classic" alt="Image 4">
                             <h4><i>Hibiscus Flower</i> </h4>
                             <p class="price">$7.00</p>
-                            <button onclick="addToCart4()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(5)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
@@ -171,7 +194,7 @@
                             <img src="pictures/Lavender Blend.webp" class="classic" alt="Image 5">
                             <h4><i>Lavender Blend</i> </h4>
                             <p class="price">$7.00</p>
-                            <button onclick="addToCart5()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(6)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
@@ -179,15 +202,15 @@
                             <img src="pictures/Mint & Melissa Mix.webp" class="infusions" alt="Image 6">
                             <h4><i>Mint & Melissa Mix</i> </h4>
                             <p class="price">$6.00</p>
-                            <button onclick="addToCart6()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(7)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
-                            <img src="pictures/Raspberry Leaves.webp" class="special edition" alt="Image 7">
+                            <img src="pictures/Raspberry Leaves.webp" class="special" alt="Image 7">
                             <h4><i>Raspberry Leaves</i> </h4>
                             <p class="price">$8.00</p>
-                            <button onclick="addToCart7()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(8)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
@@ -195,15 +218,15 @@
                             <img src="pictures/Rose Flowers.webp" class="infusions" alt="Image 8">
                             <h4><i>Rose Flowers</i> </h4>
                             <p class="price">$10.00</p>
-                            <button onclick="addToCart8()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(9)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
-                            <img src="pictures/Rosemary Specials.webp" class="special edition" alt="Image 9">
+                            <img src="pictures/Rosemary Specials.webp" class="special" alt="Image 9">
                             <h4><i>Rosemary Specials</i> </h4>
                             <p class="price">$7.00</p>
-                            <button onclick="addToCart9()" type="button" class="btn btn-dark" style="width: 340px;"
+                            <button onclick="addToCart(10)" type="button" class="btn btn-dark" style="width: 340px;"
                                 id="addToCard">Add to
                                 Card</button>
                         </div>
@@ -216,74 +239,6 @@
     <!-- BEGIN FOOTER -->
     <script language="javascript " type="text/javascript " src="footer.txt "></script>
     <!-- END FOOTER -->
-    <script>
-        function addToCart1() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Almond Spice $15.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-
-        function addToCart2() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Chamomile Tea $7.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart3() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Earl Grey $5.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart4() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Hibiscus Flower $7.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart5() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Lavender Blend $7.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart6() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Mint & Melissa Mix $6.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart7() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Raspberry Leaves $8.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart8() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Rose Flowers $10.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-        function addToCart9() {
-            var tag = document.createElement("p");
-            var text = document.createTextNode("Rosemary Specials $7.00");
-            tag.appendChild(text);
-            var element = document.getElementById("cart");
-            element.appendChild(tag);
-        }
-    </script>
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
         crossorigin="anonymous "></script>
