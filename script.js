@@ -35,9 +35,10 @@ function FilterCards(category) {
     var input, filter, cards, cardContainer, title, i;
     input = document.getElementsByClassName(category)[0];
     filter = input.innerText.toUpperCase();
+    filter = filter.split(" ")[0]
     let categoryProducts = document.getElementsByClassName("listCategory")[0].children
     for (let c of categoryProducts) {
-        if (c.innerText.toUpperCase() == filter) {
+        if (c.innerText.toUpperCase().split(" ")[0] == filter) {
             c.setAttribute("style", "font-weight: bold");
         } else { c.setAttribute("style", "font-weight: none"); }
     }
@@ -45,7 +46,7 @@ function FilterCards(category) {
     cards = cardContainer.getElementsByClassName("myItems");
     for (i = 0; i < cards.length; i++) {
         title = cards[i].firstElementChild.classList[0];
-        if (title.toUpperCase() == filter || filter.includes(title.toUpperCase())) {
+        if (title.toUpperCase() == filter) {
             cards[i].style.display = "";
         } else {
             cards[i].style.display = "none";
@@ -78,6 +79,7 @@ function showSliderValue() {
         if (categoryProducts[i].style.fontWeight == "bold") {
             input = document.getElementsByClassName(categoryProducts[i].classList[0])[0];
             filter = input.innerText.toUpperCase();
+            filter = filter.split(" ")[0]
         } else {
             filter == null;
         }
@@ -89,9 +91,9 @@ function showSliderValue() {
         price = parseFloat(price.substr(1, price.length));
         if (filter == "ALL" && (price <= parseFloat(rangeSlider.value))) {
             cards[i].style.display = "";
-        } else if (((title.toUpperCase() == filter) || filter.includes(title.toUpperCase())) && (price <= parseFloat(rangeSlider.value))) {
-            cards[i].style.display = "";
         } else if ((filter == null) && (price <= parseFloat(rangeSlider.value))) {
+            cards[i].style.display = "";
+        } else if ((title.toUpperCase() == filter) && (price <= parseFloat(rangeSlider.value))) {
             cards[i].style.display = "";
         } else { cards[i].style.display = "none"; }
     }
