@@ -117,13 +117,16 @@
                 <p style="text-align: left;"><i>Price</i></p>
 
                 <div class="PriceLabel">
-                    <div id="rs-bullet" class="rs-label">0</div>
-                    <input id="rs-range-line" class="Filters" type="range" value="50" min="1" max="100" step="1"
-                        style="width:225; cursor: hand;">
+                    <div id="rs-bullet" class="rs-label"></div>
+                    <div id="lineFilterColor"></div>
+                    <input id="rs-range-line" class="Filters" type="range" value="20" min="0" max="20" step="1"
+                        style="width:225; cursor: hand;" oninput="showSliderValue()">
+
+                    <!-- <output name="rangeVal">50</output> -->
                 </div>
-                <div class="box-minmax">
+                <div class="box-minmax" style="margin-top: 30px;">
                     <div><i>0</i></div>
-                    <div><i>100</i></div>
+                    <div><i>20</i></div>
                 </div>
                 <div class="lineFilters" style="margin-top: 1rem;"></div>
                 <p style="text-align: left;"><i>Category</i></p>
@@ -141,53 +144,61 @@
             <div class="col-md-9">
                 <section>
                     <div class="shopping-cart">
-                        <div class="shopping-cart-head">
-                            <span class="product-quantity" id="quantity">0</span> Product(s) in Cart<i>
-                                <div></div></span><i>
+                        <div class="shopping-cart-head" id="card">
+                            <h4 id="cart" style="font-weight: bolder; font-size: 18px;">Product(s) in Cart</h4>
+                            <button type="button" class="btn btn-dark" id="delete" onclick="clearCart()"
+                                style="margin-left: 80px; margin-top: 10px;">Clear
+                                cart</button>
                         </div>
-
                     </div>
                     <div class="grid-container" id="productsItems">
                         <div class="myItems">
                             <img src="pictures/teapot1.webp" class="teapots" id="img1" alt="Image 1">
                             <h4><i>Classic Tea Pot</i> </h4>
                             <p class="price">$20.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                            <button click="" type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
+                                onclick="addToCart1()">Add
+                                to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teapot2.webp" class="teapots" id="img1" alt="Image 2">
                             <h4><i>Classic Tea Pot</i> </h4>
                             <p class="price">$17.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
+                                onclick="addToCart2()">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teapot3.webp" class="teapots" alt="Image 3">
                             <h4><i>Classic Tea Pot</i> </h4>
                             <p class="price">$19.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
+                                onclick="addToCart3()">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teacup1.webp" class="cups" alt="Image 4">
                             <h4><i>Cup</i> </h4>
                             <p class="price">$5.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
+                                onclick="addToCart4()">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teaball.webp" class="other" alt="Image 5">
                             <h4><i>Tea Ball Infuser</i> </h4>
                             <p class="price">$2.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
+                                onclick="addToCart5()">Add to
                                 Card</button>
                         </div>
                         <div class="myItems">
                             <img src="pictures/teacup2.webp" class="cups" alt="Image 6">
                             <h4><i>Tea cups set</i> </h4>
                             <p class="price">$15.00</p>
-                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard">Add to
+                            <button type="button" class="btn btn-dark" style="width: 340px;" id="addToCard"
+                                onclick="addToCart6()">Add to
                                 Card</button>
                         </div>
                     </div>
@@ -201,13 +212,49 @@
     <script language="javascript " type="text/javascript " src="footer.txt "></script>
     <!-- END FOOTER -->
     <script>
-        var card = document.getElementById("card");
-        var button = document.getElementById("addToCard");
-        count = 0;
-        button.onclick = function () {
-            count += 1;
-            card.innerHTML = count;
-        };
+        function addToCart1() {
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Classic Tea Pot $20.00");
+            tag.appendChild(text);
+            var element = document.getElementById("cart");
+            element.appendChild(tag);
+        }
+
+        function addToCart2() {
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Classic Tea Pot $17.00");
+            tag.appendChild(text);
+            var element = document.getElementById("cart");
+            element.appendChild(tag);
+        }
+        function addToCart3() {
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Classic Tea Pot $19.00");
+            tag.appendChild(text);
+            var element = document.getElementById("cart");
+            element.appendChild(tag);
+        }
+        function addToCart4() {
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Cup $5.00");
+            tag.appendChild(text);
+            var element = document.getElementById("cart");
+            element.appendChild(tag);
+        }
+        function addToCart5() {
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Tea Ball Infuser $2.00");
+            tag.appendChild(text);
+            var element = document.getElementById("cart");
+            element.appendChild(tag);
+        }
+        function addToCart6() {
+            var tag = document.createElement("p");
+            var text = document.createTextNode("Tea cups set $15.00");
+            tag.appendChild(text);
+            var element = document.getElementById("cart");
+            element.appendChild(tag);
+        }
     </script>
 
 
